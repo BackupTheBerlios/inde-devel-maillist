@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] internationalization &amp; ctags
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-March/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20internationalization%20%26%20ctags&In-Reply-To=%3C42284993.2030901%40sten-net.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000116.html">
+   <LINK REL="Next"  HREF="000120.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] internationalization &amp; ctags</H1>
+    <B>Jannis Pohlmann</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20internationalization%20%26%20ctags&In-Reply-To=%3C42284993.2030901%40sten-net.de%3E"
+       TITLE="[InDE-devel] internationalization &amp; ctags">devel at sten-net.de
+       </A><BR>
+    <I>Fri Mar  4 12:42:11 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000116.html">[InDE-devel] internationalization &amp; ctags
+</A></li>
+        <LI>Next message: <A HREF="000120.html">[InDE-devel] internationalization &amp; ctags
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#118">[ date ]</a>
+              <a href="thread.html#118">[ thread ]</a>
+              <a href="subject.html#118">[ subject ]</a>
+              <a href="author.html#118">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Jochen Rassler schrieb:
+
+&gt;<i>Ha Jannis.
+</I>&gt;<i>
+</I>&gt;<i>Am Donnerstag, den 03.03.2005, 14:49 +0100 schrieb Jannis Pohlmann:
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>&gt;&gt;<i>I just saw an article in the FOX Wiki - 
+</I>&gt;&gt;<i><A HREF="http://fox-toolkit.net/cgi-bin/wiki.pl?Cookbook/Iterating_Over_Entries_In_FXSettings">http://fox-toolkit.net/cgi-bin/wiki.pl?Cookbook/Iterating_Over_Entries_In_FXSettings</A> 
+</I>&gt;&gt;<i>-
+</I>&gt;&gt;<i>which could be interesting. This could probably replace all the 
+</I>&gt;&gt;<i>&quot;onUpdSetting...&quot; and &quot;onCmdSetting...&quot;
+</I>&gt;&gt;<i>functions and our settings structs as well. Just a few methods for 
+</I>&gt;&gt;<i>reading, writing the settings and
+</I>&gt;&gt;<i>some for handling certain option changes would remain. Maybe this could 
+</I>&gt;&gt;<i>spare a lot of code and make
+</I>&gt;&gt;<i>it easier to read.
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>The question is, do we need iterating?
+</I>&gt;<i>But reading only those sections at those places, where we need it, would
+</I>&gt;<i>save memory, keep the code cleaner, minimize sources for bugs.
+</I>&gt;<i>Maybe something like FXbool GUIdirty may be used to indicate, that
+</I>&gt;<i>several widgets should reread the settings and mark themself dirty.
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Probably we won't need iterating. At the moment, I'm testing a way to 
+read all settings from a
+file placed in ~/.InDE/, replacing the options not found in that file by 
+default values.
+That seems not to be too difficult. Reading settings partly doesn't make 
+sense since FXSettings,
+FXStringDict and FXDict don't need much memory space. The basic way is this:
+
+MainWindow constructor:
+
+    settings = new FXSettings;
+    FXString file = FXFile::getHomeDirectory + &quot;/.InDE/settings.cfg&quot;;
+    if (!FXFile::exists(file))
+    {
+        // user is running InDE the first time
+        FXFile::create(file);
+        defaultSettings();
+        writeSettings();
+    }
+    settings-&gt;parseFile(file);
+    completeSettings();
+
+MainWindow quit method:
+
+    settings-&gt;unparseFile(file);
+
+Of course, this is only part of the actual code. I'm still not satisfied 
+with it. Everything is a little stagnating
+at the moment.
+
+&gt;<i>BTW, have you already implemented something like the new file menu
+</I>&gt;<i>command or open or any of these operations?
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>No, I haven't. New file will actually only open a new empty tab in the 
+editor, marking it as modified.
+
+&gt;<i>I have actually build up the infrastructure for the new files to test
+</I>&gt;<i>the project browser.... but if you've done anything on this, we should
+</I>&gt;<i>discuss this beforge merging.
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Don't hesitate to commit it and I will look at it.
+
+Regards,
+Jannis
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000116.html">[InDE-devel] internationalization &amp; ctags
+</A></li>
+	<LI>Next message: <A HREF="000120.html">[InDE-devel] internationalization &amp; ctags
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#118">[ date ]</a>
+              <a href="thread.html#118">[ thread ]</a>
+              <a href="subject.html#118">[ subject ]</a>
+              <a href="author.html#118">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

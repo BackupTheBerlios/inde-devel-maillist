@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] r31 - trunk/src
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-March/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20r31%20-%20trunk/src&In-Reply-To=%3C200503141435.j2EEZMIw002350%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000173.html">
+   <LINK REL="Next"  HREF="000175.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] r31 - trunk/src</H1>
+    <B>Jannis Pohlmann at BerliOS</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20r31%20-%20trunk/src&In-Reply-To=%3C200503141435.j2EEZMIw002350%40sheep.berlios.de%3E"
+       TITLE="[InDE-devel] r31 - trunk/src">jpohlmann at sheep.berlios.de
+       </A><BR>
+    <I>Mon Mar 14 15:35:22 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000173.html">[InDE-devel] makefiles, dialog editor, dialogs in XML
+</A></li>
+        <LI>Next message: <A HREF="000175.html">[InDE-devel] r31 - trunk/src
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#174">[ date ]</a>
+              <a href="thread.html#174">[ thread ]</a>
+              <a href="subject.html#174">[ subject ]</a>
+              <a href="author.html#174">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: jpohlmann
+Date: 2005-03-14 15:35:19 +0100 (Mon, 14 Mar 2005)
+New Revision: 31
+
+Modified:
+   trunk/src/TabEditor.cpp
+Log:
+Bugfix (TabEditor): Segfault occured when showing next or previous tab without any opened documents
+
+Modified: trunk/src/TabEditor.cpp
+===================================================================
+--- trunk/src/TabEditor.cpp	2005-03-11 16:42:47 UTC (rev 30)
++++ trunk/src/TabEditor.cpp	2005-03-14 14:35:19 UTC (rev 31)
+@@ -538,17 +538,18 @@
+ void TabEditor::showNextTab()
+ {
+ 	FXTRACE((1, &quot;TabEditor::showNextTab()\n&quot;));
+-	tabSwitched();
+ 	if (getCurrent() &lt; 0)
+ 	{
+ 		return;
+ 	}
+ 	if (getCurrent() == (numChildren()/2)-1)
+ 	{
++		tabSwitched();
+ 		setCurrent(0);
+ 	}
+ 	else
+ 	{
++		tabSwitched();
+ 		setCurrent(getCurrent()+1);
+ 	}
+ }
+@@ -556,11 +557,11 @@
+ void TabEditor::showPreviousTab()
+ {
+ 	FXTRACE((1, &quot;TabEditor::showPreviousTab()\n&quot;));
+-	tabSwitched();
+ 	if (getCurrent() &lt;= 0)
+ 	{
+ 		return;
+ 	}
++	tabSwitched();
+ 	setCurrent(getCurrent()-1);
+ }
+ 
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000173.html">[InDE-devel] makefiles, dialog editor, dialogs in XML
+</A></li>
+	<LI>Next message: <A HREF="000175.html">[InDE-devel] r31 - trunk/src
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#174">[ date ]</a>
+              <a href="thread.html#174">[ thread ]</a>
+              <a href="subject.html#174">[ subject ]</a>
+              <a href="author.html#174">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

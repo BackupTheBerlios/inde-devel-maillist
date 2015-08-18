@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] Thoughts and ideas
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-March/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Thoughts%20and%20ideas&In-Reply-To=%3C423D3980.5080704%40sten-net.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000235.html">
+   <LINK REL="Next"  HREF="000241.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] Thoughts and ideas</H1>
+    <B>Jannis Pohlmann</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Thoughts%20and%20ideas&In-Reply-To=%3C423D3980.5080704%40sten-net.de%3E"
+       TITLE="[InDE-devel] Thoughts and ideas">devel at sten-net.de
+       </A><BR>
+    <I>Sun Mar 20 09:51:12 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000235.html">[InDE-devel] Thoughts and ideas
+</A></li>
+        <LI>Next message: <A HREF="000241.html">[InDE-devel] Thoughts and ideas
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#240">[ date ]</a>
+              <a href="thread.html#240">[ thread ]</a>
+              <a href="subject.html#240">[ subject ]</a>
+              <a href="author.html#240">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi.
+
+&gt;&gt;<i> Do you want to write a code generator?
+</I>&gt;&gt;<i>  
+</I>&gt;&gt;<i>
+</I>&gt;<i> Yes, I had that in mind. To be honest, I've already written it. Hehe.
+</I>
+
+I've worked on it again and although it's on my TODO list for the things 
+to come after
+the initial test release, I think we can already use it - if you agree.
+
+It is relatively simple:
+
+There is a struct &quot;MethodParam&quot; with two members: name and type of the 
+parameter
+(both FXString). Then, there is a class &quot;ClassMethod&quot; to which you can 
+apply parameters,
+modifiers (const, virtual and so on), access level (public, private, 
+...) and return type.
+That's all (mostly) language independent. It at least work for Java, 
+Ruby, Python,
+C++ and Delphi/Pascal.
+
+Next there is a abstract class &quot;ClassBuilder&quot;. It provides basic methods 
+for adding
+methods to the class, to set the class name. But most important are the 
+virtual methods
+it has, like validating, rendering and writing methods. These have to be 
+overloaded by
+the language-specific classes.
+
+Finally, we've got a subclass of &quot;ClassBuilder&quot; for each language (e.g. 
+CppClassBuilder or
+RubyClassBuilder). We need to subclass &quot;ClassBuilder&quot; in order to have 
+the same
+API for every language ClassBuilder so that we later can use something 
+like this:
+
+ClassBuilder* builder;
+switch (dialog.Language()) {
+    case Java:
+       builder = new JavaClassBuilder(dialog.ClassName());
+       break;
+    case Ruby:
+       builder = new RubyClassBuilder(dialog.ClassName());
+       break;
+    default:
+       builder = new CppClassBuilder(dialog.ClassName());
+}
+if (builder-&gt;IsValid()) {
+    builder-&gt;Finalize();
+
+    // C++ differs from any other language due to its separation of
+    // declaration and implementation so we have to create two
+    // files instead of one:
+
+    if (builder-&gt;Language() == Cpp) {
+       builder-&gt;write(builder-&gt;Name() + &quot;.h&quot;, builder-&gt;Name() + &quot;.cpp&quot;);
+    } else {
+       builder-&gt;write(builder-&gt;Name() + builder-&gt;Language()-&gt;Extension());
+    }
+}
+
+This would be (nearly) everything we needed to write in order to create 
+valid sourcecode for
+any OO language.
+Of course, there is no function &quot;IsValid&quot;. Instead, there are few more 
+functions for the validation
+so that we are able to react on invalid class names, an invalid method 
+and so on individually.
+
+Those classes depend on nothing of the current sourcecode and thus would 
+integrate fine
+into it. This would make the &quot;Create Class&quot; command possible in the test 
+release already.
+
+What do you think, Jochen?
+
+- Jannis
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000235.html">[InDE-devel] Thoughts and ideas
+</A></li>
+	<LI>Next message: <A HREF="000241.html">[InDE-devel] Thoughts and ideas
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#240">[ date ]</a>
+              <a href="thread.html#240">[ thread ]</a>
+              <a href="subject.html#240">[ subject ]</a>
+              <a href="author.html#240">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] Delay
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-March/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Delay&In-Reply-To=%3C1110280841.1541.37.camel%40jogix.sojox%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000130.html">
+   <LINK REL="Next"  HREF="000128.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] Delay</H1>
+    <B>Jochen Rassler</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Delay&In-Reply-To=%3C1110280841.1541.37.camel%40jogix.sojox%3E"
+       TITLE="[InDE-devel] Delay">jochen at cornmania.de
+       </A><BR>
+    <I>Tue Mar  8 12:20:41 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000130.html">[InDE-devel] Delay
+</A></li>
+        <LI>Next message: <A HREF="000128.html">[InDE-devel] InDE Windows build
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#131">[ date ]</a>
+              <a href="thread.html#131">[ thread ]</a>
+              <a href="subject.html#131">[ subject ]</a>
+              <a href="author.html#131">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Ha Jannis.
+
+Am Dienstag, den 08.03.2005, 11:44 +0100 schrieb Jannis Pohlmann:
+&gt;<i> Hi Jochen.
+</I>&gt;<i> 
+</I>&gt;<i> &gt;As far as i have another exam in a few hours i had no time to work on
+</I>&gt;<i> &gt;InDE this weekend. 
+</I>&gt;<i> &gt;  
+</I>&gt;<i> &gt;
+</I>&gt;<i> Oh, good luck then.
+</I>
+Thanks.
+
+&gt;<i> 
+</I>&gt;<i> &gt;&gt;The settings API is already done. We won't need to load the settings 
+</I>&gt;<i> &gt;&gt;file from
+</I>&gt;<i> &gt;&gt;~/.foxrc/FoxDefault/InDE but instead have a file which is called 
+</I>&gt;<i> &gt;&gt;~/.InDE/settings.cfg
+</I>&gt;<i> &gt;&gt;    
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;why *.cfg? Is this meant for Windows compatibility?
+</I>&gt;<i> &gt;  
+</I>&gt;<i> &gt;
+</I>&gt;<i> Hm, no. We give it any extension. What do you prefer? .ini would be 
+</I>&gt;<i> logical but unusual for Linux whereas
+</I>&gt;<i> .conf would be the Linux way.
+</I>
+I prefer *.conf or no extension. As far as this is a settings for Unix,
+we do not need a extension. If the file is named .InDE/settings it is
+clear what it does. But if extension, i prefer *.conf, because it's the
+Unix way.
+&gt;<i> 
+</I>&gt;<i> &gt;But it will only be a question of few hours to implement and test.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;And some artworks are missing.... ;) 
+</I>&gt;<i> &gt;  
+</I>&gt;<i> &gt;
+</I>&gt;<i> Yes. I had a look at tons of icon archives (both, KDE-/Gnome-like and 
+</I>&gt;<i> Windows). I came to the conclusion
+</I>&gt;<i> that best would be to use typical Windows 2000 or XP icons. Wait a few 
+</I>&gt;<i> days and I will upload an archive
+</I>&gt;<i> which you can look at.
+</I>
+Are these icons free?
+If not, we can not use them because of the GPL of InDE.
+&gt;<i> 
+</I>&gt;<i> &gt;BTW, while implementing the project browser i thought about possible
+</I>&gt;<i> &gt;project structures.
+</I>&gt;<i> &gt;One may wish to have a src/ dir and then split some modules to several
+</I>&gt;<i> &gt;subdirs. E.g. 
+</I>&gt;<i> &gt;src/main.cpp
+</I>&gt;<i> &gt;src/some_other_stuff.cpp
+</I>&gt;<i> &gt;src/module1/module1_implementation.cpp
+</I>&gt;<i> &gt;src/module2/module2_implementation.cpp
+</I>&gt;<i> &gt;...
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;I haven't included support for this yet. But i will have a look at this
+</I>&gt;<i> &gt;later (for InDE &gt; 0.1).
+</I>&gt;<i> &gt;  
+</I>&gt;<i> &gt;
+</I>&gt;<i> Okay.
+</I>&gt;<i> 
+</I>&gt;<i> &gt;As soon as the project settings work with the new structure for
+</I>&gt;<i> &gt;mainwindow,... i will start implementing the SConstruct file creation,
+</I>&gt;<i> &gt;which will be the hardest job of this list.
+</I>&gt;<i> &gt;  
+</I>&gt;<i> &gt;
+</I>&gt;<i> Yes, that's going to be hard - especially if we consider that later the 
+</I>&gt;<i> user might have to add different
+</I>&gt;<i> libraries for each platform he wants his software to be built on. For 
+</I>&gt;<i> that, our settings class
+</I>&gt;<i> might need something like a
+</I>&gt;<i>      typedef FXArray&lt;FXString&gt; StringArray
+</I>&gt;<i> and functions like
+</I>&gt;<i>     setStringArrayValue()
+</I>&gt;<i>     getStringArrayValue()
+</I>&gt;<i> 
+</I>&gt;<i> But we will see.
+</I>
+I guess we have to carry some information together to locate the
+problems. 
+I have some ideas, but haven't thought in depth to all upcomming
+problems. This will most probably be a topic next week(end).
+
+But on the other hand, we could arrange this to be solved in later
+versions more intelligent. As far as we use the project settings, one
+can specify all needed libraries there and depending on this the correct
+SConstruct is build. As soon as you move the project to another
+plattform, it is needed to revise the project settings to change the
+libraries.
+I guess, that will do it for the very first release. (I also guess that
+noone will use InDE 0.1 for large projects and especially not for too
+complicated cross plattform projects)
+
+All in depth SConstruct buildings depend on the task i added about the
+project settings to know the compiler and OS. 
+
+For all this we need to know compiler switches, library names (or
+differences in them), linker options and so on. This will also be very
+interesting for debugging support.....
+&gt;<i> 
+</I>&gt;<i> &gt;As soon as this work is done, i am fine to have an initial release.
+</I>&gt;<i> &gt;Hopefully we can get our timelines together so far.
+</I>&gt;<i> &gt;Maybe we can run for the weekend of March 18th-20th?
+</I>&gt;<i> &gt;  
+</I>&gt;<i> &gt;
+</I>&gt;<i> That should be possible, I think.
+</I>
+Just to mention:
+for the release we should add GPL headers to all files, an AUTHOR,
+LICENSE, README and INSTALL file. The GPL headers can use a link to the
+AUTHOR's file, to avoid future problems, if a new developer joins the
+project *g*
+
+So far. I guess this one was the last for this morning. I have to leave
+soon for the exam...
+
+regards,
+	Jochen
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000130.html">[InDE-devel] Delay
+</A></li>
+	<LI>Next message: <A HREF="000128.html">[InDE-devel] InDE Windows build
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#131">[ date ]</a>
+              <a href="thread.html#131">[ thread ]</a>
+              <a href="subject.html#131">[ subject ]</a>
+              <a href="author.html#131">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] internationalization &amp; ctags
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-March/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20internationalization%20%26%20ctags&In-Reply-To=%3C1109865977.1557.63.camel%40jogix.sojox%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000114.html">
+   <LINK REL="Next"  HREF="000118.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] internationalization &amp; ctags</H1>
+    <B>Jochen Rassler</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20internationalization%20%26%20ctags&In-Reply-To=%3C1109865977.1557.63.camel%40jogix.sojox%3E"
+       TITLE="[InDE-devel] internationalization &amp; ctags">jochen at cornmania.de
+       </A><BR>
+    <I>Thu Mar  3 17:06:17 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000114.html">[InDE-devel] internationalization &amp; ctags
+</A></li>
+        <LI>Next message: <A HREF="000118.html">[InDE-devel] internationalization &amp; ctags
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#116">[ date ]</a>
+              <a href="thread.html#116">[ thread ]</a>
+              <a href="subject.html#116">[ subject ]</a>
+              <a href="author.html#116">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Ha Jannis.
+
+Am Donnerstag, den 03.03.2005, 14:49 +0100 schrieb Jannis Pohlmann:
+&gt;<i> I just saw an article in the FOX Wiki - 
+</I>&gt;<i> <A HREF="http://fox-toolkit.net/cgi-bin/wiki.pl?Cookbook/Iterating_Over_Entries_In_FXSettings">http://fox-toolkit.net/cgi-bin/wiki.pl?Cookbook/Iterating_Over_Entries_In_FXSettings</A> 
+</I>&gt;<i> -
+</I>&gt;<i> which could be interesting. This could probably replace all the 
+</I>&gt;<i> &quot;onUpdSetting...&quot; and &quot;onCmdSetting...&quot;
+</I>&gt;<i> functions and our settings structs as well. Just a few methods for 
+</I>&gt;<i> reading, writing the settings and
+</I>&gt;<i> some for handling certain option changes would remain. Maybe this could 
+</I>&gt;<i> spare a lot of code and make
+</I>&gt;<i> it easier to read.
+</I>
+The question is, do we need iterating?
+But reading only those sections at those places, where we need it, would
+save memory, keep the code cleaner, minimize sources for bugs.
+Maybe something like FXbool GUIdirty may be used to indicate, that
+several widgets should reread the settings and mark themself dirty.
+
+BTW, have you already implemented something like the new file menu
+command or open or any of these operations?
+I have actually build up the infrastructure for the new files to test
+the project browser.... but if you've done anything on this, we should
+discuss this beforge merging.
+
+CU
+Jochen
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000114.html">[InDE-devel] internationalization &amp; ctags
+</A></li>
+	<LI>Next message: <A HREF="000118.html">[InDE-devel] internationalization &amp; ctags
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#116">[ date ]</a>
+              <a href="thread.html#116">[ thread ]</a>
+              <a href="subject.html#116">[ subject ]</a>
+              <a href="author.html#116">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

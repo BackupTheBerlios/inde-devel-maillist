@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] release cycles
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-February/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20release%20cycles&In-Reply-To=%3C4215EB00.80200%40sten-net.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000067.html">
+   <LINK REL="Next"  HREF="000072.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] release cycles</H1>
+    <B>Jannis Pohlmann</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20release%20cycles&In-Reply-To=%3C4215EB00.80200%40sten-net.de%3E"
+       TITLE="[InDE-devel] release cycles">devel at sten-net.de
+       </A><BR>
+    <I>Fri Feb 18 14:17:52 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000067.html">[InDE-devel] release cycles
+</A></li>
+        <LI>Next message: <A HREF="000072.html">[InDE-devel] release cycles
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#69">[ date ]</a>
+              <a href="thread.html#69">[ thread ]</a>
+              <a href="subject.html#69">[ subject ]</a>
+              <a href="author.html#69">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Jochen Rassler schrieb:
+
+&gt;<i>Hi Jannis.
+</I>&gt;<i>
+</I>&gt;<i>Am Freitag, den 18.02.2005, 01:08 +0100 schrieb Jannis Pohlmann:
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>&gt;&gt;<i>In other words: I agree with you. I'm not that familiar with SVN 
+</I>&gt;&gt;<i>(although I'll teach myself some basics
+</I>&gt;&gt;<i>next week) so committing only running versions might be a good choice. 
+</I>&gt;&gt;<i>Perhaps we could run a little
+</I>&gt;&gt;<i>internal SVN server (I have a virtual debian server running on which we 
+</I>&gt;&gt;<i>could do this: www.gezeiten.org) to
+</I>&gt;&gt;<i>share our code. Only development snapshots would be released to the 
+</I>&gt;&gt;<i>official SVN and to our website.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>I think you misunderstood the point.
+</I>&gt;<i>
+</I>&gt;<i>We have a svn directory, why setting up another one?
+</I>&gt;<i>
+</I>&gt;<i>Only checking in running versions means, that you only check in changed
+</I>&gt;<i>files, which you know of that they compile fine and that the code is
+</I>&gt;<i>running. Bugs, well, who writes large amount of code without bugs? But
+</I>&gt;<i>the version should compile and run. That is not for the users, but for
+</I>&gt;<i>the other developers, as they most probably work on another module and
+</I>&gt;<i>do not want to fix your code, that you had checked in not completely.
+</I>&gt;<i>
+</I>&gt;<i>If you follow this rule: often check in little changes, every check in
+</I>&gt;<i>compiles and is runnable (or not used by other code), doesn't lead to
+</I>&gt;<i>problems in the repository and also other developers can eventually
+</I>&gt;<i>share your code.
+</I>&gt;<i>
+</I>&gt;<i>So every nightly build tarball (does berlios support this?) is runnable.
+</I>&gt;<i>That means, if you think, there have been many chages to the repository,
+</I>&gt;<i>many cool new features, check out - or take your actual workspace
+</I>&gt;<i>(better to commit first) make a scons -c , cd .. , tar cfvz ..... and
+</I>&gt;<i>upload it as a new release...
+</I>&gt;<i>
+</I>&gt;<i>Jochen
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Ah, ok. Yes, I misunderstood your words. Now it's much clearer to me.
+
+It's a good idea to work with SVN that way.
+
+Regards,
+Jannis
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000067.html">[InDE-devel] release cycles
+</A></li>
+	<LI>Next message: <A HREF="000072.html">[InDE-devel] release cycles
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#69">[ date ]</a>
+              <a href="thread.html#69">[ thread ]</a>
+              <a href="subject.html#69">[ subject ]</a>
+              <a href="author.html#69">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

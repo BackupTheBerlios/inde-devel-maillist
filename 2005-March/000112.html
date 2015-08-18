@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] internationalization &amp; ctags
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-March/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20internationalization%20%26%20ctags&In-Reply-To=%3C422715DA.6040506%40sten-net.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000109.html">
+   <LINK REL="Next"  HREF="000114.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] internationalization &amp; ctags</H1>
+    <B>Jannis Pohlmann</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20internationalization%20%26%20ctags&In-Reply-To=%3C422715DA.6040506%40sten-net.de%3E"
+       TITLE="[InDE-devel] internationalization &amp; ctags">devel at sten-net.de
+       </A><BR>
+    <I>Thu Mar  3 14:49:14 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000109.html">[InDE-devel] internationalization &amp; ctags
+</A></li>
+        <LI>Next message: <A HREF="000114.html">[InDE-devel] internationalization &amp; ctags
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#112">[ date ]</a>
+              <a href="thread.html#112">[ thread ]</a>
+              <a href="subject.html#112">[ subject ]</a>
+              <a href="author.html#112">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>&gt;<i>Yes, that's sensefull. And if you want to do the class browsing .... ;)
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>It's so close to the autocompletion due to some ctags parsing and so on 
+that it won't be too difficult,
+I think.
+
+&gt;<i>The central project settings aren't the problem for managing several
+</I>&gt;<i>projects at once, i think. Storing them in a list and asking for the
+</I>&gt;<i>actual one should fit. This could easily done by the project browser.
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>&gt;<i>MainWindow is really growing fast. Maybe Jeroen may help us out with
+</I>&gt;<i>some tricks how we can manage to distribute the functionality to some
+</I>&gt;<i>classes without loosing the ability to update the settings and widgets
+</I>&gt;<i>as easily as we do it now.
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Yes, storing all projects in a list is clear so far.
+
+I just saw an article in the FOX Wiki - 
+<A HREF="http://fox-toolkit.net/cgi-bin/wiki.pl?Cookbook/Iterating_Over_Entries_In_FXSettings">http://fox-toolkit.net/cgi-bin/wiki.pl?Cookbook/Iterating_Over_Entries_In_FXSettings</A> 
+-
+which could be interesting. This could probably replace all the 
+&quot;onUpdSetting...&quot; and &quot;onCmdSetting...&quot;
+functions and our settings structs as well. Just a few methods for 
+reading, writing the settings and
+some for handling certain option changes would remain. Maybe this could 
+spare a lot of code and make
+it easier to read.
+
+Regards,
+Jannis
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000109.html">[InDE-devel] internationalization &amp; ctags
+</A></li>
+	<LI>Next message: <A HREF="000114.html">[InDE-devel] internationalization &amp; ctags
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#112">[ date ]</a>
+              <a href="thread.html#112">[ thread ]</a>
+              <a href="subject.html#112">[ subject ]</a>
+              <a href="author.html#112">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] OS-dependencies
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-March/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20OS-dependencies&In-Reply-To=%3C42363152.1040308%40sten-net.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000181.html">
+   <LINK REL="Next"  HREF="000185.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] OS-dependencies</H1>
+    <B>Jannis Pohlmann</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20OS-dependencies&In-Reply-To=%3C42363152.1040308%40sten-net.de%3E"
+       TITLE="[InDE-devel] OS-dependencies">devel at sten-net.de
+       </A><BR>
+    <I>Tue Mar 15 01:50:26 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000181.html">[InDE-devel] OS-dependencies
+</A></li>
+        <LI>Next message: <A HREF="000185.html">[InDE-devel] OS-dependencies
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#183">[ date ]</a>
+              <a href="thread.html#183">[ thread ]</a>
+              <a href="subject.html#183">[ subject ]</a>
+              <a href="author.html#183">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Jochen.
+
+&gt;<i>Am Dienstag, den 15.03.2005, 01:02 +0100 schrieb Jannis Pohlmann:
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>&gt;&gt;<i>As far as I can see there is no function like this. But whenever you 
+</I>&gt;&gt;<i>want to access
+</I>&gt;&gt;<i>something in the filesystem you can use the following functions to merge 
+</I>&gt;&gt;<i>directory
+</I>&gt;&gt;<i>and file names. Normally, this should be enough since there won't be a 
+</I>&gt;&gt;<i>single
+</I>&gt;&gt;<i>directory which wasn't either selected by using FXDirSelector etc. or 
+</I>&gt;&gt;<i>directly
+</I>&gt;&gt;<i>entered by the user (then, it is his problem if the directory doesn't 
+</I>&gt;&gt;<i>exist).
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>ehm, i am building path names on my own.... 
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>You're right. But did you test if those FXFile methods I sent to you 
+work with two
+directories instead of one directory and a filename?
+
+&gt;&gt;<i>Do we really need that? Okay, perhaps we will, but at the moment I see 
+</I>&gt;&gt;<i>now reason
+</I>&gt;&gt;<i>for creating a structure of this kind. There is no platform-specific 
+</I>&gt;&gt;<i>code yet - as far
+</I>&gt;&gt;<i>as I can see. 
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>e.g. InDE settings path, InDE settings file name,....
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Yes, but it could be replaced by something platform independent. See below
+for what I am thinking of.
+
+&gt;<i>  
+</I>&gt;<i>
+</I>&gt;&gt;<i>If you really need to add a DIR_SEPARATOR constant/define 
+</I>&gt;&gt;<i>doing that
+</I>&gt;&gt;<i>in InDE.h probably would be best.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>May probably the best for now.
+</I>&gt;<i>How to seperate between char and string? Does a define this job or is it
+</I>&gt;<i>better to use two const expressions for that.
+</I>&gt;<i>If you have FXString str= DIR_SEPARATOR + file, does a define really fit
+</I>&gt;<i>well at this?
+</I>&gt;<i>
+</I>&gt;<i>Jochen
+</I>&gt;<i>
+</I>I think of having a better idea: We could write something like a 
+filesystem abstraction
+layer on the top of the functions provided by the FXFile namespace.
+
+FileSystem would be a simple yet effective name for it, I think. This 
+could also provide a method
+dirSeperator(). What do you think? I would volunteer for doing this tonight.
+
+Regards,
+Jannis
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000181.html">[InDE-devel] OS-dependencies
+</A></li>
+	<LI>Next message: <A HREF="000185.html">[InDE-devel] OS-dependencies
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#183">[ date ]</a>
+              <a href="thread.html#183">[ thread ]</a>
+              <a href="subject.html#183">[ subject ]</a>
+              <a href="author.html#183">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

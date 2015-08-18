@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] FXText Layout problems
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-February/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20FXText%20Layout%20problems&In-Reply-To=%3C1108493966.1556.26.camel%40jogix.sojox%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000047.html">
+   <LINK REL="Next"  HREF="000053.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] FXText Layout problems</H1>
+    <B>Jochen Rassler</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20FXText%20Layout%20problems&In-Reply-To=%3C1108493966.1556.26.camel%40jogix.sojox%3E"
+       TITLE="[InDE-devel] FXText Layout problems">jochen at cornmania.de
+       </A><BR>
+    <I>Tue Feb 15 19:59:26 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000047.html">[InDE-devel] FXText Layout problems
+</A></li>
+        <LI>Next message: <A HREF="000053.html">[InDE-devel] FXText Layout problems
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#49">[ date ]</a>
+              <a href="thread.html#49">[ thread ]</a>
+              <a href="subject.html#49">[ subject ]</a>
+              <a href="author.html#49">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Am Dienstag, den 15.02.2005, 17:24 +0100 schrieb Jannis Pohlmann:
+&gt;<i> Jochen Rassler schrieb:
+</I>&gt;<i> 
+</I>&gt;<i> &gt;&gt;Try FRAME_SUNKEN|FRAME_THICK.
+</I>&gt;<i> &gt;&gt;    
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> Seems as if you have to put you FXText into another FXVerticalFrame or 
+</I>&gt;<i> something similar.
+</I>&gt;<i> 
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;It doesn't change anything.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;BTW, i needed several new builds until i saw your settings dialog. I
+</I>&gt;<i> &gt;didn't want to appear until something unknown happened. Maybe my
+</I>&gt;<i> &gt;selfbuild FOX Debain package is a bit fluffy - but i can't imagine,
+</I>&gt;<i> &gt;because it mainly copies the needed files to the needed location. Weird.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;CU
+</I>&gt;<i> &gt;Jochen
+</I>&gt;<i> &gt;
+</I>&gt;<i> Maybe this has to do with the header files of InDE.
+</I>&gt;<i> I tried to pack all includes into one file (&quot;InDE.h&quot;) so all other files 
+</I>&gt;<i> only needed this one. Perhaps
+</I>&gt;<i> that's not a good solution. I noticed that sometimes the SCronscript 
+</I>&gt;<i> senselessly rebuilt all files
+</I>&gt;<i> and sometimes did ignore one or two. As soon as you have commited your 
+</I>&gt;<i> project creating dialog
+</I>&gt;<i> to SVN I'll change the inclusion structure.
+</I>&gt;<i> 
+</I>I've actually added my latest changes. If you want to update the include
+structure and merge the editor widget, it will be easy to syncronize our
+versions.
+
+BTW, svn should allow us to change the same files and keep track of it -
+as long as we do a svn update before svn commit. I haven't seen svn
+behavior about this, but cvs behavior and i guess it won't differ too
+much.
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> old version
+</I>// old code...
+&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; new version
+// new code...
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>
+or something similar should mark the dirty areas. You just have to merge
+it with your changed version and upload the new revision.
+
+BTW, it seems i have some problems with trunk/.sconsign.dblite while
+uploading. What is this file good for. Seems to be a (binary?) version
+of SCons watching what has changed and what has to be build on next
+call. If so, i guess it should be moved to attic.
+
+regards
+	Jochen
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000047.html">[InDE-devel] FXText Layout problems
+</A></li>
+	<LI>Next message: <A HREF="000053.html">[InDE-devel] FXText Layout problems
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#49">[ date ]</a>
+              <a href="thread.html#49">[ thread ]</a>
+              <a href="subject.html#49">[ subject ]</a>
+              <a href="author.html#49">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] Thoughts and ideas
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-March/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Thoughts%20and%20ideas&In-Reply-To=%3C423A4145.6030300%40sten-net.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000220.html">
+   <LINK REL="Next"  HREF="000223.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] Thoughts and ideas</H1>
+    <B>Jannis Pohlmann</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Thoughts%20and%20ideas&In-Reply-To=%3C423A4145.6030300%40sten-net.de%3E"
+       TITLE="[InDE-devel] Thoughts and ideas">devel at sten-net.de
+       </A><BR>
+    <I>Fri Mar 18 03:47:33 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000220.html">[InDE-devel] r43 - in trunk: include src
+</A></li>
+        <LI>Next message: <A HREF="000223.html">[InDE-devel] Thoughts and ideas
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#221">[ date ]</a>
+              <a href="thread.html#221">[ thread ]</a>
+              <a href="subject.html#221">[ subject ]</a>
+              <a href="author.html#221">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi all.
+
+I observed progress on the project management a little and tested the 
+NewClassDialog
+recently. Although there are good approaches I'd like to point out some 
+weak points regarding
+some of our concepts.
+
+The project management lacks of strategy although that's not your fault, 
+Jochen. I established
+preprocessor defines for the project type and that's been a really bad 
+idea. We should
+better implement things like that using enum typedefs.
+
+Currently, nearly all actions concerning a project are handled by 
+ProjectBrowser. Same with
+actions concerning the filesystem. That's ok for now but in the near 
+future there are
+far more objects which will need to access those actions/methods. The 
+class browser or the
+CtagHandle for example. This means, instead of using ProjectBrowser for 
+all things concerning
+the projects we should use some meta-class like objects. I'd call them 
+Project and ProjectManager
+(a class managing a FXObjectListOf&lt;Project*&gt;, handling stuff like 
+getProjectByPath(),
+getCurrentProject() and so on).
+This would have many advantages. For example, project and class browsers 
+could set the current
+project independently whenever they get focus or you select a certain 
+item in them.
+We also could add functions like
+     enum ProjectType Project::getProjectType()
+to those classes.
+
+Instead of a static list of natively supported licenses we could simply 
+provide a dialog
+to change the content of the LICENSE file (lets say in the main project 
+dir). Depending on files
+anywhere in the filesystem always equals chaos. Same applies to the 
+syntax file. We simply could
+support a syntax file located in the user's InDE directory (copied there 
+on first startup), not
+allowing the user to select a file located anywhere. A little dialog to 
+edit it using an instance
+of the Edit class (or a class similar to TabEditor just without tabs) 
+would be enough, then.
+
+For the syntax highlighting we will also need a more elegant color 
+editing solution than Adie uses.
+In Adie, some rule colors of different styles overlap due to similar names.
+
+What we'll probably need some day is a kind of terminal widget. I 
+already tried to implement one
+using FOX during the last days but it seems to be too complex for the 
+moment.
+
+Remember we wanted to release an early version of InDE this weekend? I 
+guess we won't. There's
+to much reformation needed to get things working.
+
+Yet, I'm proud our project actually evolves and there's still notable 
+activity and interest on
+the part of the (little team of) developers.
+
+So what will be the next steps?
+Jochen, I know you'd like to schedule a release as early as possible but 
+if we don't want to
+stubmle into chaos we will have to discuss and share exchange views once 
+again before (likely)
+reorganizing part of the code.
+
+Kind regards,
+Jannis
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000220.html">[InDE-devel] r43 - in trunk: include src
+</A></li>
+	<LI>Next message: <A HREF="000223.html">[InDE-devel] Thoughts and ideas
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#221">[ date ]</a>
+              <a href="thread.html#221">[ thread ]</a>
+              <a href="subject.html#221">[ subject ]</a>
+              <a href="author.html#221">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

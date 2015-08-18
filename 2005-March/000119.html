@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] internationalization &amp; ctags
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-March/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20internationalization%20%26%20ctags&In-Reply-To=%3C42286C5B.4060203%40sten-net.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000120.html">
+   <LINK REL="Next"  HREF="000121.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] internationalization &amp; ctags</H1>
+    <B>Jannis Pohlmann</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20internationalization%20%26%20ctags&In-Reply-To=%3C42286C5B.4060203%40sten-net.de%3E"
+       TITLE="[InDE-devel] internationalization &amp; ctags">devel at sten-net.de
+       </A><BR>
+    <I>Fri Mar  4 15:10:35 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000120.html">[InDE-devel] internationalization &amp; ctags
+</A></li>
+        <LI>Next message: <A HREF="000121.html">[InDE-devel] internationalization &amp; ctags
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#119">[ date ]</a>
+              <a href="thread.html#119">[ thread ]</a>
+              <a href="subject.html#119">[ subject ]</a>
+              <a href="author.html#119">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Jochen.
+
+&gt;<i>The question is, do we need iterating?
+</I>&gt;<i>But reading only those sections at those places, where we need it, would
+</I>&gt;<i>save memory, keep the code cleaner, minimize sources for bugs.
+</I>&gt;<i>Maybe something like FXbool GUIdirty may be used to indicate, that
+</I>&gt;<i>several widgets should reread the settings and mark themself dirty.
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>We won't probably need FXbool GUIdirty since there are only two points 
+in the code where settings
+are changed:
+
+    1. InDE settings dialog
+    2. Project settings dialog
+
+This means, directly after executing those dialogs settings are stored 
+and written to the specific
+settings file. (We do that in the quit/close project methods once again, 
+just to be sure they are written).
+
+At the moment, we have one variable for each option of the settings. We 
+won't need the onUpd... and onCmd..
+methods if we rewrite the settings dialogs so that they are given the 
+values they need before execution (this would
+reduce the types of dialogs to one (don't know whether this was 
+explained clearly enough).
+
+Instead of calling e.g. settings.editor.font we would use 
+settings-&gt;find(&quot;EDITOR&quot;)-&gt;find(&quot;font&quot;). All we have to make
+sure is to add a default value for each variable not being found while 
+parsing the settings file (if we call
+settings-&gt;find(&quot;EDITOR&quot;)-&gt;find(&quot;font&quot;) without an existing section 
+&quot;EDITOR&quot; we would run into a segfault).
+
+As you can see, our first attempt of MainWindow might be totally 
+revised. The reason why it's hard to merge
+my latest stuff into SVN - I am trying to avoid that you have to arrange 
+with a new codebase every few days.
+But the codebase yet isn't good enough to develop upon.
+
+My suggestion therefor is that you use the current base for testing and 
+working on the project management as
+well as creating class with both, header and source file (including a 
+license header depending on the project settings)
+and so on. That seem to be the things you are highly interested in. 
+Luckily, we're writing on an OO program so
+merging those parts with a new code base won't cost much of time.
+
+During this, my part would be to heavily think about (and finally, 
+write) a new well organized, as compact as
+possible structure for InDE. I will also have a look into other, similar 
+programs and how they are structured.
+
+What do you think?
+
+Kind regards,
+Jannis
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000120.html">[InDE-devel] internationalization &amp; ctags
+</A></li>
+	<LI>Next message: <A HREF="000121.html">[InDE-devel] internationalization &amp; ctags
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#119">[ date ]</a>
+              <a href="thread.html#119">[ thread ]</a>
+              <a href="subject.html#119">[ subject ]</a>
+              <a href="author.html#119">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

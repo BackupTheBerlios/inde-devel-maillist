@@ -1,0 +1,350 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] r42 - in trunk: include src
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-March/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20r42%20-%20in%20trunk%3A%20include%20src&In-Reply-To=%3C200503171615.j2HGFBTs030998%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000208.html">
+   <LINK REL="Next"  HREF="000217.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] r42 - in trunk: include src</H1>
+    <B>Jochen A. Ra&#223;ler at BerliOS</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20r42%20-%20in%20trunk%3A%20include%20src&In-Reply-To=%3C200503171615.j2HGFBTs030998%40sheep.berlios.de%3E"
+       TITLE="[InDE-devel] r42 - in trunk: include src">j_a_r at sheep.berlios.de
+       </A><BR>
+    <I>Thu Mar 17 17:15:11 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000208.html">[InDE-devel] r41 - in trunk: include src
+</A></li>
+        <LI>Next message: <A HREF="000217.html">[InDE-devel] r42 - in trunk: include src
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#215">[ date ]</a>
+              <a href="thread.html#215">[ thread ]</a>
+              <a href="subject.html#215">[ subject ]</a>
+              <a href="author.html#215">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: j_a_r
+Date: 2005-03-17 17:15:10 +0100 (Thu, 17 Mar 2005)
+New Revision: 42
+
+Added:
+   trunk/include/NewClassDialog.h
+   trunk/src/NewClassDialog.cpp
+Modified:
+   trunk/src/MainWindow.cpp
+Log:
+added NewClassDialog, yet without functionality
+
+Added: trunk/include/NewClassDialog.h
+===================================================================
+--- trunk/include/NewClassDialog.h	2005-03-17 14:24:36 UTC (rev 41)
++++ trunk/include/NewClassDialog.h	2005-03-17 16:15:10 UTC (rev 42)
+@@ -0,0 +1,89 @@
++/*
++ * InDE - Fast, pragmatic C++ IDE
++ * Copyright (C) 2005 	InDE Development Team
++ *						see AUTHOR file for more information
++ *
++ * This program is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU General Public License
++ * as published by the Free Software Foundation; either version 2
++ * of the License, or (at your option) any later version.
++ *
++ * This program is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ * GNU General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this program; if not, write to the Free Software
++ * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
++ */
++
++#ifndef NEWCLASSDIALOG
++#define NEWCLASSDIALOG
++
++#include &lt;fx.h&gt;
++#include &quot;MainWindow.h&quot;
++
++class NewClassDialog : public FXDialogBox
++{
++	FXDECLARE(NewClassDialog)
++
++	public:
++		FXString		name;
++		FXbool			source;
++		FXbool			header;
++		FXint			sourceDir;
++		FXint			includeDir;
++		FXint			classType;
++
++	private:
++		FXDataTarget	tgtName;
++		FXDataTarget	tgtSource;
++		FXDataTarget	tgtHeader;
++		FXDataTarget	tgtSourceDir;
++		FXDataTarget	tgtIncludeDir;
++		FXDataTarget	tgtClassType;
++
++		MainWindow 		*mw;
++
++	protected:
++		NewClassDialog() {}
++		NewClassDialog(const NewClassDialog&amp;);
++		NewClassDialog&amp; operator=(const NewClassDialog&amp;);
++		
++	public:
++		/*
++			Constructor: NewClassDialog
++		*/
++		NewClassDialog(FXWindow* owner, const FXString&amp; title);
++
++		/*
++			Destructor: ~NewClassDialog
++		*/
++		~NewClassDialog();
++
++		/*
++			Function: create
++		*/
++		virtual void create();
++
++		/*
++			Function: check
++
++			Checks if the user provided us with the needed information
++		*/
++		FXbool check();
++
++		/*
++			Function: run
++
++			executes the dialog. 
++		*/
++		void run(const ProjectSettings* path);
++		
++};
++
++
++
++
++#endif // NEWCLASSDIALOG
+
+Modified: trunk/src/MainWindow.cpp
+===================================================================
+--- trunk/src/MainWindow.cpp	2005-03-17 14:24:36 UTC (rev 41)
++++ trunk/src/MainWindow.cpp	2005-03-17 16:15:10 UTC (rev 42)
+@@ -4,6 +4,7 @@
+ #include &quot;NewProjectWizard.h&quot;
+ #include &quot;ProjectSettingsDialog.h&quot;
+ #include &quot;FileSystem.h&quot;
++#include &quot;NewClassDialog.h&quot;
+ 
+ FXDEFMAP(MainWindow) MainWindowMap[] = {
+ 	FXMAPFUNC(SEL_COMMAND,		MainWindow::ID_QUIT,				MainWindow::onQuit),
+@@ -175,8 +176,7 @@
+ 
+ 	new FXTabItem(browserFrame, &quot;Project&quot;);
+ 	FXVerticalFrame* frm5 	= new FXVerticalFrame(browserFrame, LAYOUT_FILL_X|LAYOUT_FILL_Y|FRAME_RAISED, 0, 0, 0, 0, 5, 5, 5, 5, 0, 0);
+-	FXVerticalFrame* frm6 	= new FXVerticalFrame(frm5, LAYOUT_FILL_X|LAYOUT_FILL_Y|FRAME_LINE, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-	projectBrowser 			= new ProjectBrowser(frm6, this);
++	projectBrowser 			= new ProjectBrowser(frm5, this);
+ 	FXHorizontalFrame* frm7 = new FXHorizontalFrame(frm5, LAYOUT_FILL_X, 0, 0, 0, 0, 0, 0, 4, 0, 0, 4);
+ 	new FXLabel(frm7, &quot;Filter:&quot;, NULL, LAYOUT_CENTER_Y);
+ 	projectFilter 			= new FXComboBox(frm7, 25, NULL, 0, COMBOBOX_STATIC|LAYOUT_FILL_X|FRAME_SUNKEN|FRAME_THICK);
+@@ -199,6 +199,18 @@
+ 			break;
+ 
+ 		case ID_NEW_CLASS:
++			if (projects.no() &gt; 0)
++			{
++				NewClassDialog classDialog(this, &quot;Add file to project?&quot;);
++				FXString active = projectBrowser-&gt;getActiveProject();
++				int i;
++				for (i = 0; i &lt; projects.no(); ++i)
++				{
++					if (active == projects[i]-&gt;getProjectName())
++						break;
++				}
++				classDialog.run(projects[i]);
++			}
+ 			break;
+ 
+ 		case ID_OPEN_FILE:
+
+Added: trunk/src/NewClassDialog.cpp
+===================================================================
+--- trunk/src/NewClassDialog.cpp	2005-03-17 14:24:36 UTC (rev 41)
++++ trunk/src/NewClassDialog.cpp	2005-03-17 16:15:10 UTC (rev 42)
+@@ -0,0 +1,134 @@
++/*
++ * InDE - Fast, pragmatic C++ IDE
++ * Copyright (C) 2005 	InDE Development Team
++ *						see AUTHOR file for more information
++ *
++ * This program is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU General Public License
++ * as published by the Free Software Foundation; either version 2
++ * of the License, or (at your option) any later version.
++ *
++ * This program is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ * GNU General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this program; if not, write to the Free Software
++ * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
++ */
++
++#include &quot;NewClassDialog.h&quot;
++#include &quot;DialogTitle.h&quot;
++
++//////////////////////////////////////////////////
++// Message map
++FXDEFMAP(NewClassDialog) NewClassDialogMap[] = {
++};
++
++
++//////////////////////////////////////////////////
++// Object implementation
++FXIMPLEMENT(NewClassDialog, FXDialogBox, NewClassDialogMap, ARRAYNUMBER(NewClassDialogMap))
++
++
++
++//////////////////////////////////////////////////
++// Constructor
++NewClassDialog::NewClassDialog(FXWindow* owner, const FXString&amp; title)
++	:	FXDialogBox(owner, title, DECOR_ALL),
++		tgtName(name),
++		tgtSource(source),
++		tgtHeader(header),
++		tgtSourceDir(sourceDir),
++		tgtIncludeDir(includeDir),
++		tgtClassType(classType),
++		source(1),
++		header(1),
++		sourceDir(0),
++		includeDir(0),
++		classType(0)
++{
++	// get MainWindow
++	FXWindow *mainWindow = getOwner();
++	while (!dynamic_cast&lt;MainWindow*&gt;(mainWindow))
++		mainWindow = mainWindow-&gt;getOwner();
++	mw = dynamic_cast&lt;MainWindow*&gt;(mainWindow);
++
++	FXVerticalFrame *frm = new FXVerticalFrame(this, LAYOUT_FILL_X|LAYOUT_FILL_Y);
++	new DialogTitle(frm, &quot;create new class&quot;);
++
++	FXHorizontalFrame *hfrm;
++
++	hfrm = new FXHorizontalFrame(frm, LAYOUT_FILL_X);
++	new FXLabel(hfrm, &quot;Class name:&quot;);
++	new FXTextField(hfrm, 15, &amp;tgtName, FXDataTarget::ID_VALUE, TEXTFIELD_NORMAL);
++
++	hfrm = new FXHorizontalFrame(frm, LAYOUT_FILL_X);
++	new FXLabel(hfrm, &quot;Create:&quot;);
++	new FXCheckButton(hfrm, &quot;Source file&quot;, &amp;tgtSource, FXDataTarget::ID_VALUE);
++	new FXCheckButton(hfrm, &quot;Header file&quot;, &amp;tgtHeader, FXDataTarget::ID_VALUE);
++	
++	FXGroupBox *gp;
++	FXVerticalFrame *vfrm;
++
++	hfrm = new FXHorizontalFrame(frm, LAYOUT_FILL_X);
++	gp = new FXGroupBox(hfrm, &quot;Dir for source file&quot;, FRAME_LINE);
++	vfrm = new FXVerticalFrame(gp, LAYOUT_FILL_X|LAYOUT_FILL_Y);
++	new FXRadioButton(vfrm, &quot;source dir&quot;, 	&amp;tgtSourceDir, FXDataTarget::ID_OPTION+0);
++	new FXRadioButton(vfrm, &quot;include dir&quot;,	&amp;tgtSourceDir, FXDataTarget::ID_OPTION+1);
++	new FXRadioButton(vfrm, &quot;root dir&quot;, 	&amp;tgtSourceDir, FXDataTarget::ID_OPTION+2);
++	gp = new FXGroupBox(hfrm, &quot;Dir for include file&quot;, FRAME_LINE);
++	vfrm = new FXVerticalFrame(gp, LAYOUT_FILL_X|LAYOUT_FILL_Y);
++	new FXRadioButton(vfrm, &quot;include dir&quot;, 	&amp;tgtIncludeDir, FXDataTarget::ID_OPTION+0);
++	new FXRadioButton(vfrm, &quot;source dir&quot;, 	&amp;tgtIncludeDir, FXDataTarget::ID_OPTION+1);
++	new FXRadioButton(vfrm, &quot;root dir&quot;, 	&amp;tgtIncludeDir, FXDataTarget::ID_OPTION+2);
++
++	gp = new FXGroupBox(frm, &quot;Class type&quot;, FRAME_LINE|LAYOUT_FILL_X);
++	vfrm = new FXVerticalFrame(gp, LAYOUT_FILL_X|LAYOUT_FILL_Y);
++	new FXRadioButton(vfrm, &quot;C++ Class&quot;, 	&amp;tgtClassType, FXDataTarget::ID_OPTION+0);
++	new FXRadioButton(vfrm, &quot;Python Class&quot;, &amp;tgtClassType, FXDataTarget::ID_OPTION+1);
++	new FXRadioButton(vfrm, &quot;Java Class&quot;, 	&amp;tgtClassType, FXDataTarget::ID_OPTION+2);
++
++	hfrm = new FXHorizontalFrame(frm, LAYOUT_FILL_X);
++	new FXButton(hfrm, &quot;&amp;Cancel&quot;, NULL, this, FXDialogBox::ID_CANCEL, BUTTON_DEFAULT|LAYOUT_LEFT|FRAME_RAISED|FRAME_THICK, 0, 0, 0, 0, 12, 12, 4, 4);	
++	new FXButton(hfrm, &quot;&amp;Ok&quot;, NULL, this, FXDialogBox::ID_ACCEPT, BUTTON_INITIAL|BUTTON_DEFAULT|LAYOUT_RIGHT|FRAME_RAISED|FRAME_THICK, 0, 0, 0, 0, 12, 12, 4, 4);	
++}
++
++
++//////////////////////////////////////////////////
++// Destructor
++NewClassDialog::~NewClassDialog()
++{
++}
++
++
++//////////////////////////////////////////////////
++// create
++void NewClassDialog::create()
++{
++	FXDialogBox::create();
++}
++
++
++//////////////////////////////////////////////////
++// check
++FXbool NewClassDialog::check()
++{
++}
++
++
++//////////////////////////////////////////////////
++// run
++void NewClassDialog::run(const ProjectSettings* path)
++{
++	// execute dialog
++	do
++	{
++		if (!execute(PLACEMENT_OWNER))
++		{
++			return;
++		}
++	} while (!check());
++}
++
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000208.html">[InDE-devel] r41 - in trunk: include src
+</A></li>
+	<LI>Next message: <A HREF="000217.html">[InDE-devel] r42 - in trunk: include src
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#215">[ date ]</a>
+              <a href="thread.html#215">[ thread ]</a>
+              <a href="subject.html#215">[ subject ]</a>
+              <a href="author.html#215">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

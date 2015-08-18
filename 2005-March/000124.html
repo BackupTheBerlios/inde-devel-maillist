@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] internationalization &amp; ctags
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-March/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20internationalization%20%26%20ctags&In-Reply-To=%3C4229DA9F.50101%40sten-net.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000123.html">
+   <LINK REL="Next"  HREF="000125.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] internationalization &amp; ctags</H1>
+    <B>Jannis Pohlmann</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20internationalization%20%26%20ctags&In-Reply-To=%3C4229DA9F.50101%40sten-net.de%3E"
+       TITLE="[InDE-devel] internationalization &amp; ctags">devel at sten-net.de
+       </A><BR>
+    <I>Sat Mar  5 17:13:19 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000123.html">[InDE-devel] internationalization &amp; ctags
+</A></li>
+        <LI>Next message: <A HREF="000125.html">[InDE-devel] internationalization &amp; ctags
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#124">[ date ]</a>
+              <a href="thread.html#124">[ thread ]</a>
+              <a href="subject.html#124">[ subject ]</a>
+              <a href="author.html#124">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Jochen.
+
+&gt;<i>Let me start a discussion about the &quot;new File&quot; menu command.
+</I>&gt;<i>
+</I>&gt;<i>Actually i added / changed the file menu to the following structure:
+</I>&gt;<i>
+</I>&gt;<i>File
+</I>&gt;<i>+ new &gt;
+</I>&gt;<i>  + new File
+</I>&gt;<i>  + new Source
+</I>&gt;<i>  + new Header
+</I>&gt;<i>  + new Class
+</I>&gt;<i>+ quit
+</I>&gt;<i>
+</I>&gt;<i>That is actually for testing several file creation functions, but i am
+</I>&gt;<i>not happy with that.
+</I>&gt;<i>
+</I>&gt;<i>My idea about this is - compared to existing IDE's - a very new
+</I>&gt;<i>approach:
+</I>&gt;<i>
+</I>&gt;<i>File
+</I>&gt;<i>+ new File
+</I>&gt;<i>...
+</I>&gt;<i>
+</I>&gt;<i>Project
+</I>&gt;<i>+ new File(s)
+</I>&gt;<i>  + Source
+</I>&gt;<i>  + Header
+</I>&gt;<i>  + Class
+</I>&gt;<i>...
+</I>&gt;<i>
+</I>&gt;<i>That means, if you use File -&gt; new File, you get a new, untitled file,
+</I>&gt;<i>which you have to store with &quot;save as&quot;, and maybe add it to the project
+</I>&gt;<i>by hand.
+</I>&gt;<i>Project -&gt; new File -&gt; Source (..) will also produce a new file, but you
+</I>&gt;<i>name it before it is created and add it to the project. Also it will be
+</I>&gt;<i>creating the license header, ask for creating other related files, add
+</I>&gt;<i>the file to SConstruct,....
+</I>&gt;<i>
+</I>Personally, I like creating files/classes by File -&gt; New -&gt; ...
+Especially if you want to create a class, source or header file without
+using the project manager these options would be better placed in the
+file menu.
+
+We could add a question &quot;Add file to project?&quot; for files that are
+opened in the editor but have no filename/are not saved yet.
+
+And if a project is opened the created files could be added automatically
+(either on save or after creation).
+
+&gt;<i>PS: does FOX have something like FXObjectList for objects, not for
+</I>&gt;<i>pointers to objects? I haven't found anything yet and therefore used a
+</I>&gt;<i>std::vector&lt;FXString&gt;. It is ok, works fine, uses a clear and well known
+</I>&gt;<i>API, but doing it the FOX way if FOX supports this, would be nicer ;)
+</I>&gt;<i>
+</I>Perhaps FXArray might  be interesting. It works like std::vector. You 
+have to include FXArray.h in
+order to use it.
+
+Regards,
+Jannis
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000123.html">[InDE-devel] internationalization &amp; ctags
+</A></li>
+	<LI>Next message: <A HREF="000125.html">[InDE-devel] internationalization &amp; ctags
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#124">[ date ]</a>
+              <a href="thread.html#124">[ thread ]</a>
+              <a href="subject.html#124">[ subject ]</a>
+              <a href="author.html#124">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

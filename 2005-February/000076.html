@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] release cycles
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-February/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20release%20cycles&In-Reply-To=%3C1108813212.1541.36.camel%40jogix.sojox%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000072.html">
+   <LINK REL="Next"  HREF="000068.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] release cycles</H1>
+    <B>Jochen Rassler</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20release%20cycles&In-Reply-To=%3C1108813212.1541.36.camel%40jogix.sojox%3E"
+       TITLE="[InDE-devel] release cycles">jochen at cornmania.de
+       </A><BR>
+    <I>Sat Feb 19 12:40:12 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000072.html">[InDE-devel] release cycles
+</A></li>
+        <LI>Next message: <A HREF="000068.html">[InDE-devel] release cycles
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#76">[ date ]</a>
+              <a href="thread.html#76">[ thread ]</a>
+              <a href="subject.html#76">[ subject ]</a>
+              <a href="author.html#76">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Jannis.
+
+Am Freitag, den 18.02.2005, 22:52 +0100 schrieb Jannis Pohlmann:
+&gt;<i> I read this in the Xfce4-dev mailinglist recently:
+</I>&gt;<i> 
+</I>&gt;<i> &quot;We have basicly two branches, HEAD and xfce_4_2. HEAD is the 
+</I>&gt;<i> development branch, where you can break things, and which will result in 
+</I>&gt;<i> 4.4.0. xfce_4_2 is the stable branch which gets only bugfixes, and from 
+</I>&gt;<i> which maintaince releases for 4.2 will be made.&quot;
+</I>
+Yes, that's the way version control works. There are two things here:
+TAGS and BRANCHES.
+If you check in a revision of your code that seems to be a milestone or
+noteworthy in any other way, e.g. first check in of a new feature, you
+can give that revision a Tag. So, if you later want to see history or
+check out the initial version of this feature,... then you do not have
+to remember the revision number (maybe something like rev. 2763) but the
+Tag. Say you import initial version with cvs support your Tag may be
+called CVS. So to find the cvs add, you just have `svn CVS checkout` to
+find it again.
+The other things are branches. If you add a branch, it is initially just
+a copy of the source of data. For example you are releasing InDE 1.0.0
+then you might set a new branch called STABLE. This branch is for the
+maintanance of the stable line, the normal svn (mostly called HEAD) tree
+is the development tree.
+If you find a bug in the stable version and you want to fix it, you can
+fix it in the stable version (without changing the development version).
+
+This may be not the best example. Actually you see the branches in more
+detail in libgcj. They use the HEAD branch for normal library
+development and the GUI branch for special development concerning the
+GUI classes - this are AWT and Swing. Actually they are merging those
+branches to get the GUI features beack to the mainline. 
+This may be of some interest, if you fear that work on special parts of
+you system may force changes in other parts, but which are under heavy
+development for other features. So you can develop you things in your
+branch (here GUI) without concerning about the ongoing development in
+the main branch. As soon as you think your work is done or fits the
+needs and stability criteria and you may wish to add it to the main
+branch, you just merge it in.
+
+And just another word to the repository and the branches. SVN and CVS do
+not really save files, the change diff history files. Yes, the first
+check in of a file and the diff are quasi the same. But later on for a
+new revision there is only a very little diff file to be stored, instead
+of a (possible very large) file. The version control stores every
+revision of every file, so this method saves you lot of storage
+capacity.
+Based on this, opening a new branch is not a real copy, but just a link
+to a certain revision of a file. The two trees now have the same code
+base, but differ in future change history.
+
+Hope, things get a bit clearer now.... if not, feel free to ask.
+&gt;<i> 
+</I>&gt;<i> I don't know whether we are able to create two directories in our main 
+</I>&gt;<i> SVN but I suppose this is possible. So this perhaps would be a fine 
+</I>&gt;<i> solution once we have a stable program: One development tree and one for 
+</I>&gt;<i> the stable version which only gets bugfixes. What do you think?
+</I>&gt;<i> 
+</I>This is and must be possible.
+I think branches will not only be the tool of choice for maintaining
+stable versions, but may also be very important for several larger
+features, that may have the need to change more fundamental things in
+the (whole) project code.
+
+To get things even more clear, look at the graph for gcc versions:
+<A HREF="http://gcc.gnu.org/develop.html">http://gcc.gnu.org/develop.html</A> down at calender. There you see the main
+development line and different branches. This seems to fit for InDE,
+too, although in a not so large tree.
+
+regards
+	Jochen
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000072.html">[InDE-devel] release cycles
+</A></li>
+	<LI>Next message: <A HREF="000068.html">[InDE-devel] release cycles
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#76">[ date ]</a>
+              <a href="thread.html#76">[ thread ]</a>
+              <a href="subject.html#76">[ subject ]</a>
+              <a href="author.html#76">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

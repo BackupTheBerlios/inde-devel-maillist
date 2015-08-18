@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] Project configuration file
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-February/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Project%20configuration%20file&In-Reply-To=%3C420F2BA1.3000406%40sten-net.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000009.html">
+   <LINK REL="Next"  HREF="000011.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] Project configuration file</H1>
+    <B>Jannis Pohlmann</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Project%20configuration%20file&In-Reply-To=%3C420F2BA1.3000406%40sten-net.de%3E"
+       TITLE="[InDE-devel] Project configuration file">devel at sten-net.de
+       </A><BR>
+    <I>Sun Feb 13 11:27:45 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000009.html">[InDE-devel] Project configuration file
+</A></li>
+        <LI>Next message: <A HREF="000011.html">[InDE-devel] Project configuration file
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#10">[ date ]</a>
+              <a href="thread.html#10">[ thread ]</a>
+              <a href="subject.html#10">[ subject ]</a>
+              <a href="author.html#10">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Jochen Rassler schrieb:
+
+&gt;<i>Hi Jannis.
+</I>&gt;<i>
+</I>&gt;<i>Am Sonntag, den 13.02.2005, 01:04 +0100 schrieb Jannis Pohlmann:
+</I>&gt;<i>
+</I>&gt;&gt;<i>Hi Jochen.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>I have kind of a task for you.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>You know we want to implement support projects (a collection of source 
+</I>&gt;&gt;<i>and header files) in InDE. Therefor we
+</I>&gt;&gt;<i>need a file where all project information is written to.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>FXSettings supports ini-like files, so this is what we should use.
+</I>&gt;&gt;<i>My task for you: Think about which sections we will need for this and 
+</I>&gt;&gt;<i>which variables.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>I'll start with a few basic things:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>Section: INFO
+</I>&gt;&gt;<i>Variable: PROJECT_NAME, PROJECT_DESCRIPTION, PROJECT_VERSION, 
+</I>&gt;&gt;<i>PROJECT_TARGET (executable, shared/static library)
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>Section: PATHS
+</I>&gt;&gt;<i>Variables: INCLUDE_PATHS, LIBRARY_PATHS, SOURCE_DIR (of project), 
+</I>&gt;&gt;<i>INCLUDE_DIR (of project), BUILD_DIR
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>Section: DEPENDENCIES
+</I>&gt;&gt;<i>Variables: LIBRARIES
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>Section: BUILD
+</I>&gt;&gt;<i>Variables: BUILD_TYPE (debug/release)
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>Feel free to criticise, add, remove, change them the way you think it 
+</I>&gt;&gt;<i>makes sense. All you have to concentrate on is what things are
+</I>&gt;&gt;<i>needed for all kinds of projects that come to your mind. Hehe.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;<i>Where do you want to put these config files?
+</I>&gt;<i>One central point or something like Eclipse's workspaces?
+</I>&gt;<i>
+</I>&gt;<i>Jochen
+</I>&gt;<i>
+</I>Hi Jochen.
+
+I thought about something like this:
+
+InDE will have a global variable which defines the base directory for 
+all projects (that's
+how most of the IDEs work, I think - Eclipse, Anjuta etc.). Of course it 
+will appear in some
+kind of global settings dialog.
+
+The user creates a project and defines name and version number for it. 
+InDE will then create
+a project directory which includes both (e.g. InDE-0.0.1 or FOX-1.4). In 
+this directory a
+project configuration file (let's call it &quot;project.ini&quot; or 
+&quot;project.cfg&quot;) is placed by InDE.
+All project settings (divided into severeal sections - see my last mail) 
+are written into
+this file.
+
+An example would be:
+
+# Default InDE settings:
+Linux: /usr/local/share/InDE/InDE.cfg
+Windows (Registry): HKEY_LOCAL_MACHINE/Software/InDE/
+
+# User-wide InDE settings:
+Linux: /home/jannis/.InDE/InDE.cfg
+Windows (Registry): HKEY_CURRENT_USER/Software/InDE/
+
+# Example base directory
+Linux: /home/jannis/Projects
+Windows: C:\Projects
+
+# Example project directories
+Linux: /home/jannis/Projects/InDE-0.0.1/
+Windows: C:\Projects\InDE-0.0.1
+
+Linux: /home/jannis/Projects/FOX-1.4
+Windows: C:\Projects\FOX-1.4
+
+# Example project configurations
+Linux: /home/jannis/Projects/InDE-0.0.1/project.cfg
+Windows: C:\Projects\InDE-0.0.1\project.cfg
+
+Linux: /home/jannis/Projects/FOX-1.4/project.cfg
+Windows: C:\Projects\FOX-1.4\project.cfg
+
+--
+
+That's it. Perhaps there will be some more files besides project.cfg
+which have to be initially put into the project directory like e.g.
+SConstructs or something like this. We'll see.
+
+That should be enough for the moment.
+
+If you don't have ideas about import configuration sections/variables
+for project.cfg, I'll create the &quot;Create new project&quot; dialog. This will
+be a first example of how the other dialogs could be designed and how
+they could be integrated into the main window class. That having done
+I will be able to share the code via SVN so we can discuss about the
+next steps.
+
+Any objections?
+
+Regards,
+Jannis
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000009.html">[InDE-devel] Project configuration file
+</A></li>
+	<LI>Next message: <A HREF="000011.html">[InDE-devel] Project configuration file
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#10">[ date ]</a>
+              <a href="thread.html#10">[ thread ]</a>
+              <a href="subject.html#10">[ subject ]</a>
+              <a href="author.html#10">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

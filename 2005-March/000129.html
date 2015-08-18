@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] Delay
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-March/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Delay&In-Reply-To=%3C1110274779.1541.20.camel%40jogix.sojox%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000127.html">
+   <LINK REL="Next"  HREF="000130.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] Delay</H1>
+    <B>Jochen Rassler</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Delay&In-Reply-To=%3C1110274779.1541.20.camel%40jogix.sojox%3E"
+       TITLE="[InDE-devel] Delay">jochen at cornmania.de
+       </A><BR>
+    <I>Tue Mar  8 10:39:39 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000127.html">[InDE-devel] Delay
+</A></li>
+        <LI>Next message: <A HREF="000130.html">[InDE-devel] Delay
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#129">[ date ]</a>
+              <a href="thread.html#129">[ thread ]</a>
+              <a href="subject.html#129">[ subject ]</a>
+              <a href="author.html#129">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Jannis.
+
+Am Montag, den 07.03.2005, 21:21 +0100 schrieb Jannis Pohlmann:
+&gt;<i> Hi Jochen.
+</I>&gt;<i> 
+</I>&gt;<i> I apologize the delay of my commit but there are some things I'm still 
+</I>&gt;<i> working on.
+</I>
+As far as i have another exam in a few hours i had no time to work on
+InDE this weekend. 
+I have some important dates this evening and tomorrow, so i will go on
+to InDE thursday. Then there is a bit more time for the next two, maybe
+three weeks, so things will grow ;)
+&gt;<i> 
+</I>&gt;<i> The settings API is already done. We won't need to load the settings 
+</I>&gt;<i> file from
+</I>&gt;<i> ~/.foxrc/FoxDefault/InDE but instead have a file which is called 
+</I>&gt;<i> ~/.InDE/settings.cfg
+</I>
+why *.cfg? Is this meant for Windows compatibility?
+
+&gt;<i> The functionality provided by the API can also be used for the project 
+</I>&gt;<i> settings.
+</I>
+I will have a look at it and arrange the project settings code.
+
+&gt;<i> 
+</I>&gt;<i> The tabbed editor already has minimalistic functionality like opening, 
+</I>&gt;<i> closing
+</I>&gt;<i> and saving one or all opened files and adjusting the font. That's ok for 
+</I>&gt;<i> now and
+</I>&gt;<i> I will further work on that after my commit.
+</I>
+Nice to hear
+
+&gt;<i> 
+</I>&gt;<i> Currently, I rewrite my SettingsDialog after moving the functionality to 
+</I>&gt;<i> load
+</I>&gt;<i> and store the values it modifies into the class itself (instead of 
+</I>&gt;<i> MainWindow).
+</I>&gt;<i> There are some generic thoughts about what should be in MainWindow and what
+</I>&gt;<i> in the dialogs/widgets but I will report on that later.
+</I>
+ok
+
+&gt;<i> 
+</I>&gt;<i> Next thing: I had a look into some documentation tools. I tested doxygen 
+</I>&gt;<i> for example,
+</I>&gt;<i> but it didn't satisfy me. So I went for NaturalDocs 
+</I>&gt;<i> (www.naturaldocs.org) which
+</I>&gt;<i> offers very clean documentation syntax and neat looking layout. We can 
+</I>&gt;<i> discuss this
+</I>&gt;<i> on the list but my next commit will already include NaturalDocs 
+</I>&gt;<i> documentated headers
+</I>&gt;<i> for all classes.
+</I>&gt;<i> 
+</I>&gt;<i> And another topic I'd shortly report about: I know you're working on the 
+</I>&gt;<i> project browser
+</I>&gt;<i> so I tweaked the filesystem browser a little bit. There are context 
+</I>&gt;<i> menus for directories
+</I>&gt;<i> and files now, both for opening one or more files and importing files 
+</I>&gt;<i> and directories.
+</I>&gt;<i> They already use the minimalistic TabEditor API which you will get to 
+</I>&gt;<i> know tomorrow, I
+</I>&gt;<i> hope.
+</I>
+The project browser is nearly finished. Things that are left to do are
+the savings of the file lists and in InDE itself (not in the project
+browser) the additions of files to the browser. 
+As far as i see it is more sensefull to wait for your code to be checked
+in to finish the browser. So i do not need to rewrite this code.
+
+But it will only be a question of few hours to implement and test.
+
+And some artworks are missing.... ;) 
+
+BTW, while implementing the project browser i thought about possible
+project structures.
+One may wish to have a src/ dir and then split some modules to several
+subdirs. E.g. 
+src/main.cpp
+src/some_other_stuff.cpp
+src/module1/module1_implementation.cpp
+src/module2/module2_implementation.cpp
+...
+
+I haven't included support for this yet. But i will have a look at this
+later (for InDE &gt; 0.1).
+
+My primaryly plans are to get the basic project browser to work, include
+it to InDE functionality. After that the inclusion of the GPL and LGPL
+headers for new files will be added.
+As soon as the project settings work with the new structure for
+mainwindow,... i will start implementing the SConstruct file creation,
+which will be the hardest job of this list.
+
+As soon as this work is done, i am fine to have an initial release.
+Hopefully we can get our timelines together so far.
+Maybe we can run for the weekend of March 18th-20th?
+
+regards,
+	Jochen
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000127.html">[InDE-devel] Delay
+</A></li>
+	<LI>Next message: <A HREF="000130.html">[InDE-devel] Delay
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#129">[ date ]</a>
+              <a href="thread.html#129">[ thread ]</a>
+              <a href="subject.html#129">[ subject ]</a>
+              <a href="author.html#129">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

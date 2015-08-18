@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] New SVN structure; New stuff commited to SVN
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-February/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20New%20SVN%20structure%3B%20New%20stuff%20commited%20to%20SVN&In-Reply-To=%3C42188CB8.2010005%40sten-net.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000083.html">
+   <LINK REL="Next"  HREF="000089.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] New SVN structure; New stuff commited to SVN</H1>
+    <B>Jannis Pohlmann</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20New%20SVN%20structure%3B%20New%20stuff%20commited%20to%20SVN&In-Reply-To=%3C42188CB8.2010005%40sten-net.de%3E"
+       TITLE="[InDE-devel] New SVN structure; New stuff commited to SVN">devel at sten-net.de
+       </A><BR>
+    <I>Sun Feb 20 14:12:24 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000083.html">[InDE-devel] New SVN structure; New stuff commited to SVN
+</A></li>
+        <LI>Next message: <A HREF="000089.html">[InDE-devel] New SVN structure; New stuff commited to SVN
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#86">[ date ]</a>
+              <a href="thread.html#86">[ thread ]</a>
+              <a href="subject.html#86">[ subject ]</a>
+              <a href="author.html#86">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Jochen Rassler schrieb:
+
+&gt;<i>Ei!
+</I>&gt;<i>
+</I>&gt;<i>Am Samstag, den 19.02.2005, 16:17 +0100 schrieb Jannis Pohlmann:
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>&gt;&gt;<i>Holla.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>I have restructured our SVN. We now have:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>trunk/
+</I>&gt;&gt;<i>tags/
+</I>&gt;&gt;<i>branches/
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>trunk/ is the development directory where stuff is commited to, normally.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>tags/ is going to be the base directory for releases. Examples: 
+</I>&gt;&gt;<i>tags/0.1, tags/0.2 ... and some day tags/1.0
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>branches/ could be used if we wanted to test and implement certain 
+</I>&gt;&gt;<i>features without completely rewriting
+</I>&gt;&gt;<i>the actual codebase and so on.
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>As far as i've understood the tags and branches, we can use tha tags for
+</I>&gt;<i>the development snapshot releases (0.1.x, 0.2.x), but should open new
+</I>&gt;<i>branches for the stable releases, to integrate bugfixes without changing
+</I>&gt;<i>the code base
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Yes, might be better. I'm not sure which one to use for development 
+snapshots and which one
+for releases. I read the subversion book at 
+<A HREF="http://svnbook.red-bean.com/en/1.0/index.html">http://svnbook.red-bean.com/en/1.0/index.html</A> (especially
+the part about tags and branches is interesting). Perhaps you could have 
+a look at that, too.
+
+&gt;&gt;<i>--
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>I have commited the new, better codebase to SVN. Jochen, if you want to 
+</I>&gt;&gt;<i>implement a project settings dialog
+</I>&gt;&gt;<i>you can get inspirations from SettingsDialog. NewProjectWizard can't use 
+</I>&gt;&gt;<i>the access methods you wrote since
+</I>&gt;&gt;<i>there might already be a project opened. But the rewritten 
+</I>&gt;&gt;<i>NewProjectWizard can of course be seen as a standard
+</I>&gt;&gt;<i>way to write dialogs without direct access to the settings structures 
+</I>&gt;&gt;<i>(see the dialogs specs regarding this).
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>Yes, i know. i hadn't cared about the data. I wanted to build up the GUI
+</I>&gt;<i>in the first iteration and thinking about what else is needed, before
+</I>&gt;<i>going to implement the data connections.
+</I>&gt;<i>But that was the work, that you've done before i had any chance.
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>I'm sorry about that. Hope the &quot;specs&quot; I composed are ok.
+
+Jannis
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000083.html">[InDE-devel] New SVN structure; New stuff commited to SVN
+</A></li>
+	<LI>Next message: <A HREF="000089.html">[InDE-devel] New SVN structure; New stuff commited to SVN
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#86">[ date ]</a>
+              <a href="thread.html#86">[ thread ]</a>
+              <a href="subject.html#86">[ subject ]</a>
+              <a href="author.html#86">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

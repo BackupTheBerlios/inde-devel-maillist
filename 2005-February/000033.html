@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] Major problem on passing settings struct to dialogs/widgets
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-February/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Major%20problem%20on%20passing%20settings%20struct%20to%20dialogs/widgets&In-Reply-To=%3C4210B31B.1090102%40sten-net.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000040.html">
+   <LINK REL="Next"  HREF="000034.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] Major problem on passing settings struct to dialogs/widgets</H1>
+    <B>Jannis Pohlmann</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Major%20problem%20on%20passing%20settings%20struct%20to%20dialogs/widgets&In-Reply-To=%3C4210B31B.1090102%40sten-net.de%3E"
+       TITLE="[InDE-devel] Major problem on passing settings struct to dialogs/widgets">devel at sten-net.de
+       </A><BR>
+    <I>Mon Feb 14 15:18:03 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000040.html">[InDE-devel] [Q1.3, Q1.4] How should settings be stored in the MainWindow class?
+</A></li>
+        <LI>Next message: <A HREF="000034.html">[InDE-devel] Major problem on passing settings struct to dialogs/widgets
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#33">[ date ]</a>
+              <a href="thread.html#33">[ thread ]</a>
+              <a href="subject.html#33">[ subject ]</a>
+              <a href="author.html#33">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Jochen.
+
+I am working on the settings dialog at the moment and I noticed a major 
+problem we would ran into if we passed
+our settings structs (both, project and InDE) to every dialog/widget:
+
+Whenever a dialog changes a settings option (e.g. 
+settings-&gt;editor.colors.foreColor = FXRGB(0, 0, 0)), every
+widget will still have to update its state. Normally this would be done 
+by onUpd... and onCmd... but we can't use them
+this way if the input fields of our dialogs aren't by a selector 
+connected to such functions. That means
+we would have to update each widgets state manually (Unthinkable!).
+
+The much more effective solution would look like this (you can see this 
+in Adie):
+
+- MainWindow has all variables in our structs (loading and storing them 
+will be as easy as before).
+
+- MainWindow has a two methods for each variable, like e.g.:
+    MainWindow::onUpdTextForeColor
+    MainWindow::onCmdTextForeColor
+
+- These functions are connected with a selector, like e.g.:
+    MainWindow::ID_TEXTFORECOLOR
+
+- every dialog / widget can use these selectors to read or change the 
+variables, like e.g.:
+    new FXColorWell(matrix, FXRGB(0,0,0), getParent(), 
+MainWindow::ID_TEXTFORECOLOR)
+
+That would do it. We will have to design many a dialog and widget so we 
+should use this for rapid development.
+Of course the effort for adding a settings option to MainWindow will be 
+a little higher. Yet, I think we have
+to do it this way.
+
+What are your thoughts about it? Perhaps you could take a look into 
+Adie's Preferences.cpp and TextWindow.cpp.
+Adie stores all options directly in the TextWindow object - but we still 
+could use our structs in order to
+give them a little more structure.
+
+Regards,
+Jannis
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000040.html">[InDE-devel] [Q1.3, Q1.4] How should settings be stored in the MainWindow class?
+</A></li>
+	<LI>Next message: <A HREF="000034.html">[InDE-devel] Major problem on passing settings struct to dialogs/widgets
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#33">[ date ]</a>
+              <a href="thread.html#33">[ thread ]</a>
+              <a href="subject.html#33">[ subject ]</a>
+              <a href="author.html#33">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

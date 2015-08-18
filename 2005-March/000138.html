@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] Instructions: Using NaturalDocs for generating	API docs
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-March/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Instructions%3A%20Using%20NaturalDocs%20for%20generating%0A%09API%20docs&In-Reply-To=%3C1110395890.1541.7.camel%40jogix.sojox%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000132.html">
+   <LINK REL="Next"  HREF="000142.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] Instructions: Using NaturalDocs for generating	API docs</H1>
+    <B>Jochen Rassler</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Instructions%3A%20Using%20NaturalDocs%20for%20generating%0A%09API%20docs&In-Reply-To=%3C1110395890.1541.7.camel%40jogix.sojox%3E"
+       TITLE="[InDE-devel] Instructions: Using NaturalDocs for generating	API docs">jochen at cornmania.de
+       </A><BR>
+    <I>Wed Mar  9 20:18:10 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000132.html">[InDE-devel] Instructions: Using NaturalDocs for generating API docs
+</A></li>
+        <LI>Next message: <A HREF="000142.html">[InDE-devel] Instructions: Using NaturalDocs for generating	API docs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#138">[ date ]</a>
+              <a href="thread.html#138">[ thread ]</a>
+              <a href="subject.html#138">[ subject ]</a>
+              <a href="author.html#138">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Jannis.
+
+Am Dienstag, den 08.03.2005, 20:28 +0100 schrieb Jannis Pohlmann:
+&gt;<i> Hi Jochen.
+</I>&gt;<i> 
+</I>&gt;<i> As already mentioned, I'd like to use NaturalDocs (naturaldocs.org) in 
+</I>&gt;<i> order to generate the API documentation
+</I>&gt;<i> for InDE.
+</I>&gt;<i> 
+</I>&gt;<i> I've commited my latest work to SVN and added a file called
+</I>&gt;<i>    
+</I>&gt;<i>     gendoc.sh
+</I>&gt;<i> 
+</I>&gt;<i> You can download NaturalDocs, and (for example) move it to
+</I>&gt;<i>    
+</I>&gt;<i>     /opt/NaturalDocs/
+</I>&gt;<i> 
+</I>&gt;<i> If you then create a symlink like this:
+</I>&gt;<i> 
+</I>&gt;<i>     ln -s /opt/NaturalDocs/NaturalDocs /usr/local/bin/NaturalDocs
+</I>&gt;<i> 
+</I>&gt;<i> You can simply run ./gendoc.sh in order to generate the documentation. 
+</I>&gt;<i> Since this is absolutely optional, I
+</I>&gt;<i> don't think we should integrate it into the SConstruct file for InDE.
+</I>&gt;<i> 
+</I>We could add a switch for this. Maybe something like:
+	
+	scons -GEN_DOCS
+
+to automatically build the docs.
+
+What about a cvn tree for the api docs. As far as i remember, there is a
+possibility on berlios to generate webcontents from svn trees. So we
+just have to commit the api-doc, but do not have to update the website
+-- this job would be done by berlios. 
+BTW, they provide nice scripts for the svn tree's, e.g. for a svn
+Mailinglist: the script generates a mail to notify the users that new
+versions have been commited to svn,....
+
+Jochen
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000132.html">[InDE-devel] Instructions: Using NaturalDocs for generating API docs
+</A></li>
+	<LI>Next message: <A HREF="000142.html">[InDE-devel] Instructions: Using NaturalDocs for generating	API docs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#138">[ date ]</a>
+              <a href="thread.html#138">[ thread ]</a>
+              <a href="subject.html#138">[ subject ]</a>
+              <a href="author.html#138">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

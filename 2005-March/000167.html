@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] ProjectSettings &lt;=&gt; Settings
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-March/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20ProjectSettings%20%3C%3D%3E%20Settings&In-Reply-To=%3C42331125.2010008%40sten-net.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000166.html">
+   <LINK REL="Next"  HREF="000162.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] ProjectSettings &lt;=&gt; Settings</H1>
+    <B>Jannis Pohlmann</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20ProjectSettings%20%3C%3D%3E%20Settings&In-Reply-To=%3C42331125.2010008%40sten-net.de%3E"
+       TITLE="[InDE-devel] ProjectSettings &lt;=&gt; Settings">devel at sten-net.de
+       </A><BR>
+    <I>Sat Mar 12 16:56:21 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000166.html">[InDE-devel] ProjectSettings &lt;=&gt; Settings
+</A></li>
+        <LI>Next message: <A HREF="000162.html">[InDE-devel] Using XML for Configuration File
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#167">[ date ]</a>
+              <a href="thread.html#167">[ thread ]</a>
+              <a href="subject.html#167">[ subject ]</a>
+              <a href="author.html#167">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Jochen.
+
+&gt;&gt;&gt;<i>Actually there is a reason.
+</I>&gt;&gt;&gt;<i>Regarding to Settings r24, subclassing from Settings had been ok, but i
+</I>&gt;&gt;&gt;<i>do not see, why i should overload ProjectSettings with color settings
+</I>&gt;&gt;&gt;<i>and so on. Also the Format settings will be deleted.
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>      
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;<i>You don't have to overload the color and format functions. Writing a 
+</I>&gt;&gt;<i>class which mostly has
+</I>&gt;&gt;<i>the same functions seems a bit duplicate to me.
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>I didn't mean to overload the functions itself, but giving the class
+</I>&gt;<i>functions it doesn't need (which are e.g. the color and format
+</I>&gt;<i>functions)
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Subclassing is still better than duplicating. Although you don't need 
+some functions the functionality
+of ProjectSettings exactly is the same.
+Somehow, keeping the two classes separated would be like forking FOX in 
+order to remove
+FXDocument just because you think you don't need it.
+
+&gt;&gt;&gt;<i>If we had a common base for the settings, e.g. CommonSettings.h, which
+</I>&gt;&gt;&gt;<i>would implement reading/writing the StringValues and IntValues, give
+</I>&gt;&gt;&gt;<i>functionality for parsing and writing, this would be a very fine super
+</I>&gt;&gt;&gt;<i>class.
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>      
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;<i>Settings *is* a superclass. It's just that the generic InDE settings 
+</I>&gt;&gt;<i>don't need any further extensions.
+</I>&gt;&gt;<i>ProjectSettings of course need them (like e.g. the project name) but 
+</I>&gt;&gt;<i>Settings is intended to be a
+</I>&gt;&gt;<i>super class, an enhancement of FXSettings.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>But Settings, as you are writing it, will hold many special
+</I>&gt;&gt;&gt;<i>functionality, which isn't interesting for the project settings, and i
+</I>&gt;&gt;&gt;<i>will also implement some functions, which aren't important for Settings.
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>      
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;<i>I can't see any special features. Mostly, the functions of Settings are 
+</I>&gt;&gt;<i>&#228;quivalents to the read.. and
+</I>&gt;&gt;<i>write.. functions of FXSettings.
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>Actually i have some code (not yet very much), that is outside of
+</I>&gt;<i>ProjectSettings, but belongs to it. It would be much more structured to
+</I>&gt;<i>move it inside ProjectSettings. For this i need some more special
+</I>&gt;<i>functions for reading and writing those data structures.
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>I'm sure you could add them to a subclass of Settings as well.
+
+&gt;<i>What do you plan to add to Settings in future?
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Nothing new. Settings is not meant to reflect the InDE settings. Its 
+supposed to be an
+enhancement of FXSettings. And the function names are more usual than 
+those of
+FXSettings. That's all. It's kind of an abstract class for saving 
+structured settings into
+a file. Nothing more.
+
+&gt;<i>I will have a look, if Settings will fit. Actually i only need
+</I>&gt;<i>read/write IntValues and StringValues, parse and write. All other
+</I>&gt;<i>functions are completely uninteresting to me. So only very few code is
+</I>&gt;<i>duplicated (most of it oneliners). If Settings won't grow evry much any
+</I>&gt;<i>more, it will be ok. If it will grow, things will change.
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>I'm sure it won't - the reasons you can read above.
+
+Regards,
+Jannis
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000166.html">[InDE-devel] ProjectSettings &lt;=&gt; Settings
+</A></li>
+	<LI>Next message: <A HREF="000162.html">[InDE-devel] Using XML for Configuration File
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#167">[ date ]</a>
+              <a href="thread.html#167">[ thread ]</a>
+              <a href="subject.html#167">[ subject ]</a>
+              <a href="author.html#167">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

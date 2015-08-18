@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] internationalization &amp; ctags
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-March/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20internationalization%20%26%20ctags&In-Reply-To=%3C422707F0.9050009%40sten-net.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000105.html">
+   <LINK REL="Next"  HREF="000109.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] internationalization &amp; ctags</H1>
+    <B>Jannis Pohlmann</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20internationalization%20%26%20ctags&In-Reply-To=%3C422707F0.9050009%40sten-net.de%3E"
+       TITLE="[InDE-devel] internationalization &amp; ctags">devel at sten-net.de
+       </A><BR>
+    <I>Thu Mar  3 13:49:52 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000105.html">[InDE-devel] internationalization &amp; ctags
+</A></li>
+        <LI>Next message: <A HREF="000109.html">[InDE-devel] internationalization &amp; ctags
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#107">[ date ]</a>
+              <a href="thread.html#107">[ thread ]</a>
+              <a href="subject.html#107">[ subject ]</a>
+              <a href="author.html#107">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Jochen.
+
+Jochen Rassler schrieb:
+
+&gt;<i>Hi Jannis.
+</I>&gt;<i>
+</I>&gt;<i>I just read the internationalization is growing in the new fox
+</I>&gt;<i>development tree..... seems like we can start to look for translators
+</I>&gt;<i>after our first release ;)
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>I didn't have a look at i18n in FOX yet, but if you say so ... why not?
+
+&gt;<i>Although i haven't had the nerves to code last two days i used some time
+</I>&gt;<i>today to read a bit and think some things over.
+</I>&gt;<i>Have you yet supported ctags for the editor widget?
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Do you remember we talked about a mail from me that seemed not to arrive 
+to the mailinglist? I wrote
+something about ctags there but that mail is gone, so lets start this 
+topic here.
+
+We can use ctags for autocompletion and the class browser. For 
+syntaxhighlighting this won't be too
+interesting but perhaps we could find out class names that appear in the 
+project and highlight them.
+
+I haven't coded the last days, too but I looked at a program called 
+&quot;ReZound&quot;. That's an audio editor
+written in FOX. After having seen their code I could imange to implement 
+some backend classes for
+tasks like periodically updating the project's ctags file and so on. The 
+goal is to take some code out
+of MainWindow since it would grow too large otherwise.
+
+We could probably divide the code maintainance. If I'm responsible for 
+the editor widget, syntaxhighlighting
+and so on it would only be logical to do the class browser. Whereas you 
+were responsible for
+project management and, lets say, the build instructions. Just an idea, 
+yet I don't know if you agree.
+
+&gt;<i>Also i thought about displaying multiple projects in InDE. After
+</I>&gt;<i>completing the projehct browser, i will have a look at this. I think it
+</I>&gt;<i>is a very easy enhancement but with great benefit.
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>At the moment this might be a little complicated due to the central 
+project settings structure in MainWindow.
+Maybe we will have to rewrite it in order to store them in a list. I 
+think we should still wait with it.
+
+Regards,
+Jannis (wo is still thinking about structure optimizations all the time)
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000105.html">[InDE-devel] internationalization &amp; ctags
+</A></li>
+	<LI>Next message: <A HREF="000109.html">[InDE-devel] internationalization &amp; ctags
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#107">[ date ]</a>
+              <a href="thread.html#107">[ thread ]</a>
+              <a href="subject.html#107">[ subject ]</a>
+              <a href="author.html#107">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

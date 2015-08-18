@@ -1,0 +1,205 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] internationalization &amp; ctags
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-March/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20internationalization%20%26%20ctags&In-Reply-To=%3C1109964075.1542.63.camel%40jogix.sojox%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000122.html">
+   <LINK REL="Next"  HREF="000124.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] internationalization &amp; ctags</H1>
+    <B>Jochen Rassler</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20internationalization%20%26%20ctags&In-Reply-To=%3C1109964075.1542.63.camel%40jogix.sojox%3E"
+       TITLE="[InDE-devel] internationalization &amp; ctags">jochen at cornmania.de
+       </A><BR>
+    <I>Fri Mar  4 20:21:15 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000122.html">[InDE-devel] internationalization &amp; ctags
+</A></li>
+        <LI>Next message: <A HREF="000124.html">[InDE-devel] internationalization &amp; ctags
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#123">[ date ]</a>
+              <a href="thread.html#123">[ thread ]</a>
+              <a href="subject.html#123">[ subject ]</a>
+              <a href="author.html#123">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Jannis.
+
+Am Freitag, den 04.03.2005, 19:20 +0100 schrieb Jannis Pohlmann:
+&gt;<i> I found a better solution. I'm writing a Settings class which can be 
+</I>&gt;<i> passed a file (which
+</I>&gt;<i> is created if it doesn't exist already). It also has methods for 
+</I>&gt;<i> settings default values and for
+</I>&gt;<i> getting the value by a key (with or without passing the section it can 
+</I>&gt;<i> be found in).
+</I>&gt;<i> 
+</I>&gt;<i> I think that's the best solution of all. For example if one wants to get 
+</I>&gt;<i> the editor font, he could
+</I>&gt;<i> simply use
+</I>&gt;<i> 
+</I>&gt;<i>     settings-&gt;getValue(&quot;EDITOR&quot;, &quot;font&quot;);
+</I>&gt;<i> 
+</I>&gt;<i> wherase
+</I>&gt;<i> 
+</I>&gt;<i>     settings-&gt;getValue(&quot;font&quot;)
+</I>&gt;<i> 
+</I>&gt;<i> actually is going to work but might cause collisions with other &quot;font&quot; 
+</I>&gt;<i> options
+</I>&gt;<i> in another section.
+</I>&gt;<i> 
+</I>&gt;<i> This class avoids segfaults by using default values for options not 
+</I>&gt;<i> being defined.
+</I>&gt;<i> I will try to commit it to SVN tomorrow. After that we will have to 
+</I>&gt;<i> change the project
+</I>&gt;<i> settings dialog as well as the InDE settings dialog a little but that 
+</I>&gt;<i> will only take a few
+</I>&gt;<i> minutes.
+</I>&gt;<i> 
+</I>&gt;<i> Lots of the onCmd.. and onUpd... methods of MainWindow will be obsolete 
+</I>&gt;<i> then, so I
+</I>&gt;<i> will remove them.
+</I>
+Sounds good!
+That's something i thought about at the beginning of InDE, but i hadn't
+known if or how it works, because i wasn't used to FOX.
+I really like that idea!
+&gt;<i> 
+</I>&gt;<i> Next thing I am changing is the menu bar creation in MainWindow. It will 
+</I>&gt;<i> be moved
+</I>&gt;<i> to a function called &quot;buildMenu&quot; or s.th. like that. It already looks 
+</I>&gt;<i> very well structured
+</I>&gt;<i> in my local repository.
+</I>&gt;<i> Another change will be the message map. Currently our way to add a menu 
+</I>&gt;<i> command handler
+</I>&gt;<i> would be to add a
+</I>&gt;<i> 
+</I>&gt;<i>     FXMAPFUNC(SEL_COMMAND, MainWindow::ID_OURCOMMAND, 
+</I>&gt;<i> MainWindow::onCmdOurCommand)
+</I>&gt;<i> 
+</I>&gt;<i> to the message map. The new solution I'd like to describe by an example, 
+</I>&gt;<i> the file menu.
+</I>&gt;<i> 
+</I>&gt;<i> At first, this menu has a method
+</I>&gt;<i>     long MainWindow::onFileCmd(FXObject*, ...)
+</I>&gt;<i> 
+</I>&gt;<i> The commands sent by the menu commands in this menu are collected using
+</I>&gt;<i>     FXMAPFUNCS(SEL_COMMAND, MainWindow::ID_NEW_FILE, MainWidow::ID_QUIT, 
+</I>&gt;<i> MainWindow::onFileCmd)
+</I>&gt;<i> 
+</I>&gt;<i> onFileCmd would look like this:
+</I>&gt;<i> 
+</I>&gt;<i> long MainWindow::onFileCmd(FXObject*, FXSelector sel, void*)
+</I>&gt;<i> {
+</I>&gt;<i>     switch (FXSELID(sel))
+</I>&gt;<i>     {
+</I>&gt;<i>        ID_NEW_FILE:
+</I>&gt;<i>           editor-&gt;doSomething();
+</I>&gt;<i>           break;
+</I>&gt;<i>        ID_NEW_CLASS:
+</I>&gt;<i>           showNewClassDialogOrSomething();
+</I>&gt;<i>           break;
+</I>&gt;<i>        ID_QUIT:
+</I>&gt;<i>           quit();
+</I>&gt;<i>           break;
+</I>&gt;<i>     };
+</I>&gt;<i>     return 1;
+</I>&gt;<i> }
+</I>&gt;<i> 
+</I>&gt;<i> This means, we reduce the handler functions in order to add public functions
+</I>&gt;<i> which could be called by other widgets directly (not by sending a 
+</I>&gt;<i> message to MainWindow).
+</I>&gt;<i> 
+</I>&gt;<i> That's an easy to understand well looking structure in my opinion.
+</I>
+Also sounds good! A bit more structured than the actual approach.
+Espacially because the MainWindow class will grow with every new feature
+that is application wide.
+
+Let me start a discussion about the &quot;new File&quot; menu command.
+
+Actually i added / changed the file menu to the following structure:
+
+File
++ new &gt;
+  + new File
+  + new Source
+  + new Header
+  + new Class
++ quit
+
+That is actually for testing several file creation functions, but i am
+not happy with that.
+
+My idea about this is - compared to existing IDE's - a very new
+approach:
+
+File
++ new File
+...
+
+Project
++ new File(s)
+  + Source
+  + Header
+  + Class
+...
+
+That means, if you use File -&gt; new File, you get a new, untitled file,
+which you have to store with &quot;save as&quot;, and maybe add it to the project
+by hand.
+Project -&gt; new File -&gt; Source (..) will also produce a new file, but you
+name it before it is created and add it to the project. Also it will be
+creating the license header, ask for creating other related files, add
+the file to SConstruct,....
+
+As far as you have a project opened and a project menu, i always found
+it very unstructured to add a file to the project with the file menu.
+
+What do you think about this?
+As far as you actually work at the menu structure, this may be the time
+to do it this way.
+
+regards
+	Jochen
+
+PS: does FOX have something like FXObjectList for objects, not for
+pointers to objects? I haven't found anything yet and therefore used a
+std::vector&lt;FXString&gt;. It is ok, works fine, uses a clear and well known
+API, but doing it the FOX way if FOX supports this, would be nicer ;)
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000122.html">[InDE-devel] internationalization &amp; ctags
+</A></li>
+	<LI>Next message: <A HREF="000124.html">[InDE-devel] internationalization &amp; ctags
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#123">[ date ]</a>
+              <a href="thread.html#123">[ thread ]</a>
+              <a href="subject.html#123">[ subject ]</a>
+              <a href="author.html#123">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

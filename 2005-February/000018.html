@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] Preliminary roadmap for InDE
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-February/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Preliminary%20roadmap%20for%20InDE&In-Reply-To=%3C420FDE76.1090005%40sten-net.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000043.html">
+   <LINK REL="Next"  HREF="000029.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] Preliminary roadmap for InDE</H1>
+    <B>Jannis Pohlmann</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Preliminary%20roadmap%20for%20InDE&In-Reply-To=%3C420FDE76.1090005%40sten-net.de%3E"
+       TITLE="[InDE-devel] Preliminary roadmap for InDE">devel at sten-net.de
+       </A><BR>
+    <I>Mon Feb 14 00:10:46 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000043.html">[InDE-devel] Commited some stuff to SVN
+</A></li>
+        <LI>Next message: <A HREF="000029.html">[InDE-devel] Preliminary roadmap for InDE
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#18">[ date ]</a>
+              <a href="thread.html#18">[ thread ]</a>
+              <a href="subject.html#18">[ subject ]</a>
+              <a href="author.html#18">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Q = questions =&gt; discussion =&gt; decision
+T = tasks
+
+
+
+1. InDE settings dialog and structure
+-------------------------------------
+This will be very import for nearly every one of the other classes.
+
+Q1.1 - Which variables / options might be needed?
+Q1.2 - In which sections should they be divided?
+Q1.3 - How should settings be stored in the MainWindow class?
+Q1.4 - How should settings be accessed by dialogs (and other classes in 
+general)?
+
+T1.1 - Realization of the settings structure the way we decided in Q1.3
+T1.2 - Realization of the interface for other classes to access the 
+settings the way it was decided in Q1.4
+T1.3 - InDE settings dialog using interface from T1.2
+
+
+
+2. InDE project dialog and config structure
+-------------------------------------------
+Having done this we will be able to discuss about which way we will 
+design our SCons scripts
+will be organized after this.
+
+Q2.1 - Which variables / options might be needed? (We partly have done 
+this already)
+Q2.2 - In which sections should they be divided?
+Q2.3 - How should the project configuration be stored in the MainWindow 
+class?
+Q2.4 - How should the project configuration be access by other classes?
+
+Note: Q2.3 and Q2.4 may be easily answered when Q1.3 and Q1.4 are done.
+
+T2.1 - Realization of the project config structure the way we decided to 
+in Q2.3
+T2.2 - Realization of the interface discussed in Q2.3
+T2.3 - &quot;Create new project&quot; dialog
+T2.4 - &quot;Project settings&quot; dialog
+
+
+
+3. SCons scripts
+----------------
+This means we will discuss some general questions about their structure 
+and what things we
+need to realize in them in order to fit most (not: all) thinkable projects.
+
+Q3.1 - Do we want to split the SConstruct files by platform (e.g. 
+SConscript.linux, SConscript.win32 and so on)?
+Q3.2 - Do we want to support SConscripts in subdirectories - would it be 
+to complicated? (perhaps we shouldn't think about this as long as we 
+don't support subprojects)
+Q3.3 - Probably on of the most difficult questions: If we want to 
+support single file compilation (on saving/button click), how may SCons 
+do this?
+
+T3.1 - Writing standard SConstructs/SConscripts for targets (executable, 
+shared or static library, MSVC project, ...)
+
+
+
+--
+Of course we aren't done after this. Further steps will be introduced 
+after steps 1 or 2 are done.
+
+Regards,
+Jannis
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000043.html">[InDE-devel] Commited some stuff to SVN
+</A></li>
+	<LI>Next message: <A HREF="000029.html">[InDE-devel] Preliminary roadmap for InDE
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#18">[ date ]</a>
+              <a href="thread.html#18">[ thread ]</a>
+              <a href="subject.html#18">[ subject ]</a>
+              <a href="author.html#18">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

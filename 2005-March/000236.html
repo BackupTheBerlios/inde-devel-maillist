@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] Thoughts and ideas
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-March/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Thoughts%20and%20ideas&In-Reply-To=%3C423C7277.7070407%40sten-net.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000233.html">
+   <LINK REL="Next"  HREF="000222.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] Thoughts and ideas</H1>
+    <B>Jannis Pohlmann</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Thoughts%20and%20ideas&In-Reply-To=%3C423C7277.7070407%40sten-net.de%3E"
+       TITLE="[InDE-devel] Thoughts and ideas">devel at sten-net.de
+       </A><BR>
+    <I>Sat Mar 19 19:41:59 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000233.html">[InDE-devel] Thoughts and ideas
+</A></li>
+        <LI>Next message: <A HREF="000222.html">[InDE-devel] Additional thoughts
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#236">[ date ]</a>
+              <a href="thread.html#236">[ thread ]</a>
+              <a href="subject.html#236">[ subject ]</a>
+              <a href="author.html#236">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Jochen.
+
+&gt;&gt;<i> Ok, try to reproduce it like this:
+</I>&gt;&gt;<i> open two or more existing Files and start modifying one of them, e.g. by
+</I>&gt;&gt;<i> clicking to the end of one line and hit enter.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> TabEditor::restyleDocument(2, 5997, 0, 1)
+</I>&gt;&gt;<i> Speicherzugriffsfehler
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> That's my output
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Jochen
+</I>&gt;&gt;<i>  
+</I>&gt;&gt;<i>
+</I>&gt;<i> Ah, I see. I'm going to correct it immediately.
+</I>
+
+The problem most probably is in one of the methods of TabEditor that 
+determine
+which document has changed (inserted, replaced, deleted) and then try to 
+restyle
+it. Restyling seems to be ok, but sometimes a wrong document is 
+determined and
+then the app crashes. I'm working on it.
+
+- Jannis
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000233.html">[InDE-devel] Thoughts and ideas
+</A></li>
+	<LI>Next message: <A HREF="000222.html">[InDE-devel] Additional thoughts
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#236">[ date ]</a>
+              <a href="thread.html#236">[ thread ]</a>
+              <a href="subject.html#236">[ subject ]</a>
+              <a href="author.html#236">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

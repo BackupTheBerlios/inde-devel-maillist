@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] Editor (with tabs and one toggleable fixed tab); ProjectBrowser
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-February/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Editor%20%28with%20tabs%20and%20one%20toggleable%20fixed%20tab%29%3B%0A%20ProjectBrowser&In-Reply-To=%3C42147475.1080309%40sten-net.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000054.html">
+   <LINK REL="Next"  HREF="000056.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] Editor (with tabs and one toggleable fixed tab); ProjectBrowser</H1>
+    <B>Jannis Pohlmann</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Editor%20%28with%20tabs%20and%20one%20toggleable%20fixed%20tab%29%3B%0A%20ProjectBrowser&In-Reply-To=%3C42147475.1080309%40sten-net.de%3E"
+       TITLE="[InDE-devel] Editor (with tabs and one toggleable fixed tab); ProjectBrowser">devel at sten-net.de
+       </A><BR>
+    <I>Thu Feb 17 11:39:49 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000054.html">[InDE-devel] Editor (with tabs and one toggleable fixed tab);	ProjectBrowser
+</A></li>
+        <LI>Next message: <A HREF="000056.html">[InDE-devel] Editor (with tabs and one toggleable fixed tab);	ProjectBrowser
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#55">[ date ]</a>
+              <a href="thread.html#55">[ thread ]</a>
+              <a href="subject.html#55">[ subject ]</a>
+              <a href="author.html#55">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Jochen Rassler schrieb:
+
+&gt;<i>Hi Jannis.
+</I>&gt;<i>
+</I>&gt;<i>Am Mittwoch, den 16.02.2005, 13:07 +0100 schrieb Jannis Pohlmann:
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>&gt;&gt;<i>Jannis Pohlmann schrieb:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>Hi Jochen.
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>I sent a feature request to Jeroen concerning the FXDirList. We could 
+</I>&gt;&gt;&gt;<i>use FXDirList for our ProjectBrowser but first someone
+</I>&gt;&gt;&gt;<i>has to implement a function to define the root directory for this 
+</I>&gt;&gt;&gt;<i>class. I hope Jeroen is willing to do this. He can't expect everyone
+</I>&gt;&gt;&gt;<i>wants to have a directory listing with / (or all drives) as root 
+</I>&gt;&gt;&gt;<i>element(s).
+</I>&gt;&gt;&gt;<i>      
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;<i>Jeroen did agree with my feature request. This means we won't have much 
+</I>&gt;&gt;<i>work with the project file browser. Perhaps this gives us the
+</I>&gt;&gt;<i>possibility to think about an additional class browser. But that's not 
+</I>&gt;&gt;<i>easy so we should wait with that.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>But this feature will go into 1.5. However, I wanted to stay at 1.4 but
+</I>&gt;<i>if it's needed.... ;)
+</I>&gt;<i>I thought about something different, but haven't looked at it yet.
+</I>&gt;<i>Something like a virtual snapshot of the devel filesystem -&gt; we do not
+</I>&gt;<i>need to show every files in it to the user, as they may be totally
+</I>&gt;<i>uninteresting. As far as a project config script exists, we know which
+</I>&gt;<i>files are in these directories and are needed by the project.
+</I>&gt;<i>
+</I>&gt;<i>I will have a look at this next days, if you are not totally
+</I>&gt;<i>uninterested in it.
+</I>&gt;<i>
+</I>&gt;<i>CU
+</I>&gt;<i>	Jochen
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Of course, this would be interesting. Yet, I'm not sure how to observe 
+the filesystem permanently
+to redraw when files/directories are deleted/moved/created. FXDirList 
+does this automatically.
+And it allows to use a filter for file extensions. We could apply a 
+filter based on the project configuration
+to FXDirList and wouldn't have to use a virtual filesystem.
+I'm not sure about that. But if you are willing to look into that, why not?
+
+Regards,
+Jannis
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000054.html">[InDE-devel] Editor (with tabs and one toggleable fixed tab);	ProjectBrowser
+</A></li>
+	<LI>Next message: <A HREF="000056.html">[InDE-devel] Editor (with tabs and one toggleable fixed tab);	ProjectBrowser
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#55">[ date ]</a>
+              <a href="thread.html#55">[ thread ]</a>
+              <a href="subject.html#55">[ subject ]</a>
+              <a href="author.html#55">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

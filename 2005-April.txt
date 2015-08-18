@@ -1,0 +1,82 @@
+From jochen at cornmania.de  Sat Apr  2 10:46:50 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Sat, 02 Apr 2005 10:46:50 +0200
+Subject: [InDE-devel] Progress?
+In-Reply-To: <424B096B.5000808@sten-net.de>
+References: <424B096B.5000808@sten-net.de>
+Message-ID: <1112431610.1378.0.camel@jogix.sojox>
+
+Am Mittwoch, den 30.03.2005, 22:17 +0200 schrieb Jannis Pohlmann:
+> Hi Jochen.
+> 
+> Did you continue working on the project management during the last two 
+> weeks 
+
+no
+
+
+
+
+From devel at sten-net.de  Mon Apr  4 23:32:55 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Mon, 04 Apr 2005 23:32:55 +0200
+Subject: [InDE-devel] Progress?
+In-Reply-To: <1112431610.1378.0.camel@jogix.sojox>
+References: <424B096B.5000808@sten-net.de> <1112431610.1378.0.camel@jogix.sojox>
+Message-ID: <4251B287.2030805@sten-net.de>
+
+Jochen Rassler schrieb:
+
+>Am Mittwoch, den 30.03.2005, 22:17 +0200 schrieb Jannis Pohlmann:
+>  
+>
+>>Hi Jochen.
+>>
+>>Did you continue working on the project management during the last two 
+>>weeks 
+>>    
+>>
+>
+>no
+>  
+>
+Well, are you still interested in contributing to the development? Do 
+you have questions regarding
+the next steps?
+
+You know, I'm waiting for at least the project to be finished by you. 
+Since you were the one to introduce
+the idea of an early release here and you did not commit or at least 
+report about absence due to
+exams I thought you continued developing ...
+
+To be honest, I lost focus on InDE by myself during the last weeks. But 
+I worked hard on some code
+from time to time. I intend to write a stand-alone class generator as a 
+demonstration of that experiments.
+
+Besides integrating icons all we need for the first release is a proper 
+project management, I guess.
+Things like auto-completion are very complex and should not become 
+highest priority.
+
+Now it's your turn, isn't it?
+
+Regards,
+Jannis
+
+
+From devel at sten-net.de  Mon Apr  4 23:35:41 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Mon, 04 Apr 2005 23:35:41 +0200
+Subject: [InDE-devel] Progress?
+In-Reply-To: <4251B287.2030805@sten-net.de>
+References: <424B096B.5000808@sten-net.de> <1112431610.1378.0.camel@jogix.sojox> <4251B287.2030805@sten-net.de>
+Message-ID: <4251B32D.7060205@sten-net.de>
+
+> You know, I'm waiting for at least the project to be finished by you.
+
+                                                ^
+                                             browser
+
+

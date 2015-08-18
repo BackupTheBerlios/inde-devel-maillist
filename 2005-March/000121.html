@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] internationalization &amp; ctags
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-March/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20internationalization%20%26%20ctags&In-Reply-To=%3C1109958691.1542.47.camel%40jogix.sojox%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000119.html">
+   <LINK REL="Next"  HREF="000122.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] internationalization &amp; ctags</H1>
+    <B>Jochen Rassler</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20internationalization%20%26%20ctags&In-Reply-To=%3C1109958691.1542.47.camel%40jogix.sojox%3E"
+       TITLE="[InDE-devel] internationalization &amp; ctags">jochen at cornmania.de
+       </A><BR>
+    <I>Fri Mar  4 18:51:31 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000119.html">[InDE-devel] internationalization &amp; ctags
+</A></li>
+        <LI>Next message: <A HREF="000122.html">[InDE-devel] internationalization &amp; ctags
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#121">[ date ]</a>
+              <a href="thread.html#121">[ thread ]</a>
+              <a href="subject.html#121">[ subject ]</a>
+              <a href="author.html#121">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Jannis.
+
+Am Freitag, den 04.03.2005, 15:10 +0100 schrieb Jannis Pohlmann:
+
+&gt;<i> At the moment, we have one variable for each option of the settings. We 
+</I>&gt;<i> won't need the onUpd... and onCmd..
+</I>&gt;<i> methods if we rewrite the settings dialogs so that they are given the 
+</I>&gt;<i> values they need before execution (this would
+</I>&gt;<i> reduce the types of dialogs to one (don't know whether this was 
+</I>&gt;<i> explained clearly enough).
+</I>&gt;<i> 
+</I>&gt;<i> Instead of calling e.g. settings.editor.font we would use 
+</I>&gt;<i> settings-&gt;find(&quot;EDITOR&quot;)-&gt;find(&quot;font&quot;). All we have to make
+</I>&gt;<i> sure is to add a default value for each variable not being found while 
+</I>&gt;<i> parsing the settings file (if we call
+</I>&gt;<i> settings-&gt;find(&quot;EDITOR&quot;)-&gt;find(&quot;font&quot;) without an existing section 
+</I>&gt;<i> &quot;EDITOR&quot; we would run into a segfault).
+</I>
+That's where we started once.
+&gt;<i> 
+</I>&gt;<i> As you can see, our first attempt of MainWindow might be totally 
+</I>&gt;<i> revised. The reason why it's hard to merge
+</I>&gt;<i> my latest stuff into SVN - I am trying to avoid that you have to arrange 
+</I>&gt;<i> with a new codebase every few days.
+</I>&gt;<i> But the codebase yet isn't good enough to develop upon.
+</I>
+I don't mind. I am young and flexible *g*
+&gt;<i> 
+</I>&gt;<i> My suggestion therefor is that you use the current base for testing and 
+</I>&gt;<i> working on the project management as
+</I>&gt;<i> well as creating class with both, header and source file (including a 
+</I>&gt;<i> license header depending on the project settings)
+</I>&gt;<i> and so on. That seem to be the things you are highly interested in. 
+</I>&gt;<i> Luckily, we're writing on an OO program so
+</I>&gt;<i> merging those parts with a new code base won't cost much of time.
+</I>
+Fortunately the dependencies aren't very important for me, because most
+work is done in seperate classes.
+But testing the functionality means a) writing testapps, which i do for
+certain classes, or b) using InDE for tests, wich is needed for other
+things.
+Why should i include all code to InDE to test the functionality, if all
+this code, which has costed hours of work, is just thrown away and has
+to be done completely from ground up again?
+&gt;<i> 
+</I>&gt;<i> During this, my part would be to heavily think about (and finally, 
+</I>&gt;<i> write) a new well organized, as compact as
+</I>&gt;<i> possible structure for InDE. I will also have a look into other, similar 
+</I>&gt;<i> programs and how they are structured.
+</I>&gt;<i> 
+</I>Don't loose the sight of it. That's what i think.
+Implementing the settings as you proposed in the other mail and
+finishing the editor would be a greater job by now. I guess with ongoing
+development we will get a need for certain refactorings anyway. So do
+it, if you need it, may be more straightforward and more satisfying,
+because you see results and not only work to be done and to be thought
+about it.
+
+Actually we have no support for different views. What about them? If you
+start to think about it, you will most probably be happy, if you arrange
+to have a initial release at x-mas. OO supports us in refactoring, for
+that we are not developing with something like C, where it is a pain in
+the ass to refactor.
+
+Don't get me wrong. Design and a good structure are very important. But
+overdesigning can be a shot to the back. There always exists a better
+solution, but trying to get the best solution before going on will never
+let you go on. Trying to do the best you can at that point may fit best,
+making things better at a later time with more knowlege about what is
+needed and what blocks will lead to better solutions. At least this is
+my point of view.
+
+As far as i am used to develop with Java, i found it normal to rewrite
+some classes or to move some code to new classes, which are than
+insantiated from this class and so on. This is fun as far as you do it
+as soon as it is needed, not earlier. And most of the time you get a
+speed boost or some satisfaction because you latly growen code is now
+more clear ;)
+
+regards
+	Jochen
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000119.html">[InDE-devel] internationalization &amp; ctags
+</A></li>
+	<LI>Next message: <A HREF="000122.html">[InDE-devel] internationalization &amp; ctags
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#121">[ date ]</a>
+              <a href="thread.html#121">[ thread ]</a>
+              <a href="subject.html#121">[ subject ]</a>
+              <a href="author.html#121">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

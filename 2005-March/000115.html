@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] garbage collector?
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-March/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20garbage%20collector%3F&In-Reply-To=%3C1109862962.1557.54.camel%40jogix.sojox%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000113.html">
+   <LINK REL="Next"  HREF="000117.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] garbage collector?</H1>
+    <B>Jochen Rassler</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20garbage%20collector%3F&In-Reply-To=%3C1109862962.1557.54.camel%40jogix.sojox%3E"
+       TITLE="[InDE-devel] garbage collector?">jochen at cornmania.de
+       </A><BR>
+    <I>Thu Mar  3 16:16:02 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000113.html">[InDE-devel] garbage collector?
+</A></li>
+        <LI>Next message: <A HREF="000117.html">[InDE-devel] Website updated \nm
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#115">[ date ]</a>
+              <a href="thread.html#115">[ thread ]</a>
+              <a href="subject.html#115">[ subject ]</a>
+              <a href="author.html#115">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Jannis.
+
+Am Donnerstag, den 03.03.2005, 14:51 +0100 schrieb Jannis Pohlmann:
+&gt;<i> Jochen Rassler schrieb:
+</I>&gt;<i> 
+</I>&gt;<i> &gt;Hi Jannis.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;I have a problem and don't know why :(
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;I am working on the project browser. This is a class, which includes a
+</I>&gt;<i> &gt;FXTreeList.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;The FXTreeList is initialized in the constructor of ProjectBrowser and
+</I>&gt;<i> &gt;deleted in the destructor.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;The FXTreeItems are build dynamically in several functions.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;If i close InDE, i get a segmentation fault, while deleting
+</I>&gt;<i> &gt;projectBrowser in MainWindow's destructor. If i comment that line out,
+</I>&gt;<i> &gt;everythings seems fine (?). Debugging into ProjectBrowser's destructor
+</I>&gt;<i> &gt;tells me, that everything works fine there.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;Why do i get the segmentation fault while deleting projectBrowser?
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;What about the FXTreeItems? As long as they are part of FXTreeList, they
+</I>&gt;<i> &gt;are deleted with FXTreeList like in control of a garbage collector?
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;Any hints?
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;regards
+</I>&gt;<i> &gt;	Jochen
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;  
+</I>&gt;<i> &gt;
+</I>&gt;<i> 
+</I>&gt;<i> Hm, no I cannot help you on that at the moment. I know those problems 
+</I>&gt;<i> but experimenting with
+</I>&gt;<i> the destructor and the objects deleted in it nearly allways led to the 
+</I>&gt;<i> solution.
+</I>&gt;<i> 
+</I>I just didn't call the constructor of the superclass, so the destructor
+called the destructor of the superclass, which wasn't constructed.
+Hard to find error.... ;)
+
+Happy Jochen
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000113.html">[InDE-devel] garbage collector?
+</A></li>
+	<LI>Next message: <A HREF="000117.html">[InDE-devel] Website updated \nm
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#115">[ date ]</a>
+              <a href="thread.html#115">[ thread ]</a>
+              <a href="subject.html#115">[ subject ]</a>
+              <a href="author.html#115">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] Editor (with tabs and one toggleable fixed tab);	ProjectBrowser
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-February/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Editor%20%28with%20tabs%20and%20one%20toggleable%20fixed%20tab%29%3B%0A%09ProjectBrowser&In-Reply-To=%3C1108682091.1541.59.camel%40jogix.sojox%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000058.html">
+   <LINK REL="Next"  HREF="000063.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] Editor (with tabs and one toggleable fixed tab);	ProjectBrowser</H1>
+    <B>Jochen Rassler</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Editor%20%28with%20tabs%20and%20one%20toggleable%20fixed%20tab%29%3B%0A%09ProjectBrowser&In-Reply-To=%3C1108682091.1541.59.camel%40jogix.sojox%3E"
+       TITLE="[InDE-devel] Editor (with tabs and one toggleable fixed tab);	ProjectBrowser">jochen at cornmania.de
+       </A><BR>
+    <I>Fri Feb 18 00:14:51 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000058.html">[InDE-devel] Editor (with tabs and one toggleable fixed tab); ProjectBrowser
+</A></li>
+        <LI>Next message: <A HREF="000063.html">[InDE-devel] Editor (with tabs and one toggleable fixed tab); ProjectBrowser
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#60">[ date ]</a>
+              <a href="thread.html#60">[ thread ]</a>
+              <a href="subject.html#60">[ subject ]</a>
+              <a href="author.html#60">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hidiho!
+
+Am Donnerstag, den 17.02.2005, 21:14 +0100 schrieb Jannis Pohlmann:
+&gt;<i> You're right, this would do the job. Nevertheless, that would require at 
+</I>&gt;<i> least FXTreeList if we wanted
+</I>&gt;<i> to separate source and include directories. But why not go for FXDirList 
+</I>&gt;<i> and FOX 1.5?
+</I>Sorry, I meant FXTreeList.
+Ok, why not. Why not using a development version for development? 
+
+One point for the stable branch would be, that the development isn't
+bothered by API changes. But on the other hand porting to 1.6 might be a
+pain...
+
+&gt;<i> When the first stable version of InDE is ready to be announced I think 
+</I>&gt;<i> FOX might already be at 1.6. If this
+</I>&gt;<i> sounds quite pessimistic - it isn't. There is really much to do, I don't 
+</I>&gt;<i> suppose InDE 0.0.1 is going to be
+</I>&gt;<i> finished before autumn 2005. And what's more important: FOX 1.5 is 
+</I>&gt;<i> likely to bring some features we really
+</I>&gt;<i> need - like internationalization and theming.
+</I>
+Ah, I think we have a very different view of releasing... I'll open a
+new thread for the discussion on it to get a little structure to the ML.
+&gt;<i> 
+</I>&gt;<i> With FXDirList we had no work on the functions being responsible for 
+</I>&gt;<i> deleting and moving files. I know
+</I>&gt;<i> other IDEs work with a virtual filesystem - so does Anjuta and I hated 
+</I>&gt;<i> adding each file I wanted to see in
+</I>&gt;<i> the project file view manually.
+</I>&gt;<i> 
+</I>&gt;<i> To come to an end: For the first release I don't consider a virtual file 
+</I>&gt;<i> view a good solution.
+</I>
+One reason for a virtual file system would be that the project holds all
+files that are in the project. If a user copies a file to the project
+directory and we do however not recognize this file being included by
+SCons, this may cause some strange behavior and may be hard to
+reintroduce, if we once follow another strategy.
+
+Actually we have a tab with two books: file system and project view. As
+long as we implement a context menu for the file system view, that lets
+you add a file to the project, there are no problems. The user can add
+every file he wants without pain. If he wants to see a file which isn't
+included in the project, he also has the possibility because there is
+the file system view. And if he can open a file from there, no
+frustration will happen...
+&gt;<i> 
+</I>I think, a treelist is not really difficult to implement. Why not doing
+it - at least until the setRootDirectory() is in FOX 1.5. And after
+that, it may be a setting, the user can do: see the complete content in
+the project directory or see the stripped project view. This enables
+some flexibility.
+
+If Jeroen introduces the new development tree in the next few days with
+this feature implemented, i may change my opinion in a second... ;)
+
+Jochen
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000058.html">[InDE-devel] Editor (with tabs and one toggleable fixed tab); ProjectBrowser
+</A></li>
+	<LI>Next message: <A HREF="000063.html">[InDE-devel] Editor (with tabs and one toggleable fixed tab); ProjectBrowser
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#60">[ date ]</a>
+              <a href="thread.html#60">[ thread ]</a>
+              <a href="subject.html#60">[ subject ]</a>
+              <a href="author.html#60">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

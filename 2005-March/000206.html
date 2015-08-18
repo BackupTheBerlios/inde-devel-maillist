@@ -1,0 +1,387 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] r41 - in trunk: include src
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-March/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20r41%20-%20in%20trunk%3A%20include%20src&In-Reply-To=%3C200503171424.j2HEObkn022920%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000213.html">
+   <LINK REL="Next"  HREF="000208.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] r41 - in trunk: include src</H1>
+    <B>Jochen A. Ra&#223;ler at BerliOS</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20r41%20-%20in%20trunk%3A%20include%20src&In-Reply-To=%3C200503171424.j2HEObkn022920%40sheep.berlios.de%3E"
+       TITLE="[InDE-devel] r41 - in trunk: include src">j_a_r at sheep.berlios.de
+       </A><BR>
+    <I>Thu Mar 17 15:24:37 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000213.html">[InDE-devel] missing mails
+</A></li>
+        <LI>Next message: <A HREF="000208.html">[InDE-devel] r41 - in trunk: include src
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#206">[ date ]</a>
+              <a href="thread.html#206">[ thread ]</a>
+              <a href="subject.html#206">[ subject ]</a>
+              <a href="author.html#206">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: j_a_r
+Date: 2005-03-17 15:24:36 +0100 (Thu, 17 Mar 2005)
+New Revision: 41
+
+Modified:
+   trunk/include/ProjectBrowser.h
+   trunk/src/MainWindow.cpp
+   trunk/src/ProjectBrowser.cpp
+   trunk/src/ProjectSettingsDialog.cpp
+Log:
+project browser refactoring
+
+Modified: trunk/include/ProjectBrowser.h
+===================================================================
+--- trunk/include/ProjectBrowser.h	2005-03-17 13:42:51 UTC (rev 40)
++++ trunk/include/ProjectBrowser.h	2005-03-17 14:24:36 UTC (rev 41)
+@@ -32,13 +32,15 @@
+ 	ProjectBrowser is a special FXTreeList like Widget, which provides 
+ 	some functionality to easyly add new projects and files to its view.
+ */
+-class ProjectBrowser : public FXComposite 
++class ProjectBrowser : public FXVerticalFrame 
+ {
+ 	FXDECLARE(ProjectBrowser)
+ 
+ 	private:
+ 		FXTreeList		*projectTree;
+ 
++		MainWindow*		mainWin;
++
+ 	protected:
+ 		ProjectBrowser() {}
+ 		ProjectBrowser(const ProjectBrowser&amp;) {}
+@@ -59,10 +61,17 @@
+ 		};
+ 
+ 	public:
++		enum {
++			ID_BROWSER = FXComposite::ID_LAST,
++		};
++
++		long onDoubleClick(FXObject*, FXSelector, void*);
++
++	public:
+ 		/*
+ 			Constructor: ProjectBrowser
+ 		*/
+-		ProjectBrowser(FXComposite *p, FXObject *tgt = NULL, FXSelector sel = 0, FXuint opts = 0, FXint x = 0, FXint y = 0, FXint w = 0, FXint h = 0);
++		ProjectBrowser(FXComposite* p, MainWindow* win, FXObject* tgt=NULL, FXSelector sel=0, FXuint opts=FRAME_LINE|LAYOUT_FILL_X|LAYOUT_FILL_Y);
+ 
+ 		/*
+ 			Destructor: ~ProjectBrowser
+@@ -74,46 +83,6 @@
+ 			Function: create
+ 		*/
+ 		void 	create();
+-		/*
+-			Function: detach
+-		*/
+-		void 	detach();
+-		/*
+-			Function: layout
+-		*/
+-		void 	layout();
+-		/*
+-			Function: getDefaultWidth
+-		*/
+-		FXint 	getDefaultWidth();
+-		/*
+-			Function: getDefautHeight
+-		*/
+-		FXint 	getDefaultHeight();
+-		/*
+-			Function: getContentWidth
+-		*/
+-		FXint 	getContentWidth();
+-		/*
+-			Function: getContentHeight
+-		*/
+-		FXint 	getContentHeight();
+-		/*
+-			Function: recalc
+-		*/
+-		void 	recalc();
+-		/*
+-			Function: canFocus
+-		*/
+-		FXbool 	canFocus() const;
+-		/*
+-			Function: setFocus
+-		*/
+-		void 	setFocus();
+-		/*
+-			Function: killFocus
+-		*/
+-		void 	killFocus();
+ 	
+ 
+ 		// working operations
+@@ -189,6 +158,13 @@
+ 			opens project settings from a settingsfile and adds it to the browser
+ 		*/
+ 		void openProject(ProjectSettings* settings);
++
++		/*
++			Function: getPathname
++
++			returns the pathname of the given item
++		*/
++		FXString getPathname(FXTreeItem* item);
+ };
+ 
+ 
+
+Modified: trunk/src/MainWindow.cpp
+===================================================================
+--- trunk/src/MainWindow.cpp	2005-03-17 13:42:51 UTC (rev 40)
++++ trunk/src/MainWindow.cpp	2005-03-17 14:24:36 UTC (rev 41)
+@@ -176,7 +176,7 @@
+ 	new FXTabItem(browserFrame, &quot;Project&quot;);
+ 	FXVerticalFrame* frm5 	= new FXVerticalFrame(browserFrame, LAYOUT_FILL_X|LAYOUT_FILL_Y|FRAME_RAISED, 0, 0, 0, 0, 5, 5, 5, 5, 0, 0);
+ 	FXVerticalFrame* frm6 	= new FXVerticalFrame(frm5, LAYOUT_FILL_X|LAYOUT_FILL_Y|FRAME_LINE, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-	projectBrowser 			= new ProjectBrowser(frm6, NULL, 0, TREELIST_BROWSESELECT|TREELIST_SHOWS_LINES|TREELIST_SHOWS_BOXES|LAYOUT_FILL_X|LAYOUT_FILL_Y);
++	projectBrowser 			= new ProjectBrowser(frm6, this);
+ 	FXHorizontalFrame* frm7 = new FXHorizontalFrame(frm5, LAYOUT_FILL_X, 0, 0, 0, 0, 0, 0, 4, 0, 0, 4);
+ 	new FXLabel(frm7, &quot;Filter:&quot;, NULL, LAYOUT_CENTER_Y);
+ 	projectFilter 			= new FXComboBox(frm7, 25, NULL, 0, COMBOBOX_STATIC|LAYOUT_FILL_X|FRAME_SUNKEN|FRAME_THICK);
+@@ -440,7 +440,7 @@
+ 
+ void MainWindow::editProjectSettings(ProjectSettings* settings)
+ {
+-	ProjectSettingsDialog dialog(this, &quot;InDE settings&quot;);
++	ProjectSettingsDialog dialog(this, &quot;InDE project settings&quot;);
+ 	dialog.run(settings);
+ }
+ 
+
+Modified: trunk/src/ProjectBrowser.cpp
+===================================================================
+--- trunk/src/ProjectBrowser.cpp	2005-03-17 13:42:51 UTC (rev 40)
++++ trunk/src/ProjectBrowser.cpp	2005-03-17 14:24:36 UTC (rev 41)
+@@ -20,27 +20,30 @@
+ 
+ #include &quot;ProjectBrowser.h&quot;
+ #include &quot;StringTokenizer.h&quot;
++#include &quot;FileSystem.h&quot;
+ 
+ //////////////////////////////////////////////////
+ // Message map
+ 
+ FXDEFMAP(ProjectBrowser) ProjectBrowserMap[] = {
+-//	FXMAPFUNC(SEL_COMMAND, ProjectBrowser::ID_SELECTLICENSEFILE, ProjectBrowser::onCmdSelectLicenseHeader),
++	FXMAPFUNC(SEL_DOUBLECLICKED,	ProjectBrowser::ID_BROWSER,	ProjectBrowser::onDoubleClick),
+ };
+ 
+ 
+ //////////////////////////////////////////////////
+ // Object implementation
+-FXIMPLEMENT(ProjectBrowser, FXComposite, ProjectBrowserMap, ARRAYNUMBER(ProjectBrowserMap))
++FXIMPLEMENT(ProjectBrowser, FXVerticalFrame, ProjectBrowserMap, ARRAYNUMBER(ProjectBrowserMap))
+ 
+ 
+ 
+ //////////////////////////////////////////////////
+ // Constructor
+-ProjectBrowser::ProjectBrowser(FXComposite *p, FXObject *tgt, FXSelector sel, FXuint opts, FXint x, FXint y, FXint w, FXint h)
+-	: FXComposite(p)
++ProjectBrowser::ProjectBrowser(FXComposite* p, MainWindow* win, FXObject* tgt, FXSelector sel, FXuint opts)
++	: FXVerticalFrame(p, opts, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+ {
+-	projectTree = new FXTreeList(p, tgt, sel, opts, x, y, w, h);
++	mainWin = win;
++
++	projectTree = new FXTreeList(this, this, ID_BROWSER, TREELIST_BROWSESELECT|TREELIST_SHOWS_LINES|TREELIST_SHOWS_BOXES|LAYOUT_FILL_X|LAYOUT_FILL_Y);
+ }
+ 
+ 
+@@ -56,60 +59,10 @@
+ // Fox interface
+ void ProjectBrowser::create()
+ {
+-	projectTree-&gt;create();
++	FXVerticalFrame::create();
+ }
+ 
+-void ProjectBrowser::detach()
+-{
+-	projectTree-&gt;detach();
+-}
+ 
+-void ProjectBrowser::layout()
+-{
+-	projectTree-&gt;layout();
+-}
+-
+-FXint ProjectBrowser::getDefaultWidth()
+-{
+-	return projectTree-&gt;getDefaultWidth();
+-}
+-
+-FXint ProjectBrowser::getDefaultHeight()
+-{
+-	return projectTree-&gt;getDefaultHeight();
+-}
+-
+-FXint ProjectBrowser::getContentWidth()
+-{
+-	return projectTree-&gt;getContentWidth();
+-}
+-
+-FXint ProjectBrowser::getContentHeight()
+-{
+-	return projectTree-&gt;getContentHeight();
+-}
+-
+-void ProjectBrowser::recalc()
+-{
+-	projectTree-&gt;recalc();
+-}
+-
+-FXbool ProjectBrowser::canFocus() const
+-{
+-	return projectTree-&gt;canFocus();
+-}
+-
+-void ProjectBrowser::setFocus()
+-{
+-	projectTree-&gt;setFocus();
+-}
+-
+-void ProjectBrowser::killFocus()
+-{
+-	projectTree-&gt;killFocus();
+-}
+-
+-
+ //////////////////////////////////////////////////
+ void ProjectBrowser::addFile(FXString project, FXString name, FXString dir, FileType type)
+ {
+@@ -228,6 +181,7 @@
+ 		FXTreeItem* parent = current-&gt;getParent();
+ 		if (parent == NULL)
+ 			break;
++		current = parent;
+ 	}
+ 	return current-&gt;getText();
+ }
+@@ -313,3 +267,50 @@
+ 	delete strtok;
+ }
+ 
++
++//////////////////////////////////////////////////
++FXString ProjectBrowser::getPathname(FXTreeItem* item) 
++{
++	FXString path;
++
++	FXTreeItem* current = item;
++	while (true)
++	{
++		path.prepend(current-&gt;getText());
++		path.prepend(FS::dirSeparator());
++		FXTreeItem* parent = current-&gt;getParent();
++		if (parent == NULL)
++			break;
++		current = parent;
++	}
++
++	path.prepend(mainWin-&gt;settings-&gt;getStringValue(&quot;baseDir&quot;));
++	return path;
++}
++
++
++//////////////////////////////////////////////////
++long ProjectBrowser::onDoubleClick(FXObject* sender, FXSelector sel, void* ptr)
++{
++	FXTRACE((1, &quot;FileBrowser::onDoubleClick()\n&quot;));
++	if (ptr)
++	{
++		FXTreeItem* item = (FXTreeItem*)ptr;
++		if (!projectTree-&gt;isItemLeaf(item))
++		{
++	    	if(projectTree-&gt;isItemExpanded(item))
++	    	{
++				projectTree-&gt;collapseTree(item, TRUE);
++			}
++			else
++			{
++				projectTree-&gt;expandTree(item, TRUE);
++			}
++		}
++		else// if (projectTree-&gt;isItemLeaf(item))
++		{
++			mainWin-&gt;getEditor()-&gt;openFile(getPathname(item));
++		}
++	}
++	return 1;
++}
+
+Modified: trunk/src/ProjectSettingsDialog.cpp
+===================================================================
+--- trunk/src/ProjectSettingsDialog.cpp	2005-03-17 13:42:51 UTC (rev 40)
++++ trunk/src/ProjectSettingsDialog.cpp	2005-03-17 14:24:36 UTC (rev 41)
+@@ -111,6 +111,10 @@
+ 	new FXTextField(frm, 60, &amp;tgtIncludeDir, FXDataTarget::ID_VALUE, LAYOUT_FILL_X|TEXTFIELD_NORMAL);
+ 	new FXLabel(frm, &quot;Build directory:&quot;);
+ 	new FXTextField(frm, 60, &amp;tgtBuildDir, FXDataTarget::ID_VALUE);
++	new FXLabel(frm, &quot;Documentation directory:&quot;);
++	new FXTextField(frm, 60, &amp;tgtDocDir, FXDataTarget::ID_VALUE, LAYOUT_FILL_X|TEXTFIELD_NORMAL);
++	new FXLabel(frm, &quot;Ressource directory:&quot;);
++	new FXTextField(frm, 60, &amp;tgtRessourceDir, FXDataTarget::ID_VALUE, LAYOUT_FILL_X|TEXTFIELD_NORMAL);
+ 
+ 	// Libraries and path settings
+ 	frm = new FXVerticalFrame(switcher, LAYOUT_FILL_X|LAYOUT_FILL_Y);
+@@ -121,10 +125,6 @@
+ 	new FXTextField(frm, 60, &amp;tgtLibraryPaths, FXDataTarget::ID_VALUE, LAYOUT_FILL_X|TEXTFIELD_NORMAL);
+ 	new FXLabel(frm, &quot;Libraries to link with (comma separated list, without suffix and prefix):&quot;);
+ 	new FXTextField(frm, 60, &amp;tgtLibraries, FXDataTarget::ID_VALUE, LAYOUT_FILL_X|TEXTFIELD_NORMAL);
+-	new FXLabel(frm, &quot;Documentation directory:&quot;);
+-	new FXTextField(frm, 60, &amp;tgtDocDir, FXDataTarget::ID_VALUE, LAYOUT_FILL_X|TEXTFIELD_NORMAL);
+-	new FXLabel(frm, &quot;Ressource directory:&quot;);
+-	new FXTextField(frm, 60, &amp;tgtRessourceDir, FXDataTarget::ID_VALUE, LAYOUT_FILL_X|TEXTFIELD_NORMAL);
+ 
+ 	// Compiler and linker options
+ 	frm = new FXVerticalFrame(switcher, LAYOUT_FILL_X|LAYOUT_FILL_Y);
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000213.html">[InDE-devel] missing mails
+</A></li>
+	<LI>Next message: <A HREF="000208.html">[InDE-devel] r41 - in trunk: include src
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#206">[ date ]</a>
+              <a href="thread.html#206">[ thread ]</a>
+              <a href="subject.html#206">[ subject ]</a>
+              <a href="author.html#206">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] Project configuration file
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-February/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Project%20configuration%20file&In-Reply-To=%3C420F9D19.9080002%40sten-net.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000011.html">
+   <LINK REL="Next"  HREF="000015.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] Project configuration file</H1>
+    <B>Jannis Pohlmann</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Project%20configuration%20file&In-Reply-To=%3C420F9D19.9080002%40sten-net.de%3E"
+       TITLE="[InDE-devel] Project configuration file">devel at sten-net.de
+       </A><BR>
+    <I>Sun Feb 13 19:31:53 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000011.html">[InDE-devel] Project configuration file
+</A></li>
+        <LI>Next message: <A HREF="000015.html">[InDE-devel] Project configuration file
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#13">[ date ]</a>
+              <a href="thread.html#13">[ thread ]</a>
+              <a href="subject.html#13">[ subject ]</a>
+              <a href="author.html#13">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Jochen.
+
+&gt;&gt;<i>Of course it 
+</I>&gt;&gt;<i>will appear in some
+</I>&gt;&gt;<i>kind of global settings dialog.
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>ok. This may placed in ~/.foxrc/InDE
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Personally, I don't like ~/.foxrc/InDE. There's more sense in creating an
+own program directory in the home dir. There may be some other things
+besides user settings (e.g. user specific syntax file) and it would be
+too chaotic if they were spread to ~/.foxrc/InDE and ~/.InDE.
+
+&gt;&gt;<i>The user creates a project and defines name and version number for it. 
+</I>&gt;&gt;<i>InDE will then create
+</I>&gt;&gt;<i>a project directory which includes both (e.g. InDE-0.0.1 or FOX-1.4). In 
+</I>&gt;&gt;<i>this directory a
+</I>&gt;&gt;<i>project configuration file (let's call it &quot;project.ini&quot; or 
+</I>&gt;&gt;<i>&quot;project.cfg&quot;) is placed by InDE.
+</I>&gt;&gt;<i>All project settings (divided into severeal sections - see my last mail) 
+</I>&gt;&gt;<i>are written into
+</I>&gt;&gt;<i>this file.
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>Hm. I do not like InDE-0.0.1 as you have to create a new project for a
+</I>&gt;<i>new version.
+</I>&gt;<i>It were ok, if you only defined InDe-0.0 and the patchlevel is the build
+</I>&gt;<i>target. But, both ways, will restrict the users to follow our release
+</I>&gt;<i>numbering scheme.
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>You're right. I'd like to correct myself. Lets keep it simple using the 
+project name (without numbers) as
+directory and nothing else.
+
+&gt;<i>Before discussing this in more detail, another demand, as i believe we
+</I>&gt;<i>should include.
+</I>&gt;<i>Take a compiler project for example. The compiler project may be divided
+</I>&gt;<i>into a preprocesor subproject, a parser (or many, e.g. to support many
+</I>&gt;<i>languages like gcc) subproject, and last but not least the targets
+</I>&gt;<i>subprojects (i386, ppc, mipsel,...).
+</I>&gt;<i>So you will create one project, named compiler, and several subproject,
+</I>&gt;<i>named parser, preprocessor, target,... they all will build as objects
+</I>&gt;<i>(libs) and build together with several rules to a complete compiler.
+</I>&gt;<i>So you need to create subprojects, which will be handled as severel
+</I>&gt;<i>directories in the IDE and will build at once, if you push the build
+</I>&gt;<i>project button. And you may specify several subprojects to be included
+</I>&gt;<i>or not for the build target (e.g. preprocessor + cpp-parser +
+</I>&gt;<i>target-amd64)
+</I>&gt;<i>
+</I>&gt;<i>I'd prefer it to have the subprojects (if any) named with the main
+</I>&gt;<i>version numbers, not the base project. So you may specify the workplace
+</I>&gt;<i>version-dependend and for example fix bugs in the stable branch while
+</I>&gt;<i>you normally develop in the unstable branch. This also would require a
+</I>&gt;<i>diff and merge tool to integrate code from one branch into the other.
+</I>&gt;<i>This also is in need for a new subproject, but this could be handled
+</I>&gt;<i>like this: subproject -&gt; new version tree -&gt; get new version number -&gt;
+</I>&gt;<i>based on old version number -&gt; inDe creates new subdirectory/subproject
+</I>&gt;<i>and copies the files from the base to the new directory. But, taking fox
+</I>&gt;<i>versions as base, the subproject's version directories are named
+</I>&gt;<i>fox-1.4, the patchlevel is then used for the new build target for a
+</I>&gt;<i>release build.
+</I>&gt;<i>
+</I>&gt;<i>And maybe you could include something like Make's make distcheck, wich
+</I>&gt;<i>throws out an ready to ship tar.gz, which also could be easyly archived,
+</I>&gt;<i>working together with a archive old branch function.
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Yeah, creating a tar.gz or tar.bz2 (which I prefer) will be easy with 
+SCons. I'll add this to the build script.
+An archiving function for these dist-files should be no problem, too.
+
+&gt;<i>The above way to handle projects and version numbers relies on a
+</I>&gt;<i>straightforward SConsript file tree, but is easyly supported by SCons.
+</I>&gt;<i>
+</I>&gt;<i>What do you think about this project structure?
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Subprojects ... Hm, that's difficult stuff, I guess. I'd like to hold 
+off on this until we have a stable
+code base which means a program that actually works without subprojects.
+Once we have reached that point we could still think about implementing 
+subprojects. It's an
+interesting idea indeed.
+
+&gt;<i>  
+</I>&gt;<i>
+</I>&gt;&gt;<i>That's it. Perhaps there will be some more files besides project.cfg
+</I>&gt;&gt;<i>which have to be initially put into the project directory like e.g.
+</I>&gt;&gt;<i>SConstructs or something like this. We'll see.
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>project.cfg and SConscript will be all files needed. And the SConstruct
+</I>&gt;<i>file in the major project dir.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>&gt;&gt;<i>If you don't have ideas about import configuration sections/variables
+</I>&gt;&gt;<i>for project.cfg, I'll create the &quot;Create new project&quot; dialog. This will
+</I>&gt;&gt;<i>be a first example of how the other dialogs could be designed and how
+</I>&gt;&gt;<i>they could be integrated into the main window class. That having done
+</I>&gt;&gt;<i>I will be able to share the code via SVN so we can discuss about the
+</I>&gt;&gt;<i>next steps.
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>That's not the problem....
+</I>&gt;<i>I am just thinking about how to contribute. What do you actually expect?
+</I>&gt;<i>If i should implement just the advanced setting class, i do not need any
+</I>&gt;<i>InDE code, because it's a standalone class derived from fox.
+</I>&gt;<i>But implementing the create new dialog based on the settings class will
+</I>&gt;<i>need the code base to include it.
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Okay, I understand. I know it seems a bit as if I would try to handle 
+dozends of tasks all at one
+time without having a clear mind or something. Hehe.
+
+Well then, I will meditate some minutes about the next steps in order to 
+provide you some
+clear information about what is to be done.
+
+&gt;&gt;<i>Any objections?
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>More than enough.
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>No problem. That's good as long as we turn them into something 
+constructive (I think that is
+what we do).
+
+Regards,
+Jannis
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000011.html">[InDE-devel] Project configuration file
+</A></li>
+	<LI>Next message: <A HREF="000015.html">[InDE-devel] Project configuration file
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#13">[ date ]</a>
+              <a href="thread.html#13">[ thread ]</a>
+              <a href="subject.html#13">[ subject ]</a>
+              <a href="author.html#13">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] Commited some stuff to SVN
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-February/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Commited%20some%20stuff%20to%20SVN&In-Reply-To=%3C421005A1.4020309%40sten-net.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000020.html">
+   <LINK REL="Next"  HREF="000026.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] Commited some stuff to SVN</H1>
+    <B>Jannis Pohlmann</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Commited%20some%20stuff%20to%20SVN&In-Reply-To=%3C421005A1.4020309%40sten-net.de%3E"
+       TITLE="[InDE-devel] Commited some stuff to SVN">devel at sten-net.de
+       </A><BR>
+    <I>Mon Feb 14 02:57:53 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000020.html">[InDE-devel] Commited some stuff to SVN
+</A></li>
+        <LI>Next message: <A HREF="000026.html">[InDE-devel] Commited some stuff to SVN
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#22">[ date ]</a>
+              <a href="thread.html#22">[ thread ]</a>
+              <a href="subject.html#22">[ subject ]</a>
+              <a href="author.html#22">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Jochen.
+
+Jochen Rassler schrieb:
+
+&gt;<i>Ok, this will be a perfect start.
+</I>&gt;<i>I am too tired to work things out this evening. Just had a few very
+</I>&gt;<i>short nights.
+</I>&gt;<i>
+</I>&gt;<i>But some ideas related to the other mail, regarding project settings.
+</I>&gt;<i>
+</I>&gt;<i>Project creation. Anjuta has a nice concept with its project creation
+</I>&gt;<i>dialog (or at least had as i looked at it last time - over a one and a
+</I>&gt;<i>half year ago). Step by Step dialogs wich let the user enter project
+</I>&gt;<i>name, description, target, project type, used libraries, both normal
+</I>&gt;<i>ones and user libraries.
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Step by step, yes, that would be great. You could use FXWizard for this, 
+I think.
+But let's not head on too fast. We should discuss the internal structure 
+of the InDE settings
+first and follow the roadmap: One task after the other. At least that's 
+what I think.
+
+&gt;<i>The on demand compilation should be done without SCons. We know the
+</I>&gt;<i>project settings, because we create them and let the user change them
+</I>&gt;<i>through one of our dialogs. So we know all of the compiler settings. So
+</I>&gt;<i>we can easily invoke the compiler with all needed switches, the input
+</I>&gt;<i>file and path and also output path. The only problem i see at this
+</I>&gt;<i>moment may be to know which compiler to use, because SCons does this job
+</I>&gt;<i>for us. But maybe we can use a very basic SConscipt file to just test
+</I>&gt;<i>the compiler version to parse which compiler is chosen by SCons and use
+</I>&gt;<i>this one.
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>That sounds really good. I see the same problem as you here: the 
+compiler which is used.
+As we are using Python already with SCons we perhaps could put a little 
+Python script for on
+demand compilation into the project directory. Therewith, platform and 
+what else is needed to
+know could be determined and the right compiler command could be called.
+
+It's a bit vague at the moment but I'm optimistic we will be able to 
+manage this.
+
+&gt;<i>I'll give all the answers a try tomorrow. 
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>ALL the answers? Answering only the questions for the first step might 
+be better. Just tell
+me what your ideas on the first four questions are. I will start a new 
+mailinglist topic
+for Q1.1 - Q1.4.
+
+&gt;<i>And i also think we should
+</I>&gt;<i>start implementing project and inde settings as soon as we collected
+</I>&gt;<i>some ideas / information. It should not be too difficult to edit
+</I>&gt;<i>settings and add new variables once the basic structure is implemented.
+</I>&gt;<i>Also the supported project types can easyly enhanced as we know of new
+</I>&gt;<i>needs.
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>If we find a good solution for managing the setting variables adding 
+more options will be easy, yes.
+
+&gt;<i>I do not like to think too far in such detailed questions as long as it
+</I>&gt;<i>is unclear anyhow, how to introduce the basic features to the
+</I>&gt;<i>application. Doing one step after the other should clear things up and
+</I>&gt;<i>show the problems or the potential of the solution.
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Yeah. Let's work in a systematic step-by-step schema - the roadmap is 
+predestinated for that.
+
+&gt;<i>BTW, when we are just talking about project settings. A nice thing i
+</I>&gt;<i>like in many IDE is the automatic license header creation. Maybe a
+</I>&gt;<i>radiogroup of few known free licenses (at least GPL and LGPL) and maybe
+</I>&gt;<i>one for user defined header. If you push the new file button, the header
+</I>&gt;<i>will automatically added with license, year and author.
+</I>&gt;<i>And, if we create a *.cpp or *.h file, InDE could ask the user to create
+</I>&gt;<i>the other file, too. So you only have to create the header file, InDE
+</I>&gt;<i>creates the source file too. And therefor maybe a long term feature:
+</I>&gt;<i>after the header is written, InDE could add all not inlined functions as
+</I>&gt;<i>simple bodies to the cpp file, so that you only have to enter your code
+</I>&gt;<i>(just for the roadmap of nice features;)
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Superb ideas!
+
+&gt;<i>I just looked through the tasks and i think you can attach the following
+</I>&gt;<i>task to me (as i am not allowed to do this):
+</I>&gt;<i>1612: Create project dialog, as it depends on 1611 anyhow
+</I>&gt;<i>
+</I>&gt;<i>Is it neccessary to divide the single tasks to subprojects? They all
+</I>&gt;<i>depend on the InDE core and so it may be more intuitiv to have them in
+</I>&gt;<i>one list.
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>No, it's not. But I'm not sure if we really need this task management 
+feature. What do you think?
+Wouldn't clearly marked topics in this mailinglist (such as: 
+&quot;[InDE-devel] [T1.1] Some text&quot;) be
+enough? We are only two developers, if we follow a scheme like this, 
+there'd be enough structure.
+
+BTW: Do you have ICQ, IRC or something? Such logistic questions perhaps 
+could be more easily
+discussed there.
+
+Regards,
+Jannis
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000020.html">[InDE-devel] Commited some stuff to SVN
+</A></li>
+	<LI>Next message: <A HREF="000026.html">[InDE-devel] Commited some stuff to SVN
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#22">[ date ]</a>
+              <a href="thread.html#22">[ thread ]</a>
+              <a href="subject.html#22">[ subject ]</a>
+              <a href="author.html#22">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

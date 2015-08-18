@@ -1,0 +1,5454 @@
+From devel at sten-net.de  Fri Feb 11 19:04:37 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Fri, 11 Feb 2005 19:04:37 +0100
+Subject: [Inde-devel] test
+Message-ID: <420CF3B5.3060706@sten-net.de>
+
+test
+
+-- 
+		- Jannis
+
+
+
+From jochen at cornmania.de  Fri Feb 11 22:42:12 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Fri, 11 Feb 2005 22:42:12 +0100
+Subject: [Inde-devel] I am in
+Message-ID: <1108158132.1606.33.camel@jogix.sojox>
+
+Hi Jannis.
+
+I just have entered the mailinglist. So i'm in ;)
+
+regards
+	Jochen
+
+
+
+From jochen at cornmania.de  Fri Feb 11 23:19:20 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Fri, 11 Feb 2005 23:19:20 +0100
+Subject: [Inde-devel] FOX toolkit
+Message-ID: <1108160360.1606.38.camel@jogix.sojox>
+
+Hi.
+
+I am waiting for FOX 1.4.3 to be released. I haven't yet downloaded 1.4
+because of the many bugs in it. I guess it will be just a matter of time
+- say days or better hours - that 1.4.3 will be released.
+
+Jeroen does a really good job, but i had prefered he had released the
+actual 1.4.0 as 1.3.27 or better 1.3.90 or 1.4rc1 and stated it as the
+first beta for 1.4. So the 1.4 release is not yet a stable on but rather
+a development beta pre 1.4 one.
+
+How do you think about it?
+
+regards
+	Jochen
+
+
+
+From devel at sten-net.de  Sat Feb 12 15:07:17 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Sat, 12 Feb 2005 15:07:17 +0100
+Subject: [Inde-devel] FOX toolkit
+In-Reply-To: <1108160360.1606.38.camel@jogix.sojox>
+References: <1108160360.1606.38.camel@jogix.sojox>
+Message-ID: <420E0D95.7070402@sten-net.de>
+
+Jochen Rassler schrieb:
+
+>Hi.
+>
+>I am waiting for FOX 1.4.3 to be released. I haven't yet downloaded 1.4
+>because of the many bugs in it. I guess it will be just a matter of time
+>- say days or better hours - that 1.4.3 will be released.
+>
+>Jeroen does a really good job, but i had prefered he had released the
+>actual 1.4.0 as 1.3.27 or better 1.3.90 or 1.4rc1 and stated it as the
+>first beta for 1.4. So the 1.4 release is not yet a stable on but rather
+>a development beta pre 1.4 one.
+>
+>How do you think about it?
+>
+>regards
+>	Jochen
+>  
+>
+Hi Jochen.
+
+FOX 1.4.3 was released today.
+
+Yes, it seems as if 1.4 is not that stable as one might have expected. 
+Yet, Jeroen did some
+important fixes in 1.4.2 and 1.4.3. 1.4.3 to me seems to be as good as 
+the latest development
+release although I'll use the latter to develop my stuff.
+
+By the way, if he had released it as 1.3.90 he wouldn't have followed 
+the naming scheme
+of FOX (the last number defines the amount of patches which were 
+released after the
+1.3.0 release).
+
+Regards,
+Jannis
+
+
+From devel at sten-net.de  Sat Feb 12 19:27:53 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Sat, 12 Feb 2005 19:27:53 +0100
+Subject: [InDE-devel] Spelling of "InDE"; Tasks announced on berliOS
+Message-ID: <420E4AA9.4040401@sten-net.de>
+
+Hello Jochen,
+
+I'm of the opinion we should call inDE with an upper case letter at the 
+beginning (>> InDE). Somehow
+this looks better. What do you think?
+
+I have started to announce tasks I am going to be working at for the 
+next days on our project site. I will
+enter some other tasks later, only that you are able to follow my 
+current work. If you have any comments,
+questions or ideas on some of the tasks, we can discuss them here, I think.
+
+Regards,
+Jannis
+
+
+From jochen at cornmania.de  Sat Feb 12 21:16:22 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Sat, 12 Feb 2005 21:16:22 +0100
+Subject: [Inde-devel] FOX toolkit
+In-Reply-To: <420E0D95.7070402@sten-net.de>
+References: <1108160360.1606.38.camel@jogix.sojox>
+	 <420E0D95.7070402@sten-net.de>
+Message-ID: <1108239382.1569.3.camel@jogix.sojox>
+
+Hi Jannis.
+
+Am Samstag, den 12.02.2005, 15:07 +0100 schrieb Jannis Pohlmann:
+> By the way, if he had released it as 1.3.90 he wouldn't have followed 
+> the naming scheme
+> of FOX (the last number defines the amount of patches which were 
+> released after the
+> 1.3.0 release).
+
+Yes, you are right. I think he had had to call it 1.4rc1 or similar.
+Sometimes it is very difficult to understand the release numbers. The
+1.3.90 scheme had been the way Linus Torvalds had named it. The
+percentage of readiness.
+But Jeroen follows the GNU way. And although gcc is GNU software, they
+do not follow the GNU convention. gcc 3.3 _is_ a stable release.
+
+But now fox 1.4.3 is out and i hope it will run ok. I will compile it in
+an hour or so und just test it.
+
+Jochen
+
+
+
+From jochen at cornmania.de  Sat Feb 12 21:22:52 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Sat, 12 Feb 2005 21:22:52 +0100
+Subject: [InDE-devel] Spelling of "InDE"; Tasks announced on berliOS
+In-Reply-To: <420E4AA9.4040401@sten-net.de>
+References: <420E4AA9.4040401@sten-net.de>
+Message-ID: <1108239773.1569.10.camel@jogix.sojox>
+
+Hi Jannis.
+
+Am Samstag, den 12.02.2005, 19:27 +0100 schrieb Jannis Pohlmann:
+> I'm of the opinion we should call inDE with an upper case letter at the 
+> beginning (>> InDE). Somehow
+> this looks better. What do you think?
+
+I really don't mind. But i'd prefer to define it once and leave it this
+way.
+> 
+> I have started to announce tasks I am going to be working at for the 
+> next days on our project site. I will
+> enter some other tasks later, only that you are able to follow my 
+> current work. If you have any comments,
+> questions or ideas on some of the tasks, we can discuss them here, I think.
+> 
+I was out the complete day - my nephew had birthday and so i had to be
+there.
+
+I will look at the tasks later to get an overview. 
+
+BTW, did you upload your actual code to svn? Maybe i could work at the
+one or other task. Or maybe we define some more tasks which seem
+important for the first steps and i start to implement some of them. I
+have some time left until mid of February, after then i can only help
+with little tasks until mid of April. exams .... :(
+
+CU
+Jochen
+
+
+
+From devel at sten-net.de  Sat Feb 12 23:49:55 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Sat, 12 Feb 2005 23:49:55 +0100
+Subject: [InDE-devel] Spelling of "InDE"; Tasks announced on berliOS
+In-Reply-To: <1108239773.1569.10.camel@jogix.sojox>
+References: <420E4AA9.4040401@sten-net.de> <1108239773.1569.10.camel@jogix.sojox>
+Message-ID: <420E8813.8090306@sten-net.de>
+
+Jochen Rassler schrieb:
+
+>Hi Jannis.
+>
+>Am Samstag, den 12.02.2005, 19:27 +0100 schrieb Jannis Pohlmann:
+>  
+>
+>>I'm of the opinion we should call inDE with an upper case letter at the 
+>>beginning (>> InDE). Somehow
+>>this looks better. What do you think?
+>>    
+>>
+>
+>I really don't mind. But i'd prefer to define it once and leave it this
+>way.
+>  
+>
+>>I have started to announce tasks I am going to be working at for the 
+>>next days on our project site. I will
+>>enter some other tasks later, only that you are able to follow my 
+>>current work. If you have any comments,
+>>questions or ideas on some of the tasks, we can discuss them here, I think.
+>>
+>>    
+>>
+>I was out the complete day - my nephew had birthday and so i had to be
+>there.
+>
+>I will look at the tasks later to get an overview. 
+>
+>BTW, did you upload your actual code to svn? Maybe i could work at the
+>one or other task. Or maybe we define some more tasks which seem
+>important for the first steps and i start to implement some of them. I
+>have some time left until mid of February, after then i can only help
+>with little tasks until mid of April. exams .... :(
+>
+>CU
+>Jochen
+>  
+>
+Hi again,
+
+Okay then, let's call it InDE, not inDE.
+
+I'll upload some stuff as soon as possible. I wanted to implement some 
+basics in our App class.
+As long as this isn't done yet, there's nothing you can start with. But 
+when it's done, I will upload it and
+you can do some dialogs perhaps? At the moment, I can't tell exactly 
+what steps are going to be done next.
+
+Regards,
+Jannis
+
+
+
+
+From devel at sten-net.de  Sun Feb 13 01:04:53 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Sun, 13 Feb 2005 01:04:53 +0100
+Subject: [InDE-devel] Project configuration file
+Message-ID: <420E99A5.9020004@sten-net.de>
+
+Hi Jochen.
+
+I have kind of a task for you.
+
+You know we want to implement support projects (a collection of source 
+and header files) in InDE. Therefor we
+need a file where all project information is written to.
+
+FXSettings supports ini-like files, so this is what we should use.
+My task for you: Think about which sections we will need for this and 
+which variables.
+
+I'll start with a few basic things:
+
+Section: INFO
+Variable: PROJECT_NAME, PROJECT_DESCRIPTION, PROJECT_VERSION, 
+PROJECT_TARGET (executable, shared/static library)
+
+Section: PATHS
+Variables: INCLUDE_PATHS, LIBRARY_PATHS, SOURCE_DIR (of project), 
+INCLUDE_DIR (of project), BUILD_DIR
+
+Section: DEPENDENCIES
+Variables: LIBRARIES
+
+Section: BUILD
+Variables: BUILD_TYPE (debug/release)
+
+Feel free to criticise, add, remove, change them the way you think it 
+makes sense. All you have to concentrate on is what things are
+needed for all kinds of projects that come to your mind. Hehe.
+
+Best regards,
+Jannis
+
+
+From jochen at cornmania.de  Sun Feb 13 10:56:13 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Sun, 13 Feb 2005 10:56:13 +0100
+Subject: [InDE-devel] Project configuration file
+In-Reply-To: <420E99A5.9020004@sten-net.de>
+References: <420E99A5.9020004@sten-net.de>
+Message-ID: <1108288573.1556.3.camel@jogix.sojox>
+
+Hi Jannis.
+
+Am Sonntag, den 13.02.2005, 01:04 +0100 schrieb Jannis Pohlmann:
+> Hi Jochen.
+> 
+> I have kind of a task for you.
+> 
+> You know we want to implement support projects (a collection of source 
+> and header files) in InDE. Therefor we
+> need a file where all project information is written to.
+> 
+> FXSettings supports ini-like files, so this is what we should use.
+> My task for you: Think about which sections we will need for this and 
+> which variables.
+> 
+> I'll start with a few basic things:
+> 
+> Section: INFO
+> Variable: PROJECT_NAME, PROJECT_DESCRIPTION, PROJECT_VERSION, 
+> PROJECT_TARGET (executable, shared/static library)
+> 
+> Section: PATHS
+> Variables: INCLUDE_PATHS, LIBRARY_PATHS, SOURCE_DIR (of project), 
+> INCLUDE_DIR (of project), BUILD_DIR
+> 
+> Section: DEPENDENCIES
+> Variables: LIBRARIES
+> 
+> Section: BUILD
+> Variables: BUILD_TYPE (debug/release)
+> 
+> Feel free to criticise, add, remove, change them the way you think it 
+> makes sense. All you have to concentrate on is what things are
+> needed for all kinds of projects that come to your mind. Hehe.
+> 
+Where do you want to put these config files?
+One central point or something like Eclipse's workspaces?
+
+Jochen
+
+
+
+From devel at sten-net.de  Sun Feb 13 11:27:45 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Sun, 13 Feb 2005 11:27:45 +0100
+Subject: [InDE-devel] Project configuration file
+In-Reply-To: <1108288573.1556.3.camel@jogix.sojox>
+References: <420E99A5.9020004@sten-net.de> <1108288573.1556.3.camel@jogix.sojox>
+Message-ID: <420F2BA1.3000406@sten-net.de>
+
+Jochen Rassler schrieb:
+
+>Hi Jannis.
+>
+>Am Sonntag, den 13.02.2005, 01:04 +0100 schrieb Jannis Pohlmann:
+>
+>>Hi Jochen.
+>>
+>>I have kind of a task for you.
+>>
+>>You know we want to implement support projects (a collection of source 
+>>and header files) in InDE. Therefor we
+>>need a file where all project information is written to.
+>>
+>>FXSettings supports ini-like files, so this is what we should use.
+>>My task for you: Think about which sections we will need for this and 
+>>which variables.
+>>
+>>I'll start with a few basic things:
+>>
+>>Section: INFO
+>>Variable: PROJECT_NAME, PROJECT_DESCRIPTION, PROJECT_VERSION, 
+>>PROJECT_TARGET (executable, shared/static library)
+>>
+>>Section: PATHS
+>>Variables: INCLUDE_PATHS, LIBRARY_PATHS, SOURCE_DIR (of project), 
+>>INCLUDE_DIR (of project), BUILD_DIR
+>>
+>>Section: DEPENDENCIES
+>>Variables: LIBRARIES
+>>
+>>Section: BUILD
+>>Variables: BUILD_TYPE (debug/release)
+>>
+>>Feel free to criticise, add, remove, change them the way you think it 
+>>makes sense. All you have to concentrate on is what things are
+>>needed for all kinds of projects that come to your mind. Hehe.
+>>
+>>
+>Where do you want to put these config files?
+>One central point or something like Eclipse's workspaces?
+>
+>Jochen
+>
+Hi Jochen.
+
+I thought about something like this:
+
+InDE will have a global variable which defines the base directory for 
+all projects (that's
+how most of the IDEs work, I think - Eclipse, Anjuta etc.). Of course it 
+will appear in some
+kind of global settings dialog.
+
+The user creates a project and defines name and version number for it. 
+InDE will then create
+a project directory which includes both (e.g. InDE-0.0.1 or FOX-1.4). In 
+this directory a
+project configuration file (let's call it "project.ini" or 
+"project.cfg") is placed by InDE.
+All project settings (divided into severeal sections - see my last mail) 
+are written into
+this file.
+
+An example would be:
+
+# Default InDE settings:
+Linux: /usr/local/share/InDE/InDE.cfg
+Windows (Registry): HKEY_LOCAL_MACHINE/Software/InDE/
+
+# User-wide InDE settings:
+Linux: /home/jannis/.InDE/InDE.cfg
+Windows (Registry): HKEY_CURRENT_USER/Software/InDE/
+
+# Example base directory
+Linux: /home/jannis/Projects
+Windows: C:\Projects
+
+# Example project directories
+Linux: /home/jannis/Projects/InDE-0.0.1/
+Windows: C:\Projects\InDE-0.0.1
+
+Linux: /home/jannis/Projects/FOX-1.4
+Windows: C:\Projects\FOX-1.4
+
+# Example project configurations
+Linux: /home/jannis/Projects/InDE-0.0.1/project.cfg
+Windows: C:\Projects\InDE-0.0.1\project.cfg
+
+Linux: /home/jannis/Projects/FOX-1.4/project.cfg
+Windows: C:\Projects\FOX-1.4\project.cfg
+
+--
+
+That's it. Perhaps there will be some more files besides project.cfg
+which have to be initially put into the project directory like e.g.
+SConstructs or something like this. We'll see.
+
+That should be enough for the moment.
+
+If you don't have ideas about import configuration sections/variables
+for project.cfg, I'll create the "Create new project" dialog. This will
+be a first example of how the other dialogs could be designed and how
+they could be integrated into the main window class. That having done
+I will be able to share the code via SVN so we can discuss about the
+next steps.
+
+Any objections?
+
+Regards,
+Jannis
+
+
+From jochen at cornmania.de  Sun Feb 13 12:20:24 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Sun, 13 Feb 2005 12:20:24 +0100
+Subject: [InDE-devel] Project configuration file
+In-Reply-To: <420F2BA1.3000406@sten-net.de>
+References: <420E99A5.9020004@sten-net.de>
+	 <1108288573.1556.3.camel@jogix.sojox>  <420F2BA1.3000406@sten-net.de>
+Message-ID: <1108293624.1556.29.camel@jogix.sojox>
+
+Hi Jannis.
+
+Am Sonntag, den 13.02.2005, 11:27 +0100 schrieb Jannis Pohlmann:
+> I thought about something like this:
+> 
+> InDE will have a global variable which defines the base directory for 
+> all projects (that's
+> how most of the IDEs work, I think - Eclipse, Anjuta etc.). Of course it 
+> will appear in some
+> kind of global settings dialog.
+ok. This may placed in ~/.foxrc/InDE
+> 
+> The user creates a project and defines name and version number for it. 
+> InDE will then create
+> a project directory which includes both (e.g. InDE-0.0.1 or FOX-1.4). In 
+> this directory a
+> project configuration file (let's call it "project.ini" or 
+> "project.cfg") is placed by InDE.
+> All project settings (divided into severeal sections - see my last mail) 
+> are written into
+> this file.
+Hm. I do not like InDE-0.0.1 as you have to create a new project for a
+new version.
+It were ok, if you only defined InDe-0.0 and the patchlevel is the build
+target. But, both ways, will restrict the users to follow our release
+numbering scheme.
+
+Before discussing this in more detail, another demand, as i believe we
+should include.
+Take a compiler project for example. The compiler project may be divided
+into a preprocesor subproject, a parser (or many, e.g. to support many
+languages like gcc) subproject, and last but not least the targets
+subprojects (i386, ppc, mipsel,...).
+So you will create one project, named compiler, and several subproject,
+named parser, preprocessor, target,... they all will build as objects
+(libs) and build together with several rules to a complete compiler.
+So you need to create subprojects, which will be handled as severel
+directories in the IDE and will build at once, if you push the build
+project button. And you may specify several subprojects to be included
+or not for the build target (e.g. preprocessor + cpp-parser +
+target-amd64)
+
+I'd prefer it to have the subprojects (if any) named with the main
+version numbers, not the base project. So you may specify the workplace
+version-dependend and for example fix bugs in the stable branch while
+you normally develop in the unstable branch. This also would require a
+diff and merge tool to integrate code from one branch into the other.
+This also is in need for a new subproject, but this could be handled
+like this: subproject -> new version tree -> get new version number ->
+based on old version number -> inDe creates new subdirectory/subproject
+and copies the files from the base to the new directory. But, taking fox
+versions as base, the subproject's version directories are named
+fox-1.4, the patchlevel is then used for the new build target for a
+release build.
+
+And maybe you could include something like Make's make distcheck, wich
+throws out an ready to ship tar.gz, which also could be easyly archived,
+working together with a archive old branch function.
+
+The above way to handle projects and version numbers relies on a
+straightforward SConsript file tree, but is easyly supported by SCons.
+
+What do you think about this project structure?
+
+> That's it. Perhaps there will be some more files besides project.cfg
+> which have to be initially put into the project directory like e.g.
+> SConstructs or something like this. We'll see.
+project.cfg and SConscript will be all files needed. And the SConstruct
+file in the major project dir.
+
+
+> If you don't have ideas about import configuration sections/variables
+> for project.cfg, I'll create the "Create new project" dialog. This will
+> be a first example of how the other dialogs could be designed and how
+> they could be integrated into the main window class. That having done
+> I will be able to share the code via SVN so we can discuss about the
+> next steps.
+That's not the problem....
+I am just thinking about how to contribute. What do you actually expect?
+If i should implement just the advanced setting class, i do not need any
+InDE code, because it's a standalone class derived from fox.
+But implementing the create new dialog based on the settings class will
+need the code base to include it.
+> 
+> Any objections?
+More than enough.
+> 
+Later
+	Jochen
+
+
+
+From jochen at cornmania.de  Sun Feb 13 12:34:47 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Sun, 13 Feb 2005 12:34:47 +0100
+Subject: [InDE-devel] project web site
+Message-ID: <1108294487.1556.43.camel@jogix.sojox>
+
+Hi Jannis.
+
+Have you already thought about the project web site? Do you already have
+a design?
+
+As a design idea i will post a link, because this site looks very nice
+in my opinion: http://rarewares.org/
+
+Changes for us, or structure:
+* white background with logo at the head and the short description you
+have added to the project description site
+* blue tables with white letters
+* navigation menu
+* main table with contents
+* maybe a third table with news headlines 
+
+I think we do not need, as at the above link, the navigation menu at the
+top, also the marketing buttons on the left side. Just a very simple,
+nice looking, and most important, very good structured website, where
+you can find information intuitivly and do not have to search for the
+contents.
+
+Basic menu structure may look like:
+Home / News
+About
+Download
+Screenshots
+FAQ
+Links
+Projects
+
+Home / News is self speaking, About also. But there we can not only
+describe the features, but also some ideas for InDE, why we started this
+project, what we want to reach, print a roadmap,...
+Download may be a link to the project download side, or better, a short
+description, how to build under different plattforms and there the link
+to the project download side.
+Screenshot is self speaking, too, FAQ may be divided into two sections:
+doc and faq, maybe we should name it doc/faq
+Under Links we may add things like fox-toolkit, fox-community, maybe
+foxdesktops, if it advances, several c++ sources,....
+Projects may be the site where our community may set links, screenshots
+and dscriptions for projects developed using InDE ;)
+
+Jochen
+
+
+
+
+From devel at sten-net.de  Sun Feb 13 19:31:53 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Sun, 13 Feb 2005 19:31:53 +0100
+Subject: [InDE-devel] Project configuration file
+In-Reply-To: <1108293624.1556.29.camel@jogix.sojox>
+References: <420E99A5.9020004@sten-net.de>	 <1108288573.1556.3.camel@jogix.sojox>  <420F2BA1.3000406@sten-net.de> <1108293624.1556.29.camel@jogix.sojox>
+Message-ID: <420F9D19.9080002@sten-net.de>
+
+Hi Jochen.
+
+>>Of course it 
+>>will appear in some
+>>kind of global settings dialog.
+>>    
+>>
+>ok. This may placed in ~/.foxrc/InDE
+>  
+>
+Personally, I don't like ~/.foxrc/InDE. There's more sense in creating an
+own program directory in the home dir. There may be some other things
+besides user settings (e.g. user specific syntax file) and it would be
+too chaotic if they were spread to ~/.foxrc/InDE and ~/.InDE.
+
+>>The user creates a project and defines name and version number for it. 
+>>InDE will then create
+>>a project directory which includes both (e.g. InDE-0.0.1 or FOX-1.4). In 
+>>this directory a
+>>project configuration file (let's call it "project.ini" or 
+>>"project.cfg") is placed by InDE.
+>>All project settings (divided into severeal sections - see my last mail) 
+>>are written into
+>>this file.
+>>    
+>>
+>Hm. I do not like InDE-0.0.1 as you have to create a new project for a
+>new version.
+>It were ok, if you only defined InDe-0.0 and the patchlevel is the build
+>target. But, both ways, will restrict the users to follow our release
+>numbering scheme.
+>  
+>
+You're right. I'd like to correct myself. Lets keep it simple using the 
+project name (without numbers) as
+directory and nothing else.
+
+>Before discussing this in more detail, another demand, as i believe we
+>should include.
+>Take a compiler project for example. The compiler project may be divided
+>into a preprocesor subproject, a parser (or many, e.g. to support many
+>languages like gcc) subproject, and last but not least the targets
+>subprojects (i386, ppc, mipsel,...).
+>So you will create one project, named compiler, and several subproject,
+>named parser, preprocessor, target,... they all will build as objects
+>(libs) and build together with several rules to a complete compiler.
+>So you need to create subprojects, which will be handled as severel
+>directories in the IDE and will build at once, if you push the build
+>project button. And you may specify several subprojects to be included
+>or not for the build target (e.g. preprocessor + cpp-parser +
+>target-amd64)
+>
+>I'd prefer it to have the subprojects (if any) named with the main
+>version numbers, not the base project. So you may specify the workplace
+>version-dependend and for example fix bugs in the stable branch while
+>you normally develop in the unstable branch. This also would require a
+>diff and merge tool to integrate code from one branch into the other.
+>This also is in need for a new subproject, but this could be handled
+>like this: subproject -> new version tree -> get new version number ->
+>based on old version number -> inDe creates new subdirectory/subproject
+>and copies the files from the base to the new directory. But, taking fox
+>versions as base, the subproject's version directories are named
+>fox-1.4, the patchlevel is then used for the new build target for a
+>release build.
+>
+>And maybe you could include something like Make's make distcheck, wich
+>throws out an ready to ship tar.gz, which also could be easyly archived,
+>working together with a archive old branch function.
+>  
+>
+Yeah, creating a tar.gz or tar.bz2 (which I prefer) will be easy with 
+SCons. I'll add this to the build script.
+An archiving function for these dist-files should be no problem, too.
+
+>The above way to handle projects and version numbers relies on a
+>straightforward SConsript file tree, but is easyly supported by SCons.
+>
+>What do you think about this project structure?
+>  
+>
+Subprojects ... Hm, that's difficult stuff, I guess. I'd like to hold 
+off on this until we have a stable
+code base which means a program that actually works without subprojects.
+Once we have reached that point we could still think about implementing 
+subprojects. It's an
+interesting idea indeed.
+
+>  
+>
+>>That's it. Perhaps there will be some more files besides project.cfg
+>>which have to be initially put into the project directory like e.g.
+>>SConstructs or something like this. We'll see.
+>>    
+>>
+>project.cfg and SConscript will be all files needed. And the SConstruct
+>file in the major project dir.
+>
+>
+>  
+>
+>>If you don't have ideas about import configuration sections/variables
+>>for project.cfg, I'll create the "Create new project" dialog. This will
+>>be a first example of how the other dialogs could be designed and how
+>>they could be integrated into the main window class. That having done
+>>I will be able to share the code via SVN so we can discuss about the
+>>next steps.
+>>    
+>>
+>That's not the problem....
+>I am just thinking about how to contribute. What do you actually expect?
+>If i should implement just the advanced setting class, i do not need any
+>InDE code, because it's a standalone class derived from fox.
+>But implementing the create new dialog based on the settings class will
+>need the code base to include it.
+>  
+>
+Okay, I understand. I know it seems a bit as if I would try to handle 
+dozends of tasks all at one
+time without having a clear mind or something. Hehe.
+
+Well then, I will meditate some minutes about the next steps in order to 
+provide you some
+clear information about what is to be done.
+
+>>Any objections?
+>>    
+>>
+>More than enough.
+>  
+>
+No problem. That's good as long as we turn them into something 
+constructive (I think that is
+what we do).
+
+Regards,
+Jannis
+
+
+From devel at sten-net.de  Sun Feb 13 19:49:34 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Sun, 13 Feb 2005 19:49:34 +0100
+Subject: [InDE-devel] project web site
+In-Reply-To: <1108294487.1556.43.camel@jogix.sojox>
+References: <1108294487.1556.43.camel@jogix.sojox>
+Message-ID: <420FA13E.8090400@sten-net.de>
+
+Jochen Rassler schrieb:
+
+>Hi Jannis.
+>
+>Have you already thought about the project web site? Do you already have
+>a design?
+>
+>As a design idea i will post a link, because this site looks very nice
+>in my opinion: http://rarewares.org/
+>
+>Changes for us, or structure:
+>* white background with logo at the head and the short description you
+>have added to the project description site
+>* blue tables with white letters
+>* navigation menu
+>* main table with contents
+>* maybe a third table with news headlines 
+>
+>I think we do not need, as at the above link, the navigation menu at the
+>top, also the marketing buttons on the left side. Just a very simple,
+>nice looking, and most important, very good structured website, where
+>you can find information intuitivly and do not have to search for the
+>contents.
+>
+>Basic menu structure may look like:
+>Home / News
+>About
+>Download
+>Screenshots
+>FAQ
+>Links
+>Projects
+>
+>Home / News is self speaking, About also. But there we can not only
+>describe the features, but also some ideas for InDE, why we started this
+>project, what we want to reach, print a roadmap,...
+>Download may be a link to the project download side, or better, a short
+>description, how to build under different plattforms and there the link
+>to the project download side.
+>Screenshot is self speaking, too, FAQ may be divided into two sections:
+>doc and faq, maybe we should name it doc/faq
+>Under Links we may add things like fox-toolkit, fox-community, maybe
+>foxdesktops, if it advances, several c++ sources,....
+>Projects may be the site where our community may set links, screenshots
+>and dscriptions for projects developed using InDE ;)
+>
+>Jochen
+>
+Hi,
+
+I totally agree with your suggestions concerning the structure. It 
+should be as intuitive and simple as
+possible.
+
+Personally, I don't like white text on a dark color. The main problem 
+regarding the website is the time.
+I don't have enough at the moment to create a new website.
+
+Correct me if I'm wrong: It seems you won't have much time the next two 
+months as well. Therefor
+I'd suggest to try a usual CMS for the page. This gives us the 
+opportunity to post news and stuff without
+having to write a system for this before. Would be the easiest and 
+probably not the worst solution.
+
+What do you think?
+
+My suggestion: http://typo3.com/
+
+Regards,
+Jannis
+
+-- 
+		- Jannis
+
+
+
+From jochen at cornmania.de  Sun Feb 13 20:19:52 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Sun, 13 Feb 2005 20:19:52 +0100
+Subject: [InDE-devel] Project configuration file
+In-Reply-To: <420F9D19.9080002@sten-net.de>
+References: <420E99A5.9020004@sten-net.de>
+	 <1108288573.1556.3.camel@jogix.sojox>  <420F2BA1.3000406@sten-net.de>
+	 <1108293624.1556.29.camel@jogix.sojox>  <420F9D19.9080002@sten-net.de>
+Message-ID: <1108322392.1556.52.camel@jogix.sojox>
+
+Hi Jannis.
+
+Am Sonntag, den 13.02.2005, 19:31 +0100 schrieb Jannis Pohlmann:
+> >
+> Personally, I don't like ~/.foxrc/InDE. There's more sense in creating an
+> own program directory in the home dir. There may be some other things
+> besides user settings (e.g. user specific syntax file) and it would be
+> too chaotic if they were spread to ~/.foxrc/InDE and ~/.InDE.
+
+The point goes to you ;)
+> 
+> >
+> You're right. I'd like to correct myself. Lets keep it simple using the 
+> project name (without numbers) as
+> directory and nothing else.
+Ok.
+> 
+> Subprojects ... Hm, that's difficult stuff, I guess. I'd like to hold 
+> off on this until we have a stable
+> code base which means a program that actually works without subprojects.
+> Once we have reached that point we could still think about implementing 
+> subprojects. It's an
+> interesting idea indeed.
+> 
+I do not think it is too difficult. But you're right, this is a feature
+for future versions. We actually should care about the very basics.
+> >  
+> Okay, I understand. I know it seems a bit as if I would try to handle 
+> dozends of tasks all at one
+> time without having a clear mind or something. Hehe.
+
+No, that's not what i meant. It is a bit easier for me to see what is to
+be done and where to start and what's related to it if i had seen any
+code ;)
+> 
+> No problem. That's good as long as we turn them into something 
+> constructive (I think that is
+> what we do).
+> 
+Yes. And i personally like roadmaps. They do not only help others to see
+what will be included in future versions, but help yourself storing all
+ideas in a central area. Others may add good ideas if they know what you
+will produce, join the discussion or just increase the audience. But
+primary intention is to keep the own ideas.
+
+CU
+Jochen
+
+
+
+From jochen at cornmania.de  Sun Feb 13 20:24:44 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Sun, 13 Feb 2005 20:24:44 +0100
+Subject: [InDE-devel] project web site
+In-Reply-To: <420FA13E.8090400@sten-net.de>
+References: <1108294487.1556.43.camel@jogix.sojox>
+	 <420FA13E.8090400@sten-net.de>
+Message-ID: <1108322684.1556.58.camel@jogix.sojox>
+
+Hi Jannis.
+
+Am Sonntag, den 13.02.2005, 19:49 +0100 schrieb Jannis Pohlmann:
+> Personally, I don't like white text on a dark color. The main problem 
+> regarding the website is the time.
+> I don't have enough at the moment to create a new website.
+
+I started programming at old DOS times (not to mention C64*g*), most of
+the time with borland pascal. I don't know if you still know those dos
+environments from turbo pascal 6 and 7 and turbo c++ 3. Nice blue
+background and yellow or white letters on it. Turbo c++ 3.0 was shipped
+with standard light green letters. I find it easier for the eyes to read
+than black on white as the contrast and light intensity is too high *g*
+Maybe i am too much night active *g*
+> 
+> Correct me if I'm wrong: It seems you won't have much time the next two 
+> months as well. Therefor
+> I'd suggest to try a usual CMS for the page. This gives us the 
+> opportunity to post news and stuff without
+> having to write a system for this before. Would be the easiest and 
+> probably not the worst solution.
+> 
+> What do you think?
+
+CMS is not too bad for it. I hadn't suggested it, because you also
+prefer plain html ;)
+> 
+> My suggestion: http://typo3.com/
+
+haven't heard too much good things about it, but i don't mind. As long
+as it fits our needs....
+
+regards
+Jochen
+
+
+
+From devel at sten-net.de  Sun Feb 13 22:04:27 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Sun, 13 Feb 2005 22:04:27 +0100
+Subject: [InDE-devel] Commited some stuff to SVN
+Message-ID: <420FC0DB.5090704@sten-net.de>
+
+Hi Jochen.
+
+Have a look at http://svn.berlios.de/viewcvs/inde/
+
+I have commited my current InDE directory to SVN. What you see there is 
+the following:
+
+    - naked App class with syntax file loading support (in Win32 this 
+may become complicated somehow)
+    - nearly empty MainWindow class (note: the project view is odd, I 
+just put it in there as a placeholder)
+    - empty SettingsDialog class which later can be used to adjust the 
+user's InDE settings
+    - DialogTitle class which could be something like a default header 
+for our dialogs
+    - SConstruct to build InDE on Linux
+
+... and some more things (like an ugly splash screen for example. Hehe)
+
+Please tell me what you think of this skeleton. The layout perhaps is 
+not very exciting but editor and project
+view will take some time. I think we should manage this InDE settings 
+dialog and a project creation dialog
+first, before we have a look at the rest.
+
+Regards,
+Jannis
+
+
+From devel at sten-net.de  Mon Feb 14 00:10:46 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Mon, 14 Feb 2005 00:10:46 +0100
+Subject: [InDE-devel] Preliminary roadmap for InDE
+Message-ID: <420FDE76.1090005@sten-net.de>
+
+Q = questions => discussion => decision
+T = tasks
+
+
+
+1. InDE settings dialog and structure
+-------------------------------------
+This will be very import for nearly every one of the other classes.
+
+Q1.1 - Which variables / options might be needed?
+Q1.2 - In which sections should they be divided?
+Q1.3 - How should settings be stored in the MainWindow class?
+Q1.4 - How should settings be accessed by dialogs (and other classes in 
+general)?
+
+T1.1 - Realization of the settings structure the way we decided in Q1.3
+T1.2 - Realization of the interface for other classes to access the 
+settings the way it was decided in Q1.4
+T1.3 - InDE settings dialog using interface from T1.2
+
+
+
+2. InDE project dialog and config structure
+-------------------------------------------
+Having done this we will be able to discuss about which way we will 
+design our SCons scripts
+will be organized after this.
+
+Q2.1 - Which variables / options might be needed? (We partly have done 
+this already)
+Q2.2 - In which sections should they be divided?
+Q2.3 - How should the project configuration be stored in the MainWindow 
+class?
+Q2.4 - How should the project configuration be access by other classes?
+
+Note: Q2.3 and Q2.4 may be easily answered when Q1.3 and Q1.4 are done.
+
+T2.1 - Realization of the project config structure the way we decided to 
+in Q2.3
+T2.2 - Realization of the interface discussed in Q2.3
+T2.3 - "Create new project" dialog
+T2.4 - "Project settings" dialog
+
+
+
+3. SCons scripts
+----------------
+This means we will discuss some general questions about their structure 
+and what things we
+need to realize in them in order to fit most (not: all) thinkable projects.
+
+Q3.1 - Do we want to split the SConstruct files by platform (e.g. 
+SConscript.linux, SConscript.win32 and so on)?
+Q3.2 - Do we want to support SConscripts in subdirectories - would it be 
+to complicated? (perhaps we shouldn't think about this as long as we 
+don't support subprojects)
+Q3.3 - Probably on of the most difficult questions: If we want to 
+support single file compilation (on saving/button click), how may SCons 
+do this?
+
+T3.1 - Writing standard SConstructs/SConscripts for targets (executable, 
+shared or static library, MSVC project, ...)
+
+
+
+--
+Of course we aren't done after this. Further steps will be introduced 
+after steps 1 or 2 are done.
+
+Regards,
+Jannis
+
+
+From jochen at cornmania.de  Mon Feb 14 02:24:58 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Mon, 14 Feb 2005 02:24:58 +0100
+Subject: [InDE-devel] Commited some stuff to SVN
+In-Reply-To: <420FC0DB.5090704@sten-net.de>
+References: <420FC0DB.5090704@sten-net.de>
+Message-ID: <1108344298.1556.95.camel@jogix.sojox>
+
+Hi Jannis.
+
+Am Sonntag, den 13.02.2005, 22:04 +0100 schrieb Jannis Pohlmann:
+> Hi Jochen.
+> 
+> Have a look at http://svn.berlios.de/viewcvs/inde/
+> 
+> I have commited my current InDE directory to SVN. What you see there is 
+> the following:
+> 
+>     - naked App class with syntax file loading support (in Win32 this 
+> may become complicated somehow)
+>     - nearly empty MainWindow class (note: the project view is odd, I 
+> just put it in there as a placeholder)
+>     - empty SettingsDialog class which later can be used to adjust the 
+> user's InDE settings
+>     - DialogTitle class which could be something like a default header 
+> for our dialogs
+>     - SConstruct to build InDE on Linux
+> 
+> ... and some more things (like an ugly splash screen for example. Hehe)
+> 
+> Please tell me what you think of this skeleton. The layout perhaps is 
+> not very exciting but editor and project
+> view will take some time. I think we should manage this InDE settings 
+> dialog and a project creation dialog
+> first, before we have a look at the rest.
+> 
+Ok, this will be a perfect start.
+I am too tired to work things out this evening. Just had a few very
+short nights.
+
+But some ideas related to the other mail, regarding project settings.
+
+Project creation. Anjuta has a nice concept with its project creation
+dialog (or at least had as i looked at it last time - over a one and a
+half year ago). Step by Step dialogs wich let the user enter project
+name, description, target, project type, used libraries, both normal
+ones and user libraries.
+
+For project settings i like the way Eclipse shows you the information.
+
+The on demand compilation should be done without SCons. We know the
+project settings, because we create them and let the user change them
+through one of our dialogs. So we know all of the compiler settings. So
+we can easily invoke the compiler with all needed switches, the input
+file and path and also output path. The only problem i see at this
+moment may be to know which compiler to use, because SCons does this job
+for us. But maybe we can use a very basic SConscipt file to just test
+the compiler version to parse which compiler is chosen by SCons and use
+this one.
+
+I'll give all the answers a try tomorrow. And i also think we should
+start implementing project and inde settings as soon as we collected
+some ideas / information. It should not be too difficult to edit
+settings and add new variables once the basic structure is implemented.
+Also the supported project types can easyly enhanced as we know of new
+needs.
+I do not like to think too far in such detailed questions as long as it
+is unclear anyhow, how to introduce the basic features to the
+application. Doing one step after the other should clear things up and
+show the problems or the potential of the solution.
+
+BTW, when we are just talking about project settings. A nice thing i
+like in many IDE is the automatic license header creation. Maybe a
+radiogroup of few known free licenses (at least GPL and LGPL) and maybe
+one for user defined header. If you push the new file button, the header
+will automatically added with license, year and author.
+And, if we create a *.cpp or *.h file, InDE could ask the user to create
+the other file, too. So you only have to create the header file, InDE
+creates the source file too. And therefor maybe a long term feature:
+after the header is written, InDE could add all not inlined functions as
+simple bodies to the cpp file, so that you only have to enter your code
+(just for the roadmap of nice features;)
+
+I just looked through the tasks and i think you can attach the following
+task to me (as i am not allowed to do this):
+1612: Create project dialog, as it depends on 1611 anyhow
+
+Is it neccessary to divide the single tasks to subprojects? They all
+depend on the InDE core and so it may be more intuitiv to have them in
+one list.
+
+regards
+	Jochen
+
+
+
+From jochen at cornmania.de  Mon Feb 14 02:33:23 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Mon, 14 Feb 2005 02:33:23 +0100
+Subject: [InDE-devel] Commited some stuff to SVN
+In-Reply-To: <1108344298.1556.95.camel@jogix.sojox>
+References: <420FC0DB.5090704@sten-net.de>
+	 <1108344298.1556.95.camel@jogix.sojox>
+Message-ID: <1108344803.1556.97.camel@jogix.sojox>
+
+however, this is/was A 3.3  ;)
+
+> The on demand compilation should be done without SCons. We know the
+> project settings, because we create them and let the user change them
+> through one of our dialogs. So we know all of the compiler settings. So
+> we can easily invoke the compiler with all needed switches, the input
+> file and path and also output path. The only problem i see at this
+> moment may be to know which compiler to use, because SCons does this job
+> for us. But maybe we can use a very basic SConscipt file to just test
+> the compiler version to parse which compiler is chosen by SCons and use
+> this one.
+> 
+
+
+
+
+From devel at sten-net.de  Mon Feb 14 02:22:29 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Mon, 14 Feb 2005 02:22:29 +0100
+Subject: [InDE-devel] project web site
+In-Reply-To: <1108322684.1556.58.camel@jogix.sojox>
+References: <1108294487.1556.43.camel@jogix.sojox>	 <420FA13E.8090400@sten-net.de> <1108322684.1556.58.camel@jogix.sojox>
+Message-ID: <420FFD55.3040302@sten-net.de>
+
+Hi Jochen.
+
+For some hours I have been testing nearly all downloadable content 
+management systems but none of them
+did satisfy me. This means our site will be static XHTML. I already know 
+this is be what you had
+preferred anyway so why not? Besides, the FOX website is static, too and 
+it seems to be no problem.
+Most of the stuff provided by CMS would totally bloat the site, I think.
+
+Well then, I have been developing websites for the last six years, so 
+I'll make a layout and present
+it to you as soon as I can. Only if you agree with this. If not, feel 
+free to make a layout by your-
+self and I am going to have a look at it when it's done.
+
+So far so good. What we sooner or later need for a website (and for the 
+application itself) is a kind
+of logo. If you agree, I will ask my girlfriend whom I am going to visit 
+next week. She's really
+experienced in vector graphics, perhaps she has a good idea.
+
+Ah, it's late once again. Today's roadmap announce gives me the hope 
+that you now have the
+possibility to follow my - often a little chaotic - thoughts. That's a 
+good feeling.
+
+Regards,
+Jannis
+
+
+From devel at sten-net.de  Mon Feb 14 02:57:53 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Mon, 14 Feb 2005 02:57:53 +0100
+Subject: [InDE-devel] Commited some stuff to SVN
+In-Reply-To: <1108344298.1556.95.camel@jogix.sojox>
+References: <420FC0DB.5090704@sten-net.de> <1108344298.1556.95.camel@jogix.sojox>
+Message-ID: <421005A1.4020309@sten-net.de>
+
+Hi Jochen.
+
+Jochen Rassler schrieb:
+
+>Ok, this will be a perfect start.
+>I am too tired to work things out this evening. Just had a few very
+>short nights.
+>
+>But some ideas related to the other mail, regarding project settings.
+>
+>Project creation. Anjuta has a nice concept with its project creation
+>dialog (or at least had as i looked at it last time - over a one and a
+>half year ago). Step by Step dialogs wich let the user enter project
+>name, description, target, project type, used libraries, both normal
+>ones and user libraries.
+>  
+>
+Step by step, yes, that would be great. You could use FXWizard for this, 
+I think.
+But let's not head on too fast. We should discuss the internal structure 
+of the InDE settings
+first and follow the roadmap: One task after the other. At least that's 
+what I think.
+
+>The on demand compilation should be done without SCons. We know the
+>project settings, because we create them and let the user change them
+>through one of our dialogs. So we know all of the compiler settings. So
+>we can easily invoke the compiler with all needed switches, the input
+>file and path and also output path. The only problem i see at this
+>moment may be to know which compiler to use, because SCons does this job
+>for us. But maybe we can use a very basic SConscipt file to just test
+>the compiler version to parse which compiler is chosen by SCons and use
+>this one.
+>  
+>
+That sounds really good. I see the same problem as you here: the 
+compiler which is used.
+As we are using Python already with SCons we perhaps could put a little 
+Python script for on
+demand compilation into the project directory. Therewith, platform and 
+what else is needed to
+know could be determined and the right compiler command could be called.
+
+It's a bit vague at the moment but I'm optimistic we will be able to 
+manage this.
+
+>I'll give all the answers a try tomorrow. 
+>  
+>
+ALL the answers? Answering only the questions for the first step might 
+be better. Just tell
+me what your ideas on the first four questions are. I will start a new 
+mailinglist topic
+for Q1.1 - Q1.4.
+
+>And i also think we should
+>start implementing project and inde settings as soon as we collected
+>some ideas / information. It should not be too difficult to edit
+>settings and add new variables once the basic structure is implemented.
+>Also the supported project types can easyly enhanced as we know of new
+>needs.
+>  
+>
+If we find a good solution for managing the setting variables adding 
+more options will be easy, yes.
+
+>I do not like to think too far in such detailed questions as long as it
+>is unclear anyhow, how to introduce the basic features to the
+>application. Doing one step after the other should clear things up and
+>show the problems or the potential of the solution.
+>  
+>
+Yeah. Let's work in a systematic step-by-step schema - the roadmap is 
+predestinated for that.
+
+>BTW, when we are just talking about project settings. A nice thing i
+>like in many IDE is the automatic license header creation. Maybe a
+>radiogroup of few known free licenses (at least GPL and LGPL) and maybe
+>one for user defined header. If you push the new file button, the header
+>will automatically added with license, year and author.
+>And, if we create a *.cpp or *.h file, InDE could ask the user to create
+>the other file, too. So you only have to create the header file, InDE
+>creates the source file too. And therefor maybe a long term feature:
+>after the header is written, InDE could add all not inlined functions as
+>simple bodies to the cpp file, so that you only have to enter your code
+>(just for the roadmap of nice features;)
+>  
+>
+Superb ideas!
+
+>I just looked through the tasks and i think you can attach the following
+>task to me (as i am not allowed to do this):
+>1612: Create project dialog, as it depends on 1611 anyhow
+>
+>Is it neccessary to divide the single tasks to subprojects? They all
+>depend on the InDE core and so it may be more intuitiv to have them in
+>one list.
+>  
+>
+No, it's not. But I'm not sure if we really need this task management 
+feature. What do you think?
+Wouldn't clearly marked topics in this mailinglist (such as: 
+"[InDE-devel] [T1.1] Some text") be
+enough? We are only two developers, if we follow a scheme like this, 
+there'd be enough structure.
+
+BTW: Do you have ICQ, IRC or something? Such logistic questions perhaps 
+could be more easily
+discussed there.
+
+Regards,
+Jannis
+
+
+From devel at sten-net.de  Mon Feb 14 03:16:50 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Mon, 14 Feb 2005 03:16:50 +0100
+Subject: [InDE-devel] [Q1.1, Q1.2] InDE settings - which variables/options, which sections?
+Message-ID: <42100A12.3030309@sten-net.de>
+
+Hi Jochen.
+
+Loads of stuff below, as you can see. This is a suggestion for the InDE 
+settings dialog structure (inspired by Anjuta, mostly).
+It's not complete (how should it?). I suppose there will be tons of 
+options which we will have to add sooner or later. Once having
+a good settings structure that should be easy. The options below could 
+make a tiny start. Here we go.
+
+
++------------------------+
+| General                |
++------------------------+
+
++ Base directory
++ History:
+    + Amount of recently opened projects
+    + Amount of recently opened files
++ Options:
+    + Automatically load last project
+
++------------------------+
+| Saving                 |
++------------------------+
+
++ Autosave interval (0 = no autosave)
++ Backup on save
+    + Backup-Suffix
+
++------------------------+
+| Editor                 |
++------------------------+
+
++ Use auto indentation
+    + Indentation style
++ Use tabs
++ Tab size
++ Many more - the editor widgets will be complicated, let's first do 
+some more simple stuff.
+
+Regards,
+Jannis
+
+
+From devel at sten-net.de  Mon Feb 14 03:31:43 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Mon, 14 Feb 2005 03:31:43 +0100
+Subject: [InDE-devel] [Q1.3, Q1.4] How should settings be stored in the MainWindow class?
+Message-ID: <42100D8F.2070104@sten-net.de>
+
+I thought of something like this:
+
+We don't need an extra class for the settings. Some nested structs 
+should do it.
+
+As an example:
+
+    struct EditorSettings;
+    struct BuildSettings;
+    struct GeneralSettings;
+    struct SavingSettings;
+
+Following the mailinglist topic for Q1.1 and Q1.2, GeneralSettings could 
+look like this:
+
+    struct GeneralSettings
+    {
+        FXString   baseDir;
+        FXuint     numRecentProjects;
+        FXuint     numRecentFiles;
+        FXbool     autoLoadProject;
+    };
+
+In addition to this we could define a settings struct including all 
+other structs:
+
+    struct InDESettings
+    {
+        EditorSettings    editor;
+        BuildSettings     build;
+        GeneralSettings   general;
+        SavingSettings    saving;
+    };
+
+MainWindow would then have member variable
+
+    InDESettings   settings;
+
+and - perhaps, if this wouldn't slow down the app - some FXDataTargets 
+pointing
+to import setting options.
+
+This member variable could be passed as pointer to all widgets which 
+need access
+to it, like e.g.:
+
+    settingsDialog = new SettingsDialog(this, _("InDE settings"), 
+&settings);
+
+This would make application-wide use and changing of the settings easy 
+and is easily
+maintainable and uncomplicated.
+
+For the project settings we could use something similar which will be 
+filled with
+values from the project.cfg file. But that is another question in 
+another step (Q2.3
+and Q2.4, I think).
+
+Jochen, do you agree with this suggestion or do you have a different idea?
+
+Regards,
+Jannis
+
+
+
+From devel at sten-net.de  Mon Feb 14 10:34:35 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Mon, 14 Feb 2005 10:34:35 +0100
+Subject: [InDE-devel] [Q1.1, Q1.2] InDE settings - which variables/options,
+ which sections?
+In-Reply-To: <42100A12.3030309@sten-net.de>
+References: <42100A12.3030309@sten-net.de>
+Message-ID: <421070AB.50700@sten-net.de>
+
+Some improvement:
+
+Let's only add settings we already are able to use. For example, we 
+don't have an editor widget yet, so what reason is there to
+think about what we could somehow need for it? That's too vague.
+
+So it would be better to answer Q1.3 and Q1.4 and then realize the 
+settings system including only options we can already make
+use of.
+
+Anyhow, this will be my task while yours will be the project creating 
+dialog and the internal project config structure. We should
+discuss about that as soon as we have found a solution for Q1.3 and Q1.4 
+which both of us believe in.
+
+Regards,
+Jannis
+
+
+From jochen at cornmania.de  Mon Feb 14 11:57:15 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Mon, 14 Feb 2005 11:57:15 +0100
+Subject: [InDE-devel] Commited some stuff to SVN
+In-Reply-To: <421005A1.4020309@sten-net.de>
+References: <420FC0DB.5090704@sten-net.de>
+	 <1108344298.1556.95.camel@jogix.sojox>  <421005A1.4020309@sten-net.de>
+Message-ID: <1108378636.1555.5.camel@jogix.sojox>
+
+Hi Jannis.
+
+Am Montag, den 14.02.2005, 02:57 +0100 schrieb Jannis Pohlmann:
+> ALL the answers? Answering only the questions for the first step might 
+> be better. Just tell
+> me what your ideas on the first four questions are. I will start a new 
+> mailinglist topic
+> for Q1.1 - Q1.4.
+
+Hm. Q1.* is InDE Settings. This shouldn't be too important. Yes, we need
+the very basics there, like project directory, but what else? The
+project settings are more important as i think.
+> 
+> No, it's not. But I'm not sure if we really need this task management 
+> feature. What do you think?
+> Wouldn't clearly marked topics in this mailinglist (such as: 
+> "[InDE-devel] [T1.1] Some text") be
+> enough? We are only two developers, if we follow a scheme like this, 
+> there'd be enough structure.
+
+I like the taskmanagers. One can add the features and / or ideas, mark
+it with a certain priority and so you can see all needed work at one
+site. Having this only at the mailinglist may force us to forget a
+feature.
+Also others can see where the development will lead to.
+The discussion of single topics, yes, for this is the mailinglist.
+> 
+> BTW: Do you have ICQ, IRC or something? Such logistic questions perhaps 
+> could be more easily
+> discussed there.
+
+Long long time ago.....
+I will have a look if i found my acount or i will get a new one (it was
+at least 5 years back as i used icq). I haven't needed it in the past.
+So what do you prefer?
+
+CU
+	Jochen
+
+
+
+From jochen at cornmania.de  Mon Feb 14 12:02:50 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Mon, 14 Feb 2005 12:02:50 +0100
+Subject: [InDE-devel] [Q1.3, Q1.4] How should settings be stored in the
+	MainWindow class?
+In-Reply-To: <42100D8F.2070104@sten-net.de>
+References: <42100D8F.2070104@sten-net.de>
+Message-ID: <1108378970.1555.7.camel@jogix.sojox>
+
+Hi Jannis.
+
+Am Montag, den 14.02.2005, 03:31 +0100 schrieb Jannis Pohlmann:
+> I thought of something like this:
+> 
+> We don't need an extra class for the settings. Some nested structs 
+> should do it.
+> 
+> As an example:
+> 
+>     struct EditorSettings;
+>     struct BuildSettings;
+>     struct GeneralSettings;
+>     struct SavingSettings;
+> 
+> Following the mailinglist topic for Q1.1 and Q1.2, GeneralSettings could 
+> look like this:
+> 
+>     struct GeneralSettings
+>     {
+>         FXString   baseDir;
+>         FXuint     numRecentProjects;
+>         FXuint     numRecentFiles;
+>         FXbool     autoLoadProject;
+>     };
+> 
+> In addition to this we could define a settings struct including all 
+> other structs:
+> 
+>     struct InDESettings
+>     {
+>         EditorSettings    editor;
+>         BuildSettings     build;
+>         GeneralSettings   general;
+>         SavingSettings    saving;
+>     };
+> 
+> MainWindow would then have member variable
+> 
+>     InDESettings   settings;
+> 
+> and - perhaps, if this wouldn't slow down the app - some FXDataTargets 
+> pointing
+> to import setting options.
+> 
+> This member variable could be passed as pointer to all widgets which 
+> need access
+> to it, like e.g.:
+> 
+>     settingsDialog = new SettingsDialog(this, _("InDE settings"), 
+> &settings);
+> 
+> This would make application-wide use and changing of the settings easy 
+> and is easily
+> maintainable and uncomplicated.
+> 
+> For the project settings we could use something similar which will be 
+> filled with
+> values from the project.cfg file. But that is another question in 
+> another step (Q2.3
+> and Q2.4, I think).
+> 
+> Jochen, do you agree with this suggestion or do you have a different idea?
+> 
+That's similar to my idea. I maybe had added functions to flush and load
+the settings.
+
+Jochen
+
+
+
+From jochen at cornmania.de  Mon Feb 14 12:07:27 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Mon, 14 Feb 2005 12:07:27 +0100
+Subject: [InDE-devel] project web site
+In-Reply-To: <420FFD55.3040302@sten-net.de>
+References: <1108294487.1556.43.camel@jogix.sojox>
+	 <420FA13E.8090400@sten-net.de> <1108322684.1556.58.camel@jogix.sojox>
+	 <420FFD55.3040302@sten-net.de>
+Message-ID: <1108379247.1555.12.camel@jogix.sojox>
+
+Hi Jannis.
+
+Am Montag, den 14.02.2005, 02:22 +0100 schrieb Jannis Pohlmann:
+> Hi Jochen.
+> 
+> For some hours I have been testing nearly all downloadable content 
+> management systems but none of them
+> did satisfy me. This means our site will be static XHTML. I already know 
+> this is be what you had
+> preferred anyway so why not? Besides, the FOX website is static, too and 
+> it seems to be no problem.
+> Most of the stuff provided by CMS would totally bloat the site, I think.
+
+Yes. that's what i fear of CMS
+> 
+> Well then, I have been developing websites for the last six years, so 
+> I'll make a layout and present
+> it to you as soon as I can. Only if you agree with this. If not, feel 
+> free to make a layout by your-
+> self and I am going to have a look at it when it's done.
+
+i look towards your design!
+> 
+> So far so good. What we sooner or later need for a website (and for the 
+> application itself) is a kind
+> of logo. If you agree, I will ask my girlfriend whom I am going to visit 
+> next week. She's really
+> experienced in vector graphics, perhaps she has a good idea.
+
+i am not very creative. so it will be fine
+> 
+> Ah, it's late once again. Today's roadmap announce gives me the hope 
+> that you now have the
+> possibility to follow my - often a little chaotic - thoughts. That's a 
+> good feeling.
+
+Yeah, the direction is more than clear. BTW, i am sometimes somewhat
+chaotic too. And if i start to brainstorm..... *g*
+
+CU
+	Jochen
+
+
+
+From jochen at cornmania.de  Mon Feb 14 12:50:22 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Mon, 14 Feb 2005 12:50:22 +0100
+Subject: [InDE-devel] Preliminary roadmap for InDE
+In-Reply-To: <420FDE76.1090005@sten-net.de>
+References: <420FDE76.1090005@sten-net.de>
+Message-ID: <1108381822.1555.28.camel@jogix.sojox>
+
+Hi Jannis.
+
+So, i'll give it a try
+
+> 1. InDE settings dialog and structure
+> -------------------------------------
+> This will be very import for nearly every one of the other classes.
+> 
+> Q1.1 - Which variables / options might be needed?
+Editorfont, Syntaxcoloring, Autosave, Autocompile, Autoheaders and the
+license, Keybindings,... more to come if the editor evolves
+> Q1.2 - In which sections should they be divided?
+As you've written in the other mails they can be divided into structs,
+and these structs couls be the sections
+> Q1.3 - How should settings be stored in the MainWindow class?
+Once again the structs
+> Q1.4 - How should settings be accessed by dialogs (and other classes in 
+> general)?
+and once again...
+> 
+> T1.1 - Realization of the settings structure the way we decided in Q1.3
+> T1.2 - Realization of the interface for other classes to access the 
+> settings the way it was decided in Q1.4
+> T1.3 - InDE settings dialog using interface from T1.2
+> 
+> 
+> 
+> 2. InDE project dialog and config structure
+> -------------------------------------------
+> Having done this we will be able to discuss about which way we will 
+> design our SCons scripts
+> will be organized after this.
+> 
+> Q2.1 - Which variables / options might be needed? (We partly have done 
+> this already)
+Info: Name, Description, Target, maybe Target machine and OS?( do we
+need crosscompilation option? does any compiler other than gcc support
+this?), Version(here?)
+Path and Libs: self speaking
+Switches: several compiler switches, like debug switch, optimization,
+warnings,...
+> Q2.2 - In which sections should they be divided?
+Sections as you described in "project configuration file" mail plus the
+switches section
+> Q2.3 - How should the project configuration be stored in the MainWindow 
+> class?
+linke InDE settings i guess: structs
+> Q2.4 - How should the project configuration be access by other classes?
+reading the structs
+> 
+> Note: Q2.3 and Q2.4 may be easily answered when Q1.3 and Q1.4 are done.
+They are!
+> 
+> T2.1 - Realization of the project config structure the way we decided to 
+> in Q2.3
+> T2.2 - Realization of the interface discussed in Q2.3
+> T2.3 - "Create new project" dialog
+> T2.4 - "Project settings" dialog
+> 
+> 
+> 
+> 3. SCons scripts
+> ----------------
+> This means we will discuss some general questions about their structure 
+> and what things we
+> need to realize in them in order to fit most (not: all) thinkable projects.
+> 
+> Q3.1 - Do we want to split the SConstruct files by platform (e.g. 
+> SConscript.linux, SConscript.win32 and so on)?
+I am not able to answer this question because i am not familiar with
+windows
+> Q3.2 - Do we want to support SConscripts in subdirectories - would it be 
+> to complicated? (perhaps we shouldn't think about this as long as we 
+> don't support subprojects)
+what about SConscript files in the src directory?
+We need them for subprojects, yes, so do we want to enable them in
+general? This question may be answered as soon as we implement the
+creation of them and see what may fit best.
+> Q3.3 - Probably on of the most difficult questions: If we want to 
+> support single file compilation (on saving/button click), how may SCons 
+> do this?
+I think i have answered it in the commuted stuff mail
+> 
+> T3.1 - Writing standard SConstructs/SConscripts for targets (executable, 
+> shared or static library, MSVC project, ...)
+> 
+> 
+> 
+> --
+> Of course we aren't done after this. Further steps will be introduced 
+> after steps 1 or 2 are done.
+> 
+> Regards,
+> Jannis
+> _______________________________________________
+> InDE-devel mailing list
+> InDE-devel at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/inde-devel
+> 
+
+
+
+From devel at sten-net.de  Mon Feb 14 13:35:27 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Mon, 14 Feb 2005 13:35:27 +0100
+Subject: [InDE-devel] Commited some stuff to SVN
+In-Reply-To: <1108378636.1555.5.camel@jogix.sojox>
+References: <420FC0DB.5090704@sten-net.de>	 <1108344298.1556.95.camel@jogix.sojox>  <421005A1.4020309@sten-net.de> <1108378636.1555.5.camel@jogix.sojox>
+Message-ID: <42109B0F.3030806@sten-net.de>
+
+Hi Jochen.
+
+>Hm. Q1.* is InDE Settings. This shouldn't be too important. Yes, we need
+>the very basics there, like project directory, but what else? The
+>project settings are more important as i think.
+>  
+>
+If you read my latest mail on Q1.1/1.2 you could see I noticed this, 
+too. Base directory at the moment
+is all we need. Yet, some structure should be predefined. If you do the 
+project settings, I'll work
+on this.
+
+>>No, it's not. But I'm not sure if we really need this task management 
+>>feature. What do you think?
+>>Wouldn't clearly marked topics in this mailinglist (such as: 
+>>"[InDE-devel] [T1.1] Some text") be
+>>enough? We are only two developers, if we follow a scheme like this, 
+>>there'd be enough structure.
+>>    
+>>
+>
+>I like the taskmanagers. One can add the features and / or ideas, mark
+>it with a certain priority and so you can see all needed work at one
+>site. Having this only at the mailinglist may force us to forget a
+>feature.
+>Also others can see where the development will lead to.
+>The discussion of single topics, yes, for this is the mailinglist.
+>  
+>
+Okay, we will use the taskmanagers, then. I'll give it a new structure 
+and assign the project
+settings dialog to you.
+
+>>BTW: Do you have ICQ, IRC or something? Such logistic questions perhaps 
+>>could be more easily
+>>discussed there.
+>>    
+>>
+>
+>Long long time ago.....
+>I will have a look if i found my acount or i will get a new one (it was
+>at least 5 years back as i used icq). I haven't needed it in the past.
+>So what do you prefer?
+>  
+>
+ICQ as it is mostly a P2P chat. I don't like to chat with dozends of 
+people at the same time.
+
+>CU
+>	Jochen
+>  
+>
+Regards,
+Jannis
+
+
+From devel at sten-net.de  Mon Feb 14 13:39:09 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Mon, 14 Feb 2005 13:39:09 +0100
+Subject: [InDE-devel] [Q1.3, Q1.4] How should settings be stored in the
+ MainWindow class?
+In-Reply-To: <1108378970.1555.7.camel@jogix.sojox>
+References: <42100D8F.2070104@sten-net.de> <1108378970.1555.7.camel@jogix.sojox>
+Message-ID: <42109BED.2020906@sten-net.de>
+
+Jochen Rassler schrieb:
+
+>Hi Jannis.
+>
+>Am Montag, den 14.02.2005, 03:31 +0100 schrieb Jannis Pohlmann:
+>  
+>
+>>I thought of something like this:
+>>
+>>We don't need an extra class for the settings. Some nested structs 
+>>should do it.
+>>
+>>As an example:
+>>
+>>    struct EditorSettings;
+>>    struct BuildSettings;
+>>    struct GeneralSettings;
+>>    struct SavingSettings;
+>>
+>>Following the mailinglist topic for Q1.1 and Q1.2, GeneralSettings could 
+>>look like this:
+>>
+>>    struct GeneralSettings
+>>    {
+>>        FXString   baseDir;
+>>        FXuint     numRecentProjects;
+>>        FXuint     numRecentFiles;
+>>        FXbool     autoLoadProject;
+>>    };
+>>
+>>In addition to this we could define a settings struct including all 
+>>other structs:
+>>
+>>    struct InDESettings
+>>    {
+>>        EditorSettings    editor;
+>>        BuildSettings     build;
+>>        GeneralSettings   general;
+>>        SavingSettings    saving;
+>>    };
+>>
+>>MainWindow would then have member variable
+>>
+>>    InDESettings   settings;
+>>
+>>and - perhaps, if this wouldn't slow down the app - some FXDataTargets 
+>>pointing
+>>to import setting options.
+>>
+>>This member variable could be passed as pointer to all widgets which 
+>>need access
+>>to it, like e.g.:
+>>
+>>    settingsDialog = new SettingsDialog(this, _("InDE settings"), 
+>>&settings);
+>>
+>>This would make application-wide use and changing of the settings easy 
+>>and is easily
+>>maintainable and uncomplicated.
+>>
+>>For the project settings we could use something similar which will be 
+>>filled with
+>>values from the project.cfg file. But that is another question in 
+>>another step (Q2.3
+>>and Q2.4, I think).
+>>
+>>Jochen, do you agree with this suggestion or do you have a different idea?
+>>
+>>    
+>>
+>That's similar to my idea. I maybe had added functions to flush and load
+>the settings.
+>
+>Jochen
+>
+Fine. Of course, load and save functions are needed as well.
+With a settings structure like this we now have a good starting point 
+for the first dialogs.
+Feel free to work the project settings dialog. I will add this to the 
+task manager on berliOS.
+
+Regards,
+Jannis
+
+
+From devel at sten-net.de  Mon Feb 14 13:51:17 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Mon, 14 Feb 2005 13:51:17 +0100
+Subject: [InDE-devel] Preliminary roadmap for InDE
+In-Reply-To: <1108381822.1555.28.camel@jogix.sojox>
+References: <420FDE76.1090005@sten-net.de> <1108381822.1555.28.camel@jogix.sojox>
+Message-ID: <42109EC5.6030108@sten-net.de>
+
+Hi once again.
+
+>>Q1.1 - Which variables / options might be needed?
+>>    
+>>
+>Editorfont, Syntaxcoloring, Autosave, Autocompile, Autoheaders and the
+>license, Keybindings,... more to come if the editor evolves
+>  
+>
+Correct. I will set up some setting options but we still have to wait 
+for the certain widgets
+to appear in order to know which ones we really need.
+
+>>Q1.2 - In which sections should they be divided?
+>>    
+>>
+>As you've written in the other mails they can be divided into structs,
+>and these structs couls be the sections
+>  
+>
+>>Q1.3 - How should settings be stored in the MainWindow class?
+>>    
+>>
+>Once again the structs
+>  
+>
+>>Q1.4 - How should settings be accessed by dialogs (and other classes in 
+>>general)?
+>>    
+>>
+>and once again...
+>  
+>
+Yes, Q1.1 - Q1.4 are answered. I agree.
+
+>>T1.1 - Realization of the settings structure the way we decided in Q1.3
+>>T1.2 - Realization of the interface for other classes to access the 
+>>settings the way it was decided in Q1.4
+>>T1.3 - InDE settings dialog using interface from T1.2
+>>    
+>>
+This will be my part.
+
+>>
+>>2. InDE project dialog and config structure
+>>-------------------------------------------
+>>Having done this we will be able to discuss about which way we will 
+>>design our SCons scripts
+>>will be organized after this.
+>>
+>>Q2.1 - Which variables / options might be needed? (We partly have done 
+>>this already)
+>>    
+>>
+>Info: Name, Description, Target, maybe Target machine and OS?( do we
+>need crosscompilation option? does any compiler other than gcc support
+>this?), Version(here?)
+>Path and Libs: self speaking
+>Switches: several compiler switches, like debug switch, optimization,
+>warnings,...
+>  
+>
+I thought about two more variables: project include dir, project source 
+dir (perhaps in plural form)
+This would mean the user can define two (or more) directories for this 
+which will automatically included
+in a central SConstruct file. This would make SConscripts in the source 
+directory redundant.
+
+What do you think? Would this be usefull?
+
+>>Q2.2 - In which sections should they be divided?
+>>    
+>>
+>Sections as you described in "project configuration file" mail plus the
+>switches section
+>  
+>
+>>Q2.3 - How should the project configuration be stored in the MainWindow 
+>>class?
+>>    
+>>
+>linke InDE settings i guess: structs
+>  
+>
+>>Q2.4 - How should the project configuration be access by other classes?
+>>    
+>>
+>reading the structs
+>  
+>
+>>Note: Q2.3 and Q2.4 may be easily answered when Q1.3 and Q1.4 are done.
+>>    
+>>
+>They are!
+>  
+>
+Yes. Very, very fine.
+
+>>T2.1 - Realization of the project config structure the way we decided to 
+>>in Q2.3
+>>T2.2 - Realization of the interface discussed in Q2.3
+>>T2.3 - "Create new project" dialog
+>>T2.4 - "Project settings" dialog
+>>    
+>>
+And that's gonna be your part, I think. You seem to be very willing to 
+do this, hehe.
+
+>>3. SCons scripts
+>>----------------
+>>This means we will discuss some general questions about their structure 
+>>and what things we
+>>need to realize in them in order to fit most (not: all) thinkable projects.
+>>
+>>Q3.1 - Do we want to split the SConstruct files by platform (e.g. 
+>>SConscript.linux, SConscript.win32 and so on)?
+>>    
+>>
+>I am not able to answer this question because i am not familiar with
+>windows
+>  
+>
+I am not familiar with SCons on Windows, too. But I will have a look at 
+that soon. I develop with FOX
+on Win32 as well as on Linux - that's why I want something like a MSVS 
+project export function.
+
+>>Q3.2 - Do we want to support SConscripts in subdirectories - would it be 
+>>to complicated? (perhaps we shouldn't think about this as long as we 
+>>don't support subprojects)
+>>    
+>>
+>what about SConscript files in the src directory?
+>We need them for subprojects, yes, so do we want to enable them in
+>general? This question may be answered as soon as we implement the
+>creation of them and see what may fit best.
+>  
+>
+I illustrated my opinion about this above (Q2.1).
+
+>>Q3.3 - Probably on of the most difficult questions: If we want to 
+>>support single file compilation (on saving/button click), how may SCons 
+>>do this?
+>>    
+>>
+>I think i have answered it in the commuted stuff mail
+>  
+>
+Right.
+
+>>T3.1 - Writing standard SConstructs/SConscripts for targets (executable, 
+>>shared or static library, MSVC project, ...)
+>>    
+>>
+This probably will require some extra discussion. But lets make the 
+settings and our dialogs first.
+
+Best regards,
+Jannis
+
+
+From devel at sten-net.de  Mon Feb 14 15:18:03 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Mon, 14 Feb 2005 15:18:03 +0100
+Subject: [InDE-devel] Major problem on passing settings struct to dialogs/widgets
+Message-ID: <4210B31B.1090102@sten-net.de>
+
+Hi Jochen.
+
+I am working on the settings dialog at the moment and I noticed a major 
+problem we would ran into if we passed
+our settings structs (both, project and InDE) to every dialog/widget:
+
+Whenever a dialog changes a settings option (e.g. 
+settings->editor.colors.foreColor = FXRGB(0, 0, 0)), every
+widget will still have to update its state. Normally this would be done 
+by onUpd... and onCmd... but we can't use them
+this way if the input fields of our dialogs aren't by a selector 
+connected to such functions. That means
+we would have to update each widgets state manually (Unthinkable!).
+
+The much more effective solution would look like this (you can see this 
+in Adie):
+
+- MainWindow has all variables in our structs (loading and storing them 
+will be as easy as before).
+
+- MainWindow has a two methods for each variable, like e.g.:
+    MainWindow::onUpdTextForeColor
+    MainWindow::onCmdTextForeColor
+
+- These functions are connected with a selector, like e.g.:
+    MainWindow::ID_TEXTFORECOLOR
+
+- every dialog / widget can use these selectors to read or change the 
+variables, like e.g.:
+    new FXColorWell(matrix, FXRGB(0,0,0), getParent(), 
+MainWindow::ID_TEXTFORECOLOR)
+
+That would do it. We will have to design many a dialog and widget so we 
+should use this for rapid development.
+Of course the effort for adding a settings option to MainWindow will be 
+a little higher. Yet, I think we have
+to do it this way.
+
+What are your thoughts about it? Perhaps you could take a look into 
+Adie's Preferences.cpp and TextWindow.cpp.
+Adie stores all options directly in the TextWindow object - but we still 
+could use our structs in order to
+give them a little more structure.
+
+Regards,
+Jannis
+
+
+From devel at sten-net.de  Mon Feb 14 18:38:15 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Mon, 14 Feb 2005 18:38:15 +0100
+Subject: [InDE-devel] Major problem on passing settings struct to dialogs/widgets
+In-Reply-To: <4210B31B.1090102@sten-net.de>
+References: <4210B31B.1090102@sten-net.de>
+Message-ID: <4210E207.50103@sten-net.de>
+
+Hi Jochen.
+
+I've commited my partly done SettingsDialog together with a new header 
+file called InDESettings.h to SVN.
+
+The SettingsDialog uses the Adie-like mechanism to access InDE's 
+settings. In my opinion that's the way we should
+access the settings values. I added a function to retrieve the main 
+settings struct as well - you'll need this for creating
+the project directory. It's called MainWindow::getSettings()
+
+For the project settings structure I'd suggest you create a 
+ProjectSettings.h with all structs in it.
+
+If you use FXWizard for your project creating dialog, please call it 
+"NewProjectWizard". If you want to use
+FXDialogBox or something else, call it "NewProjectDialog".
+
+What else do I have to say? Hm, I'm looking forward to having a look on 
+your project dialog. Perhaps you could write
+another one for the project settings (this could be inspired by the 
+SettingsDialog) after that? You'd have to add loads of methods
+to the MainWindow class for this, but they will be very useful.
+
+I have to try to catch my train ...
+
+Regards,
+Jannis
+
+
+
+From jochen at cornmania.de  Mon Feb 14 18:35:37 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Mon, 14 Feb 2005 18:35:37 +0100
+Subject: [InDE-devel] Commited some stuff to SVN
+In-Reply-To: <42109B0F.3030806@sten-net.de>
+References: <420FC0DB.5090704@sten-net.de>
+	 <1108344298.1556.95.camel@jogix.sojox>  <421005A1.4020309@sten-net.de>
+	 <1108378636.1555.5.camel@jogix.sojox>  <42109B0F.3030806@sten-net.de>
+Message-ID: <1108402537.1555.29.camel@jogix.sojox>
+
+Hi Jannis.
+
+> ICQ as it is mostly a P2P chat. I don't like to chat with dozends of 
+> people at the same time.
+> 
+I will go to get it run!
+
+CU 
+Jochen
+
+
+
+From jochen at cornmania.de  Mon Feb 14 18:44:33 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Mon, 14 Feb 2005 18:44:33 +0100
+Subject: [InDE-devel] Preliminary roadmap for InDE
+In-Reply-To: <42109EC5.6030108@sten-net.de>
+References: <420FDE76.1090005@sten-net.de>
+	 <1108381822.1555.28.camel@jogix.sojox>  <42109EC5.6030108@sten-net.de>
+Message-ID: <1108403073.1555.37.camel@jogix.sojox>
+
+Hidiho!
+
+Am Montag, den 14.02.2005, 13:51 +0100 schrieb Jannis Pohlmann:
+> >>2. InDE project dialog and config structure
+> >>-------------------------------------------
+> >>Having done this we will be able to discuss about which way we will 
+> >>design our SCons scripts
+> >>will be organized after this.
+> >>
+> >>Q2.1 - Which variables / options might be needed? (We partly have done 
+> >>this already)
+> >>    
+> >>
+> >Info: Name, Description, Target, maybe Target machine and OS?( do we
+> >need crosscompilation option? does any compiler other than gcc support
+> >this?), Version(here?)
+> >Path and Libs: self speaking
+> >Switches: several compiler switches, like debug switch, optimization,
+> >warnings,...
+> >  
+> >
+> I thought about two more variables: project include dir, project source 
+> dir (perhaps in plural form)
+> This would mean the user can define two (or more) directories for this 
+> which will automatically included
+> in a central SConstruct file. This would make SConscripts in the source 
+> directory redundant.
+
+which means: src dir for *.cpp, include dir for *.h, but then a bin dir
+for the *.o files would also help ;)
+
+> What do you think? Would this be usefull?
+Yes. This is what we need :p
+> 
+> >>Q2.2 - In which sections should they be divided?
+> >>    
+> >>
+> >Sections as you described in "project configuration file" mail plus the
+> >switches section
+> >  
+> >
+> >>Q2.3 - How should the project configuration be stored in the MainWindow 
+> >>class?
+> >>    
+> >>
+> >linke InDE settings i guess: structs
+> >  
+> >
+> >>Q2.4 - How should the project configuration be access by other classes?
+> >>    
+> >>
+> >reading the structs
+> >  
+> >
+> >>Note: Q2.3 and Q2.4 may be easily answered when Q1.3 and Q1.4 are done.
+> >>    
+> >>
+> >They are!
+> >  
+> >
+> Yes. Very, very fine.
+> 
+> >>T2.1 - Realization of the project config structure the way we decided to 
+> >>in Q2.3
+> >>T2.2 - Realization of the interface discussed in Q2.3
+> >>T2.3 - "Create new project" dialog
+> >>T2.4 - "Project settings" dialog
+> >>    
+> >>
+> And that's gonna be your part, I think. You seem to be very willing to 
+> do this, hehe.
+
+Yeah, this is my part and I#ll gone start implementation today! As soon
+as i've done other work (for university)
+> 
+> >>3. SCons scripts
+> >>----------------
+> >>This means we will discuss some general questions about their structure 
+> >>and what things we
+> >>need to realize in them in order to fit most (not: all) thinkable projects.
+> >>
+> >>Q3.1 - Do we want to split the SConstruct files by platform (e.g. 
+> >>SConscript.linux, SConscript.win32 and so on)?
+> >>    
+> >>
+> >I am not able to answer this question because i am not familiar with
+> >windows
+> >  
+> >
+> I am not familiar with SCons on Windows, too. But I will have a look at 
+> that soon. I develop with FOX
+> on Win32 as well as on Linux - that's why I want something like a MSVS 
+> project export function.
+> 
+> >>Q3.2 - Do we want to support SConscripts in subdirectories - would it be 
+> >>to complicated? (perhaps we shouldn't think about this as long as we 
+> >>don't support subprojects)
+> >>    
+> >>
+> >what about SConscript files in the src directory?
+> >We need them for subprojects, yes, so do we want to enable them in
+> >general? This question may be answered as soon as we implement the
+> >creation of them and see what may fit best.
+> >  
+> >
+> I illustrated my opinion about this above (Q2.1).
+> 
+> >>Q3.3 - Probably on of the most difficult questions: If we want to 
+> >>support single file compilation (on saving/button click), how may SCons 
+> >>do this?
+> >>    
+> >>
+> >I think i have answered it in the commuted stuff mail
+> >  
+> >
+> Right.
+> 
+> >>T3.1 - Writing standard SConstructs/SConscripts for targets (executable, 
+> >>shared or static library, MSVC project, ...)
+> >>    
+> >>
+> This probably will require some extra discussion. But lets make the 
+> settings and our dialogs first.
+> 
+Let me do a proposal:
+Let us forget about the Windows structures first. I guess, we should
+start implementing InDE-settings, project-settings, Editor widget, and
+SCons support for Linux.
+If this all works well, we can see what is done under Windows to get
+this run too. If it runs, also with lilitations (e.g. only with
+gcc-mingw), we should release InDE 0.0.1 to get the audience. Then we
+can develop more features step by step. 
+So WE can see the progress of this project.
+
+CU
+Jochen
+
+
+
+From jochen at cornmania.de  Mon Feb 14 18:48:39 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Mon, 14 Feb 2005 18:48:39 +0100
+Subject: [InDE-devel] [Q1.3, Q1.4] How should settings be stored in the
+	MainWindow class?
+In-Reply-To: <42109BED.2020906@sten-net.de>
+References: <42100D8F.2070104@sten-net.de>
+	 <1108378970.1555.7.camel@jogix.sojox>  <42109BED.2020906@sten-net.de>
+Message-ID: <1108403319.1555.42.camel@jogix.sojox>
+
+Hi Jannis.
+
+> Fine. Of course, load and save functions are needed as well.
+> With a settings structure like this we now have a good starting point 
+> for the first dialogs.
+> Feel free to work the project settings dialog. I will add this to the 
+> task manager on berliOS.
+> 
+What about something like this:
+
+struct InDE_Settings {
+	int loadSettings();
+	int saveSettings();
+}
+
+struct EditorSettings: public InDE_Settings {
+	Font *font;
+	//...
+}
+
+int EditorSettings::loadSettings() {
+	//...
+}
+(or implementing those functions in the base settings struct and take
+the path and file as params)
+doing it this way may provide a clear settings API
+
+CU 
+Jochen
+
+
+
+From devel at sten-net.de  Mon Feb 14 18:49:06 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Mon, 14 Feb 2005 18:49:06 +0100
+Subject: [InDE-devel] Commited some stuff to SVN
+In-Reply-To: <1108402537.1555.29.camel@jogix.sojox>
+References: <420FC0DB.5090704@sten-net.de>	 <1108344298.1556.95.camel@jogix.sojox>  <421005A1.4020309@sten-net.de>	 <1108378636.1555.5.camel@jogix.sojox>  <42109B0F.3030806@sten-net.de> <1108402537.1555.29.camel@jogix.sojox>
+Message-ID: <4210E492.7080907@sten-net.de>
+
+Jochen Rassler schrieb:
+
+>Hi Jannis.
+>
+>  
+>
+>>ICQ as it is mostly a P2P chat. I don't like to chat with dozends of 
+>>people at the same time.
+>>
+>>    
+>>
+>I will go to get it run!
+>
+>CU 
+>Jochen
+>
+>_______________________________________________
+>InDE-devel mailing list
+>InDE-devel at lists.berlios.de
+>http://lists.berlios.de/mailman/listinfo/inde-devel
+>
+>  
+>
+Great.
+
+- click -
+Endlich wieder deutsche Diskussionen. So lange niemand in der 
+Mailingliste eingetragen ist,
+k?nnen wir uns das ja leisten. Oder?
+- click -
+
+My ICQ number is 128425053.
+
+Regards,
+Jannis
+
+
+From devel at sten-net.de  Mon Feb 14 18:51:32 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Mon, 14 Feb 2005 18:51:32 +0100
+Subject: [InDE-devel] Preliminary roadmap for InDE
+In-Reply-To: <1108403073.1555.37.camel@jogix.sojox>
+References: <420FDE76.1090005@sten-net.de>	 <1108381822.1555.28.camel@jogix.sojox>  <42109EC5.6030108@sten-net.de> <1108403073.1555.37.camel@jogix.sojox>
+Message-ID: <4210E524.2070201@sten-net.de>
+
+Hi again.
+
+>Let me do a proposal:
+>Let us forget about the Windows structures first. I guess, we should
+>start implementing InDE-settings, project-settings, Editor widget, and
+>SCons support for Linux.
+>If this all works well, we can see what is done under Windows to get
+>this run too. If it runs, also with lilitations (e.g. only with
+>gcc-mingw), we should release InDE 0.0.1 to get the audience. Then we
+>can develop more features step by step. 
+>So WE can see the progress of this project.
+>  
+>
+Yes, let's do that. Development will be much faster without having to 
+permanently switch
+from Linux to Windows and back.
+
+- Jannis
+
+
+From devel at sten-net.de  Mon Feb 14 18:53:33 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Mon, 14 Feb 2005 18:53:33 +0100
+Subject: [InDE-devel] [Q1.3, Q1.4] How should settings be stored in the
+ MainWindow class?
+In-Reply-To: <1108403319.1555.42.camel@jogix.sojox>
+References: <42100D8F.2070104@sten-net.de>	 <1108378970.1555.7.camel@jogix.sojox>  <42109BED.2020906@sten-net.de> <1108403319.1555.42.camel@jogix.sojox>
+Message-ID: <4210E59D.8010303@sten-net.de>
+
+Jochen Rassler schrieb:
+
+>Hi Jannis.
+>
+>  
+>
+>>Fine. Of course, load and save functions are needed as well.
+>>With a settings structure like this we now have a good starting point 
+>>for the first dialogs.
+>>Feel free to work the project settings dialog. I will add this to the 
+>>task manager on berliOS.
+>>
+>>    
+>>
+>What about something like this:
+>
+>struct InDE_Settings {
+>	int loadSettings();
+>	int saveSettings();
+>}
+>
+>struct EditorSettings: public InDE_Settings {
+>	Font *font;
+>	//...
+>}
+>
+>int EditorSettings::loadSettings() {
+>	//...
+>}
+>(or implementing those functions in the base settings struct and take
+>the path and file as params)
+>doing it this way may provide a clear settings API
+>
+>CU 
+>Jochen
+>
+We will need FXSettings for this - and some other things. I don't know 
+if this would work.
+I'll think about it on the way to my girlfriend.
+
+Regards,
+Jannis
+
+
+From jochen at cornmania.de  Mon Feb 14 18:54:20 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Mon, 14 Feb 2005 18:54:20 +0100
+Subject: [InDE-devel] Major problem on passing settings struct to
+	dialogs/widgets
+In-Reply-To: <4210B31B.1090102@sten-net.de>
+References: <4210B31B.1090102@sten-net.de>
+Message-ID: <1108403660.1555.45.camel@jogix.sojox>
+
+Am Montag, den 14.02.2005, 15:18 +0100 schrieb Jannis Pohlmann:
+> Hi Jochen.
+> 
+> I am working on the settings dialog at the moment and I noticed a major 
+> problem we would ran into if we passed
+> our settings structs (both, project and InDE) to every dialog/widget:
+> 
+> Whenever a dialog changes a settings option (e.g. 
+> settings->editor.colors.foreColor = FXRGB(0, 0, 0)), every
+> widget will still have to update its state. Normally this would be done 
+> by onUpd... and onCmd... but we can't use them
+> this way if the input fields of our dialogs aren't by a selector 
+> connected to such functions. That means
+> we would have to update each widgets state manually (Unthinkable!).
+> 
+> The much more effective solution would look like this (you can see this 
+> in Adie):
+> 
+> - MainWindow has all variables in our structs (loading and storing them 
+> will be as easy as before).
+> 
+> - MainWindow has a two methods for each variable, like e.g.:
+>     MainWindow::onUpdTextForeColor
+>     MainWindow::onCmdTextForeColor
+> 
+> - These functions are connected with a selector, like e.g.:
+>     MainWindow::ID_TEXTFORECOLOR
+> 
+> - every dialog / widget can use these selectors to read or change the 
+> variables, like e.g.:
+>     new FXColorWell(matrix, FXRGB(0,0,0), getParent(), 
+> MainWindow::ID_TEXTFORECOLOR)
+> 
+> That would do it. We will have to design many a dialog and widget so we 
+> should use this for rapid development.
+> Of course the effort for adding a settings option to MainWindow will be 
+> a little higher. Yet, I think we have
+> to do it this way.
+> 
+> What are your thoughts about it? Perhaps you could take a look into 
+> Adie's Preferences.cpp and TextWindow.cpp.
+> Adie stores all options directly in the TextWindow object - but we still 
+> could use our structs in order to
+> give them a little more structure.
+> 
+It seems to be the easiest solution.
+I am not too familiar to fox by now, i guess you know it better than me.
+So it's up to you, i'll follow your advice.
+
+Jochen
+
+
+
+From jochen at cornmania.de  Mon Feb 14 18:54:55 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Mon, 14 Feb 2005 18:54:55 +0100
+Subject: [InDE-devel] Major problem on passing settings struct to
+	dialogs/widgets
+In-Reply-To: <4210E207.50103@sten-net.de>
+References: <4210B31B.1090102@sten-net.de>  <4210E207.50103@sten-net.de>
+Message-ID: <1108403695.1555.47.camel@jogix.sojox>
+
+Hi Jannis.
+
+Am Montag, den 14.02.2005, 18:38 +0100 schrieb Jannis Pohlmann:
+> Hi Jochen.
+> 
+> I've commited my partly done SettingsDialog together with a new header 
+> file called InDESettings.h to SVN.
+> 
+> The SettingsDialog uses the Adie-like mechanism to access InDE's 
+> settings. In my opinion that's the way we should
+> access the settings values. I added a function to retrieve the main 
+> settings struct as well - you'll need this for creating
+> the project directory. It's called MainWindow::getSettings()
+> 
+> For the project settings structure I'd suggest you create a 
+> ProjectSettings.h with all structs in it.
+> 
+> If you use FXWizard for your project creating dialog, please call it 
+> "NewProjectWizard". If you want to use
+> FXDialogBox or something else, call it "NewProjectDialog".
+> 
+> What else do I have to say? Hm, I'm looking forward to having a look on 
+> your project dialog. Perhaps you could write
+> another one for the project settings (this could be inspired by the 
+> SettingsDialog) after that? You'd have to add loads of methods
+> to the MainWindow class for this, but they will be very useful.
+> 
+I will work on it later and use the new sources.
+
+Jochen
+
+
+
+From jochen at cornmania.de  Mon Feb 14 19:18:53 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Mon, 14 Feb 2005 19:18:53 +0100
+Subject: [InDE-devel] Commited some stuff to SVN
+In-Reply-To: <4210E492.7080907@sten-net.de>
+References: <420FC0DB.5090704@sten-net.de>
+	 <1108344298.1556.95.camel@jogix.sojox>  <421005A1.4020309@sten-net.de>
+	 <1108378636.1555.5.camel@jogix.sojox>  <42109B0F.3030806@sten-net.de>
+	 <1108402537.1555.29.camel@jogix.sojox>  <4210E492.7080907@sten-net.de>
+Message-ID: <1108405133.1555.50.camel@jogix.sojox>
+
+Hi Jannis.
+
+> Great.
+> 
+> - click -
+> Endlich wieder deutsche Diskussionen. So lange niemand in der 
+> Mailingliste eingetragen ist,
+> k?nnen wir uns das ja leisten. Oder?
+
+Hm... Die Frage ist, sobald jemand reinkommt, merken wir das? Und wenn
+nicht, k?nnte derjenige frustriert sein, wenn wir auf deutsch mailen und
+derjenige das nicht kann.
+Aber warum nicht.
+> - click -
+> 
+> My ICQ number is 128425053.
+I just send you an authorization request. My nuber is: 94474922
+> 
+> Regards,
+Jochen
+
+
+
+From jochen at cornmania.de  Tue Feb 15 12:41:16 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Tue, 15 Feb 2005 12:41:16 +0100
+Subject: [InDE-devel] FXText Layout problems
+Message-ID: <1108467676.1556.2.camel@jogix.sojox>
+
+Hi Jannis.
+
+I have a FXText Widget, that doesn't show the sunken frame. No matter
+what option i pass the constuctor, it also looks the same. How do i
+force FXText to like i want it to look?
+
+Jochen
+
+
+
+From devel at sten-net.de  Tue Feb 15 13:39:27 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Tue, 15 Feb 2005 13:39:27 +0100
+Subject: [InDE-devel] FXText Layout problems
+In-Reply-To: <1108467676.1556.2.camel@jogix.sojox>
+References: <1108467676.1556.2.camel@jogix.sojox>
+Message-ID: <4211ED7F.1020209@sten-net.de>
+
+Jochen Rassler schrieb:
+
+>Hi Jannis.
+>
+>I have a FXText Widget, that doesn't show the sunken frame. No matter
+>what option i pass the constuctor, it also looks the same. How do i
+>force FXText to like i want it to look?
+>
+>Jochen
+>
+>_______________________________________________
+>InDE-devel mailing list
+>InDE-devel at lists.berlios.de
+>http://lists.berlios.de/mailman/listinfo/inde-devel
+>
+>
+>  
+>
+Hi.
+
+Try FRAME_SUNKEN|FRAME_THICK.
+
+Regards,
+Jannis
+
+
+From jochen at cornmania.de  Tue Feb 15 15:47:10 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Tue, 15 Feb 2005 15:47:10 +0100
+Subject: [InDE-devel] FXText Layout problems
+In-Reply-To: <4211ED7F.1020209@sten-net.de>
+References: <1108467676.1556.2.camel@jogix.sojox>
+	 <4211ED7F.1020209@sten-net.de>
+Message-ID: <1108478830.1556.14.camel@jogix.sojox>
+
+> Try FRAME_SUNKEN|FRAME_THICK.
+
+It doesn't change anything.
+
+BTW, i needed several new builds until i saw your settings dialog. I
+didn't want to appear until something unknown happened. Maybe my
+selfbuild FOX Debain package is a bit fluffy - but i can't imagine,
+because it mainly copies the needed files to the needed location. Weird.
+
+CU
+Jochen
+
+
+
+From devel at sten-net.de  Tue Feb 15 17:24:37 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Tue, 15 Feb 2005 17:24:37 +0100
+Subject: [InDE-devel] FXText Layout problems
+In-Reply-To: <1108478830.1556.14.camel@jogix.sojox>
+References: <1108467676.1556.2.camel@jogix.sojox>	 <4211ED7F.1020209@sten-net.de> <1108478830.1556.14.camel@jogix.sojox>
+Message-ID: <42122245.7010605@sten-net.de>
+
+Jochen Rassler schrieb:
+
+>>Try FRAME_SUNKEN|FRAME_THICK.
+>>    
+>>
+Seems as if you have to put you FXText into another FXVerticalFrame or 
+something similar.
+
+>
+>It doesn't change anything.
+>
+>BTW, i needed several new builds until i saw your settings dialog. I
+>didn't want to appear until something unknown happened. Maybe my
+>selfbuild FOX Debain package is a bit fluffy - but i can't imagine,
+>because it mainly copies the needed files to the needed location. Weird.
+>
+>CU
+>Jochen
+>
+Maybe this has to do with the header files of InDE.
+I tried to pack all includes into one file ("InDE.h") so all other files 
+only needed this one. Perhaps
+that's not a good solution. I noticed that sometimes the SCronscript 
+senselessly rebuilt all files
+and sometimes did ignore one or two. As soon as you have commited your 
+project creating dialog
+to SVN I'll change the inclusion structure.
+
+Regards,
+Jannis
+
+
+From devel at sten-net.de  Tue Feb 15 18:21:10 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Tue, 15 Feb 2005 18:21:10 +0100
+Subject: [InDE-devel] Editor (with tabs and one toggleable fixed tab); ProjectBrowser
+Message-ID: <42122F86.8020802@sten-net.de>
+
+Hi Jochen.
+
+I sent a feature request to Jeroen concerning the FXDirList. We could 
+use FXDirList for our ProjectBrowser but first someone
+has to implement a function to define the root directory for this class. 
+I hope Jeroen is willing to do this. He can't expect everyone
+wants to have a directory listing with / (or all drives) as root element(s).
+
+Next point: I probably will be able to commit an Editor class which 
+supports browsing documents with the help of tabs and a toggleable
+fixed tab for immediate document view (like it is in Adie) as well. I 
+already had done most of it during my first tests for InDE and I think
+it won't be too difficult to merge it with our current code.
+
+That's it for now.
+
+Regards,
+Jannis
+
+
+From jochen at cornmania.de  Tue Feb 15 19:59:26 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Tue, 15 Feb 2005 19:59:26 +0100
+Subject: [InDE-devel] FXText Layout problems
+In-Reply-To: <42122245.7010605@sten-net.de>
+References: <1108467676.1556.2.camel@jogix.sojox>
+	 <4211ED7F.1020209@sten-net.de> <1108478830.1556.14.camel@jogix.sojox>
+	 <42122245.7010605@sten-net.de>
+Message-ID: <1108493966.1556.26.camel@jogix.sojox>
+
+Am Dienstag, den 15.02.2005, 17:24 +0100 schrieb Jannis Pohlmann:
+> Jochen Rassler schrieb:
+> 
+> >>Try FRAME_SUNKEN|FRAME_THICK.
+> >>    
+> >>
+> Seems as if you have to put you FXText into another FXVerticalFrame or 
+> something similar.
+> 
+> >
+> >It doesn't change anything.
+> >
+> >BTW, i needed several new builds until i saw your settings dialog. I
+> >didn't want to appear until something unknown happened. Maybe my
+> >selfbuild FOX Debain package is a bit fluffy - but i can't imagine,
+> >because it mainly copies the needed files to the needed location. Weird.
+> >
+> >CU
+> >Jochen
+> >
+> Maybe this has to do with the header files of InDE.
+> I tried to pack all includes into one file ("InDE.h") so all other files 
+> only needed this one. Perhaps
+> that's not a good solution. I noticed that sometimes the SCronscript 
+> senselessly rebuilt all files
+> and sometimes did ignore one or two. As soon as you have commited your 
+> project creating dialog
+> to SVN I'll change the inclusion structure.
+> 
+I've actually added my latest changes. If you want to update the include
+structure and merge the editor widget, it will be easy to syncronize our
+versions.
+
+BTW, svn should allow us to change the same files and keep track of it -
+as long as we do a svn update before svn commit. I haven't seen svn
+behavior about this, but cvs behavior and i guess it won't differ too
+much.
+
+>>>>>>>>>>>>> old version
+// old code...
+<<<<<<<<<<<<< new version
+// new code...
+>>>>>>>>>>>>>
+
+or something similar should mark the dirty areas. You just have to merge
+it with your changed version and upload the new revision.
+
+BTW, it seems i have some problems with trunk/.sconsign.dblite while
+uploading. What is this file good for. Seems to be a (binary?) version
+of SCons watching what has changed and what has to be build on next
+call. If so, i guess it should be moved to attic.
+
+regards
+	Jochen
+
+
+
+
+From jochen at cornmania.de  Wed Feb 16 10:00:06 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Wed, 16 Feb 2005 10:00:06 +0100
+Subject: [InDE-devel] NewProjectWizard
+Message-ID: <1108544406.1556.3.camel@jogix.sojox>
+
+Hi Jannis.
+
+i actually completed the GUI of the NewProjectWizard. The saving of the
+settings is still pending and also an optional picture for the wizard.
+
+I thought long about the arrangement of the compiler switches and how to
+add libraries to the settings.
+I decided to keep it very simple for the first iteration and therefor
+opened a new task to remind us to implement a more intelligent and
+straightforward system sometimes later.
+
+More to come tonight ;)
+
+regards
+	Jochen
+
+
+
+From devel at sten-net.de  Wed Feb 16 13:05:26 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Wed, 16 Feb 2005 13:05:26 +0100
+Subject: [InDE-devel] NewProjectWizard
+In-Reply-To: <1108544406.1556.3.camel@jogix.sojox>
+References: <1108544406.1556.3.camel@jogix.sojox>
+Message-ID: <42133706.7010005@sten-net.de>
+
+Jochen Rassler schrieb:
+
+>Hi Jannis.
+>
+>i actually completed the GUI of the NewProjectWizard. The saving of the
+>settings is still pending and also an optional picture for the wizard.
+>
+>I thought long about the arrangement of the compiler switches and how to
+>add libraries to the settings.
+>I decided to keep it very simple for the first iteration and therefor
+>opened a new task to remind us to implement a more intelligent and
+>straightforward system sometimes later.
+>
+>More to come tonight ;)
+>
+>regards
+>	Jochen
+>
+Hi Jochen.
+
+Sounds great. I'll have a look at that soon (= as soon as my softmodem 
+has checked out everything from SVN).
+
+Regards,
+Jannis
+
+
+From devel at sten-net.de  Wed Feb 16 13:07:39 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Wed, 16 Feb 2005 13:07:39 +0100
+Subject: [InDE-devel] Editor (with tabs and one toggleable fixed tab);
+ ProjectBrowser
+In-Reply-To: <42122F86.8020802@sten-net.de>
+References: <42122F86.8020802@sten-net.de>
+Message-ID: <4213378B.6060405@sten-net.de>
+
+Jannis Pohlmann schrieb:
+
+> Hi Jochen.
+>
+> I sent a feature request to Jeroen concerning the FXDirList. We could 
+> use FXDirList for our ProjectBrowser but first someone
+> has to implement a function to define the root directory for this 
+> class. I hope Jeroen is willing to do this. He can't expect everyone
+> wants to have a directory listing with / (or all drives) as root 
+> element(s).
+
+
+Jeroen did agree with my feature request. This means we won't have much 
+work with the project file browser. Perhaps this gives us the
+possibility to think about an additional class browser. But that's not 
+easy so we should wait with that.
+
+Regards,
+Jannis
+
+
+From devel at sten-net.de  Wed Feb 16 13:26:02 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Wed, 16 Feb 2005 13:26:02 +0100
+Subject: [InDE-devel] FXText Layout problems
+In-Reply-To: <1108493966.1556.26.camel@jogix.sojox>
+References: <1108467676.1556.2.camel@jogix.sojox>	 <4211ED7F.1020209@sten-net.de> <1108478830.1556.14.camel@jogix.sojox>	 <42122245.7010605@sten-net.de> <1108493966.1556.26.camel@jogix.sojox>
+Message-ID: <42133BDA.3070704@sten-net.de>
+
+Hi Jochen.
+
+
+>BTW, svn should allow us to change the same files and keep track of it -
+>as long as we do a svn update before svn commit. I haven't seen svn
+>behavior about this, but cvs behavior and i guess it won't differ too
+>much.
+>
+>  
+>
+It should be able to do that, yes. I'm download the SVN version control 
+documentation at the moment
+and I will search for a feature like this in it.
+
+>BTW, it seems i have some problems with trunk/.sconsign.dblite while
+>uploading. What is this file good for. Seems to be a (binary?) version
+>of SCons watching what has changed and what has to be build on next
+>call. If so, i guess it should be moved to attic.
+>  
+>
+If SVN is able to ignore files, we could ignore it. It is allways 
+created when SCons is executed.
+Since after changes SCons normally should have to recompile nearly 
+everything we don't need
+it in SVN.
+
+Regards,
+Jannis
+
+
+From jochen at cornmania.de  Wed Feb 16 23:36:27 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Wed, 16 Feb 2005 23:36:27 +0100
+Subject: [InDE-devel] Editor (with tabs and one toggleable fixed tab);
+	ProjectBrowser
+In-Reply-To: <4213378B.6060405@sten-net.de>
+References: <42122F86.8020802@sten-net.de>  <4213378B.6060405@sten-net.de>
+Message-ID: <1108593387.1541.4.camel@jogix.sojox>
+
+Hi Jannis.
+
+Am Mittwoch, den 16.02.2005, 13:07 +0100 schrieb Jannis Pohlmann:
+> Jannis Pohlmann schrieb:
+> 
+> > Hi Jochen.
+> >
+> > I sent a feature request to Jeroen concerning the FXDirList. We could 
+> > use FXDirList for our ProjectBrowser but first someone
+> > has to implement a function to define the root directory for this 
+> > class. I hope Jeroen is willing to do this. He can't expect everyone
+> > wants to have a directory listing with / (or all drives) as root 
+> > element(s).
+> 
+> 
+> Jeroen did agree with my feature request. This means we won't have much 
+> work with the project file browser. Perhaps this gives us the
+> possibility to think about an additional class browser. But that's not 
+> easy so we should wait with that.
+> 
+But this feature will go into 1.5. However, I wanted to stay at 1.4 but
+if it's needed.... ;)
+I thought about something different, but haven't looked at it yet.
+Something like a virtual snapshot of the devel filesystem -> we do not
+need to show every files in it to the user, as they may be totally
+uninteresting. As far as a project config script exists, we know which
+files are in these directories and are needed by the project.
+
+I will have a look at this next days, if you are not totally
+uninterested in it.
+
+CU
+	Jochen
+
+
+
+From devel at sten-net.de  Thu Feb 17 11:39:49 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Thu, 17 Feb 2005 11:39:49 +0100
+Subject: [InDE-devel] Editor (with tabs and one toggleable fixed tab);
+ ProjectBrowser
+In-Reply-To: <1108593387.1541.4.camel@jogix.sojox>
+References: <42122F86.8020802@sten-net.de>  <4213378B.6060405@sten-net.de> <1108593387.1541.4.camel@jogix.sojox>
+Message-ID: <42147475.1080309@sten-net.de>
+
+Jochen Rassler schrieb:
+
+>Hi Jannis.
+>
+>Am Mittwoch, den 16.02.2005, 13:07 +0100 schrieb Jannis Pohlmann:
+>  
+>
+>>Jannis Pohlmann schrieb:
+>>
+>>    
+>>
+>>>Hi Jochen.
+>>>
+>>>I sent a feature request to Jeroen concerning the FXDirList. We could 
+>>>use FXDirList for our ProjectBrowser but first someone
+>>>has to implement a function to define the root directory for this 
+>>>class. I hope Jeroen is willing to do this. He can't expect everyone
+>>>wants to have a directory listing with / (or all drives) as root 
+>>>element(s).
+>>>      
+>>>
+>>Jeroen did agree with my feature request. This means we won't have much 
+>>work with the project file browser. Perhaps this gives us the
+>>possibility to think about an additional class browser. But that's not 
+>>easy so we should wait with that.
+>>
+>>    
+>>
+>But this feature will go into 1.5. However, I wanted to stay at 1.4 but
+>if it's needed.... ;)
+>I thought about something different, but haven't looked at it yet.
+>Something like a virtual snapshot of the devel filesystem -> we do not
+>need to show every files in it to the user, as they may be totally
+>uninteresting. As far as a project config script exists, we know which
+>files are in these directories and are needed by the project.
+>
+>I will have a look at this next days, if you are not totally
+>uninterested in it.
+>
+>CU
+>	Jochen
+>  
+>
+Of course, this would be interesting. Yet, I'm not sure how to observe 
+the filesystem permanently
+to redraw when files/directories are deleted/moved/created. FXDirList 
+does this automatically.
+And it allows to use a filter for file extensions. We could apply a 
+filter based on the project configuration
+to FXDirList and wouldn't have to use a virtual filesystem.
+I'm not sure about that. But if you are willing to look into that, why not?
+
+Regards,
+Jannis
+
+
+From jochen at cornmania.de  Thu Feb 17 11:59:37 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Thu, 17 Feb 2005 11:59:37 +0100
+Subject: [InDE-devel] Editor (with tabs and one toggleable fixed tab);
+	ProjectBrowser
+In-Reply-To: <42147475.1080309@sten-net.de>
+References: <42122F86.8020802@sten-net.de>  <4213378B.6060405@sten-net.de>
+	 <1108593387.1541.4.camel@jogix.sojox>  <42147475.1080309@sten-net.de>
+Message-ID: <1108637977.1541.14.camel@jogix.sojox>
+
+Guten Morgen!
+
+Am Donnerstag, den 17.02.2005, 11:39 +0100 schrieb Jannis Pohlmann:
+> Of course, this would be interesting. Yet, I'm not sure how to observe 
+> the filesystem permanently
+> to redraw when files/directories are deleted/moved/created. FXDirList 
+> does this automatically.
+> And it allows to use a filter for file extensions. We could apply a 
+> filter based on the project configuration
+> to FXDirList and wouldn't have to use a virtual filesystem.
+> I'm not sure about that. But if you are willing to look into that, why not?
+> 
+I thought of a simple FXList, not a FXList.
+Building the directories specyfied in the project config and showing the
+files added to the project.
+
+For the first iteration we only need the cpp an h source files, maybe
+later on some resource files,...
+
+This could be done with a simple FXList, where we keep record of the
+contents based on the project.cfg. Al list entries store the file path
+and can be opened by (bouble)clicking on them.
+
+I guess, objectfiles, libraries, SCons files,.... aren't important for
+the uses, hence we can add them by uncluding filters.
+
+Bis denne
+	Jochen
+
+
+
+From jochen at cornmania.de  Thu Feb 17 13:52:06 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Thu, 17 Feb 2005 13:52:06 +0100
+Subject: [InDE-devel] Editor (with tabs and one toggleable fixed tab);
+	ProjectBrowser
+In-Reply-To: <1108637977.1541.14.camel@jogix.sojox>
+References: <42122F86.8020802@sten-net.de>  <4213378B.6060405@sten-net.de>
+	 <1108593387.1541.4.camel@jogix.sojox>  <42147475.1080309@sten-net.de>
+	 <1108637977.1541.14.camel@jogix.sojox>
+Message-ID: <1108644726.1541.19.camel@jogix.sojox>
+
+Am Donnerstag, den 17.02.2005, 11:59 +0100 schrieb Jochen Rassler:
+> Guten Morgen!
+> 
+> Am Donnerstag, den 17.02.2005, 11:39 +0100 schrieb Jannis Pohlmann:
+> > Of course, this would be interesting. Yet, I'm not sure how to observe 
+> > the filesystem permanently
+> > to redraw when files/directories are deleted/moved/created. FXDirList 
+> > does this automatically.
+> > And it allows to use a filter for file extensions. We could apply a 
+> > filter based on the project configuration
+> > to FXDirList and wouldn't have to use a virtual filesystem.
+> > I'm not sure about that. But if you are willing to look into that, why not?
+> > 
+> I thought of a simple FXList, not a FXList.
+                                      ^^^^^^
+                                      must be FXDirList ;)
+
+> Building the directories specyfied in the project config and showing the
+> files added to the project.
+> 
+> For the first iteration we only need the cpp an h source files, maybe
+> later on some resource files,...
+> 
+> This could be done with a simple FXList, where we keep record of the
+> contents based on the project.cfg. Al list entries store the file path
+> and can be opened by (bouble)clicking on them.
+> 
+> I guess, objectfiles, libraries, SCons files,.... aren't important for
+> the uses, hence we can add them by uncluding filters.
+> 
+> Bis denne
+> 	Jochen
+> 
+> _______________________________________________
+> InDE-devel mailing list
+> InDE-devel at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/inde-devel
+> 
+
+
+
+From devel at sten-net.de  Thu Feb 17 21:14:35 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Thu, 17 Feb 2005 21:14:35 +0100
+Subject: [InDE-devel] Editor (with tabs and one toggleable fixed tab);
+ ProjectBrowser
+In-Reply-To: <1108644726.1541.19.camel@jogix.sojox>
+References: <42122F86.8020802@sten-net.de>  <4213378B.6060405@sten-net.de>	 <1108593387.1541.4.camel@jogix.sojox>  <42147475.1080309@sten-net.de>	 <1108637977.1541.14.camel@jogix.sojox> <1108644726.1541.19.camel@jogix.sojox>
+Message-ID: <4214FB2B.4090107@sten-net.de>
+
+'n Abend,
+
+>>For the first iteration we only need the cpp an h source files, maybe
+>>later on some resource files,...
+>>
+>>This could be done with a simple FXList, where we keep record of the
+>>contents based on the project.cfg. Al list entries store the file path
+>>and can be opened by (bouble)clicking on them.
+>>    
+>>
+You're right, this would do the job. Nevertheless, that would require at 
+least FXTreeList if we wanted
+to separate source and include directories. But why not go for FXDirList 
+and FOX 1.5?
+When the first stable version of InDE is ready to be announced I think 
+FOX might already be at 1.6. If this
+sounds quite pessimistic - it isn't. There is really much to do, I don't 
+suppose InDE 0.0.1 is going to be
+finished before autumn 2005. And what's more important: FOX 1.5 is 
+likely to bring some features we really
+need - like internationalization and theming.
+
+With FXDirList we had no work on the functions being responsible for 
+deleting and moving files. I know
+other IDEs work with a virtual filesystem - so does Anjuta and I hated 
+adding each file I wanted to see in
+the project file view manually.
+
+To come to an end: For the first release I don't consider a virtual file 
+view a good solution.
+
+>>I guess, objectfiles, libraries, SCons files,.... aren't important for
+>>the uses, hence we can add them by uncluding filters.
+>>    
+>>
+Right, these things aren't import for the normal user. Only for InDE to 
+compile the project.
+
+Regards,
+Jannis
+
+
+From devel at sten-net.de  Thu Feb 17 21:30:16 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Thu, 17 Feb 2005 21:30:16 +0100
+Subject: [InDE-devel] Dialog conventions
+Message-ID: <4214FED8.3010003@sten-net.de>
+
+Hi Jochen.
+
+As I've already mentioned, I'm currently developing a standardized way 
+to write dialogs. I had a deep look into your
+NewProjectWizard and added some checking functionality and improved it's 
+internal design a bit. I'm doing the
+same with SettingsDialog as well. This still takes some time but I will 
+be finished by the end of the week, I think.
+
+After rewriting these two dialogs I will compose some conventions about 
+Dialogs. Afterwards we should follow these
+in order to have a kind-of-standardized internal look including the 
+already mentioned checking mechanism and easy
+access to all values of the dialog. I think it's a good thing.
+
+BTW: I already extended your dialog (or better to say, MainWindow) by 
+the functionality to create the project directory,  to
+fill the project config with values from NewProjectWizard, to save and 
+close an already opened project and, finally, to
+open the new project. And I wrote a function to select a project from 
+the filesystem and open it. Wasn't that difficult.
+
+So far,
+Jannis
+
+
+From jochen at cornmania.de  Fri Feb 18 00:14:51 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Fri, 18 Feb 2005 00:14:51 +0100
+Subject: [InDE-devel] Editor (with tabs and one toggleable fixed tab);
+	ProjectBrowser
+In-Reply-To: <4214FB2B.4090107@sten-net.de>
+References: <42122F86.8020802@sten-net.de>  <4213378B.6060405@sten-net.de>
+	 <1108593387.1541.4.camel@jogix.sojox>  <42147475.1080309@sten-net.de>
+	 <1108637977.1541.14.camel@jogix.sojox>
+	 <1108644726.1541.19.camel@jogix.sojox>  <4214FB2B.4090107@sten-net.de>
+Message-ID: <1108682091.1541.59.camel@jogix.sojox>
+
+Hidiho!
+
+Am Donnerstag, den 17.02.2005, 21:14 +0100 schrieb Jannis Pohlmann:
+> You're right, this would do the job. Nevertheless, that would require at 
+> least FXTreeList if we wanted
+> to separate source and include directories. But why not go for FXDirList 
+> and FOX 1.5?
+Sorry, I meant FXTreeList.
+Ok, why not. Why not using a development version for development? 
+
+One point for the stable branch would be, that the development isn't
+bothered by API changes. But on the other hand porting to 1.6 might be a
+pain...
+
+> When the first stable version of InDE is ready to be announced I think 
+> FOX might already be at 1.6. If this
+> sounds quite pessimistic - it isn't. There is really much to do, I don't 
+> suppose InDE 0.0.1 is going to be
+> finished before autumn 2005. And what's more important: FOX 1.5 is 
+> likely to bring some features we really
+> need - like internationalization and theming.
+
+Ah, I think we have a very different view of releasing... I'll open a
+new thread for the discussion on it to get a little structure to the ML.
+> 
+> With FXDirList we had no work on the functions being responsible for 
+> deleting and moving files. I know
+> other IDEs work with a virtual filesystem - so does Anjuta and I hated 
+> adding each file I wanted to see in
+> the project file view manually.
+> 
+> To come to an end: For the first release I don't consider a virtual file 
+> view a good solution.
+
+One reason for a virtual file system would be that the project holds all
+files that are in the project. If a user copies a file to the project
+directory and we do however not recognize this file being included by
+SCons, this may cause some strange behavior and may be hard to
+reintroduce, if we once follow another strategy.
+
+Actually we have a tab with two books: file system and project view. As
+long as we implement a context menu for the file system view, that lets
+you add a file to the project, there are no problems. The user can add
+every file he wants without pain. If he wants to see a file which isn't
+included in the project, he also has the possibility because there is
+the file system view. And if he can open a file from there, no
+frustration will happen...
+> 
+I think, a treelist is not really difficult to implement. Why not doing
+it - at least until the setRootDirectory() is in FOX 1.5. And after
+that, it may be a setting, the user can do: see the complete content in
+the project directory or see the stripped project view. This enables
+some flexibility.
+
+If Jeroen introduces the new development tree in the next few days with
+this feature implemented, i may change my opinion in a second... ;)
+
+Jochen
+
+
+
+From jochen.rassler at dadi-julis.de  Fri Feb 18 00:32:55 2005
+From: jochen.rassler at dadi-julis.de (Jochen =?ISO-8859-1?Q?Ra=DFler?=)
+Date: Fri, 18 Feb 2005 00:32:55 +0100
+Subject: [InDE-devel] release cycles
+Message-ID: <1108683175.1541.69.camel@jogix.sojox>
+
+Hi.
+
+The discussion about the release cycles, as mentioned before...
+
+> When the first stable version of InDE is ready to be announced I
+> think FOX might already be at 1.6. If this
+> sounds quite pessimistic - it isn't. There is really much to do, I don't 
+> suppose InDE 0.0.1 is going to be
+> finished before autumn 2005. And what's more important: FOX 1.5 is 
+> likely to bring some features we really
+> need - like internationalization and theming.
+
+First, you are absolutly right: fox 1.5 will long expected features,
+that i really would like to add, like the mentioned internationalization
+and thememing.
+
+But what speaks against early and regularly releases? I don't see any
+point against early releases, as far as we stay in a development tree
+and do not have to include bug eleminating patches to probably old
+versions.
+
+There are many points, why I'd like to release early and regularly:
+* increased audience
+* maybe new killer features
+* bug reports for bugs we haven't seen yet
+* maybe some help on special topics, like e.g. cvs and svn support
+* as long as the IDE is usable as a simple editor, it is a benefit to
+the free software users
+* we only check in running version to svn, however, every check in could
+(theoretically) be a development snapshot numbered as a release. as soon
+as we think some cool new features are implemented, we show our users,
+that the development is still going on and they stay to use InDE
+* it is definetly self-motivation to see a (increasing) number of users
+use what you've done....
+
+Just my 2 Cents
+	Jochen
+
+
+
+
+From jochen at cornmania.de  Fri Feb 18 00:39:06 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Fri, 18 Feb 2005 00:39:06 +0100
+Subject: [InDE-devel] Dialog conventions
+In-Reply-To: <4214FED8.3010003@sten-net.de>
+References: <4214FED8.3010003@sten-net.de>
+Message-ID: <1108683546.1541.76.camel@jogix.sojox>
+
+Hi Jannis.
+
+Am Donnerstag, den 17.02.2005, 21:30 +0100 schrieb Jannis Pohlmann:
+> Hi Jochen.
+> 
+> As I've already mentioned, I'm currently developing a standardized way 
+> to write dialogs. I had a deep look into your
+> NewProjectWizard and added some checking functionality and improved it's 
+> internal design a bit. I'm doing the
+> same with SettingsDialog as well. This still takes some time but I will 
+> be finished by the end of the week, I think.
+
+Can you check in your code? Or at least parts of it?
+I just wanted to go on with development. There are some important things
+missing, that i wanted to add. Also the checking and pre-filling of the
+structs should be implemented this night ;)
+And i wanted to build the project.cfg, implementing the read and write
+functionality and add a menu to open an existing project, adding
+files,...
+> 
+> After rewriting these two dialogs I will compose some conventions about 
+> Dialogs. Afterwards we should follow these
+> in order to have a kind-of-standardized internal look including the 
+> already mentioned checking mechanism and easy
+> access to all values of the dialog. I think it's a good thing.
+
+To have conventions - definetly yes!
+> 
+> BTW: I already extended your dialog (or better to say, MainWindow) by 
+> the functionality to create the project directory,  to
+> fill the project config with values from NewProjectWizard, to save and 
+> close an already opened project and, finally, to
+> open the new project. And I wrote a function to select a project from 
+> the filesystem and open it. Wasn't that difficult.
+> 
+Oh, that was what i had planed for this night.... hm, thought it was my
+job...
+ok, i am going to another project of mine, as far as i cannot do
+anything by now....
+
+Jochen
+
+
+
+From devel at sten-net.de  Fri Feb 18 01:00:17 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Fri, 18 Feb 2005 01:00:17 +0100
+Subject: [InDE-devel] Editor (with tabs and one toggleable fixed tab);
+ ProjectBrowser
+In-Reply-To: <1108682091.1541.59.camel@jogix.sojox>
+References: <42122F86.8020802@sten-net.de>  <4213378B.6060405@sten-net.de>	 <1108593387.1541.4.camel@jogix.sojox>  <42147475.1080309@sten-net.de>	 <1108637977.1541.14.camel@jogix.sojox>	 <1108644726.1541.19.camel@jogix.sojox>  <4214FB2B.4090107@sten-net.de> <1108682091.1541.59.camel@jogix.sojox>
+Message-ID: <42153011.5010706@sten-net.de>
+
+Hi again.
+
+>One reason for a virtual file system would be that the project holds all
+>files that are in the project. If a user copies a file to the project
+>directory and we do however not recognize this file being included by
+>SCons, this may cause some strange behavior and may be hard to
+>reintroduce, if we once follow another strategy.
+>
+>Actually we have a tab with two books: file system and project view. As
+>long as we implement a context menu for the file system view, that lets
+>you add a file to the project, there are no problems. The user can add
+>every file he wants without pain. If he wants to see a file which isn't
+>included in the project, he also has the possibility because there is
+>the file system view. And if he can open a file from there, no
+>frustration will happen...
+>  
+>
+Okay, this point (the idea of one real filesystem and one virtual 
+filesystem) definitively goes to you.
+But ... adding a file to the project view still would be complicated 
+somehow  (two or three mouseclicks
+plus browsing the filesystem and selecting a file).
+
+Concerning the project files used by SCons we speek of two different 
+things - at least I suppose we do.
+I thought about this: We use the directories defined in the project 
+directory settings to collect the files we
+need for the SCons script. That means: All *.cpp, *.c or *.cc files in 
+the source dir and all *.h, *.hpp files
+in the include dir. This would spare observing these directories 
+permanently. Every file copied/moved to
+or removed from them would directly be visible in the FXDirList and also 
+used by the SCons script.
+
+Thus, no unexpected problems would occur since there are directories 
+clearly marked as source, header
+and build directories.
+
+How is your opinion?
+
+Regards,
+Jannis
+
+
+
+From devel at sten-net.de  Fri Feb 18 01:08:50 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Fri, 18 Feb 2005 01:08:50 +0100
+Subject: [InDE-devel] release cycles
+In-Reply-To: <1108683175.1541.69.camel@jogix.sojox>
+References: <1108683175.1541.69.camel@jogix.sojox>
+Message-ID: <42153212.4090102@sten-net.de>
+
+Jochen Ra?ler schrieb:
+
+>Hi.
+>
+>The discussion about the release cycles, as mentioned before...
+>
+>  
+>
+>>When the first stable version of InDE is ready to be announced I
+>>think FOX might already be at 1.6. If this
+>>sounds quite pessimistic - it isn't. There is really much to do, I don't 
+>>suppose InDE 0.0.1 is going to be
+>>finished before autumn 2005. And what's more important: FOX 1.5 is 
+>>likely to bring some features we really
+>>need - like internationalization and theming.
+>>    
+>>
+>
+>First, you are absolutly right: fox 1.5 will long expected features,
+>that i really would like to add, like the mentioned internationalization
+>and thememing.
+>
+>But what speaks against early and regularly releases? I don't see any
+>point against early releases, as far as we stay in a development tree
+>and do not have to include bug eleminating patches to probably old
+>versions.
+>
+>There are many points, why I'd like to release early and regularly:
+>* increased audience
+>* maybe new killer features
+>* bug reports for bugs we haven't seen yet
+>* maybe some help on special topics, like e.g. cvs and svn support
+>* as long as the IDE is usable as a simple editor, it is a benefit to
+>the free software users
+>* we only check in running version to svn, however, every check in could
+>(theoretically) be a development snapshot numbered as a release. as soon
+>as we think some cool new features are implemented, we show our users,
+>that the development is still going on and they stay to use InDE
+>* it is definetly self-motivation to see a (increasing) number of users
+>use what you've done....
+>
+>Just my 2 Cents
+>	Jochen
+>  
+>
+Hello Jochen.
+
+Your absolutely right so I correct myself. Why not release earlier than 
+I thought about first.
+Increased audience and visible active development aren't bad. Some help 
+would be great, too.
+
+In other words: I agree with you. I'm not that familiar with SVN 
+(although I'll teach myself some basics
+next week) so committing only running versions might be a good choice. 
+Perhaps we could run a little
+internal SVN server (I have a virtual debian server running on which we 
+could do this: www.gezeiten.org) to
+share our code. Only development snapshots would be released to the 
+official SVN and to our website.
+
+That's a good thing perhaps.
+
+Nevertheless, as long as InDE has development status we should use FOX 1.5.
+
+Best regards,
+Jannis
+
+
+From devel at sten-net.de  Fri Feb 18 01:21:52 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Fri, 18 Feb 2005 01:21:52 +0100
+Subject: [InDE-devel] Dialog conventions
+In-Reply-To: <1108683546.1541.76.camel@jogix.sojox>
+References: <4214FED8.3010003@sten-net.de> <1108683546.1541.76.camel@jogix.sojox>
+Message-ID: <42153520.5040408@sten-net.de>
+
+Hi Jochen.
+
+>>BTW: I already extended your dialog (or better to say, MainWindow) by 
+>>the functionality to create the project directory,  to
+>>fill the project config with values from NewProjectWizard, to save and 
+>>close an already opened project and, finally, to
+>>open the new project. And I wrote a function to select a project from 
+>>the filesystem and open it. Wasn't that difficult.
+>>    
+>>
+>Oh, that was what i had planed for this night.... hm, thought it was my
+>job...
+>ok, i am going to another project of mine, as far as i cannot do
+>anything by now....
+>
+>Jochen
+>
+Sorry, I don't wanted to steal your tasks, really. I just tested some 
+ways to check a dialog and yours
+was the only one that was already finished (more or less). I found a 
+good way to do this and I will
+introduce it to you this weekend.
+Until now we hadn't any conventions and thus, our dialogs differed in 
+many points. This is what I
+want to prevent. With the "rules" I am defining at the moment our future 
+dialogs will not differ
+that much and they will all be structured the same way (this is going to 
+spare *much* work when
+merging our code).
+
+Following these rules, our dialogs's structures will allways look the 
+same and no adjustments will
+have to be made.
+
+Sorry again, I hope that is ok for you.
+
+Regards,
+Jannis
+
+
+From jochen at cornmania.de  Fri Feb 18 01:29:22 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Fri, 18 Feb 2005 01:29:22 +0100
+Subject: [InDE-devel] Editor (with tabs and one toggleable fixed tab);
+	ProjectBrowser
+In-Reply-To: <42153011.5010706@sten-net.de>
+References: <42122F86.8020802@sten-net.de>  <4213378B.6060405@sten-net.de>
+	 <1108593387.1541.4.camel@jogix.sojox>  <42147475.1080309@sten-net.de>
+	 <1108637977.1541.14.camel@jogix.sojox>
+	 <1108644726.1541.19.camel@jogix.sojox>  <4214FB2B.4090107@sten-net.de>
+	 <1108682091.1541.59.camel@jogix.sojox>  <42153011.5010706@sten-net.de>
+Message-ID: <1108686562.1541.83.camel@jogix.sojox>
+
+Hi.
+
+Am Freitag, den 18.02.2005, 01:00 +0100 schrieb Jannis Pohlmann:
+> Concerning the project files used by SCons we speek of two different 
+> things - at least I suppose we do.
+> I thought about this: We use the directories defined in the project 
+> directory settings to collect the files we
+> need for the SCons script. That means: All *.cpp, *.c or *.cc files in 
+> the source dir and all *.h, *.hpp files
+> in the include dir. This would spare observing these directories 
+> permanently. Every file copied/moved to
+> or removed from them would directly be visible in the FXDirList and also 
+> used by the SCons script.
+> 
+> Thus, no unexpected problems would occur since there are directories 
+> clearly marked as source, header
+> and build directories.
+> 
+That's true as long as no files *not* in the project dir are included to
+the project.
+
+Jochen
+
+
+
+From jochen at cornmania.de  Fri Feb 18 01:38:11 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Fri, 18 Feb 2005 01:38:11 +0100
+Subject: [InDE-devel] release cycles
+In-Reply-To: <42153212.4090102@sten-net.de>
+References: <1108683175.1541.69.camel@jogix.sojox>
+	 <42153212.4090102@sten-net.de>
+Message-ID: <1108687091.1541.92.camel@jogix.sojox>
+
+Hi Jannis.
+
+Am Freitag, den 18.02.2005, 01:08 +0100 schrieb Jannis Pohlmann:
+> In other words: I agree with you. I'm not that familiar with SVN 
+> (although I'll teach myself some basics
+> next week) so committing only running versions might be a good choice. 
+> Perhaps we could run a little
+> internal SVN server (I have a virtual debian server running on which we 
+> could do this: www.gezeiten.org) to
+> share our code. Only development snapshots would be released to the 
+> official SVN and to our website.
+> 
+I think you misunderstood the point.
+
+We have a svn directory, why setting up another one?
+
+Only checking in running versions means, that you only check in changed
+files, which you know of that they compile fine and that the code is
+running. Bugs, well, who writes large amount of code without bugs? But
+the version should compile and run. That is not for the users, but for
+the other developers, as they most probably work on another module and
+do not want to fix your code, that you had checked in not completely.
+
+If you follow this rule: often check in little changes, every check in
+compiles and is runnable (or not used by other code), doesn't lead to
+problems in the repository and also other developers can eventually
+share your code.
+
+So every nightly build tarball (does berlios support this?) is runnable.
+That means, if you think, there have been many chages to the repository,
+many cool new features, check out - or take your actual workspace
+(better to commit first) make a scons -c , cd .. , tar cfvz ..... and
+upload it as a new release...
+
+Jochen
+
+
+
+From jochen at cornmania.de  Fri Feb 18 01:45:32 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Fri, 18 Feb 2005 01:45:32 +0100
+Subject: [InDE-devel] release cycles
+In-Reply-To: <1108683175.1541.69.camel@jogix.sojox>
+References: <1108683175.1541.69.camel@jogix.sojox>
+Message-ID: <1108687532.1541.95.camel@jogix.sojox>
+
+Am Freitag, den 18.02.2005, 00:32 +0100 schrieb Jochen Ra?ler:
+> Hi.
+> 
+> The discussion about the release cycles, as mentioned before...
+> 
+> > When the first stable version of InDE is ready to be announced I
+> > think FOX might already be at 1.6. If this
+> > sounds quite pessimistic - it isn't. There is really much to do, I don't 
+> > suppose InDE 0.0.1 is going to be
+> > finished before autumn 2005. And what's more important: FOX 1.5 is 
+> > likely to bring some features we really
+> > need - like internationalization and theming.
+> 
+> First, you are absolutly right: fox 1.5 will long expected features,
+> that i really would like to add, like the mentioned internationalization
+> and thememing.
+> 
+> But what speaks against early and regularly releases? I don't see any
+> point against early releases, as far as we stay in a development tree
+> and do not have to include bug eleminating patches to probably old
+> versions.
+> 
+> There are many points, why I'd like to release early and regularly:
+> * increased audience
+> * maybe new killer features
+> * bug reports for bugs we haven't seen yet
+> * maybe some help on special topics, like e.g. cvs and svn support
+> * as long as the IDE is usable as a simple editor, it is a benefit to
+> the free software users
+> * we only check in running version to svn, however, every check in could
+> (theoretically) be a development snapshot numbered as a release. as soon
+> as we think some cool new features are implemented, we show our users,
+> that the development is still going on and they stay to use InDE
+> * it is definetly self-motivation to see a (increasing) number of users
+> use what you've done....
+> 
+
+Forgot to mention, that i'd prefer to release the very first release
+0.0.1 as soon as the editor is running (in a simple way) and the project
+configuration works.
+So the users may have a feeling, where this projects goes to.
+
+
+
+From devel at sten-net.de  Fri Feb 18 14:17:52 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Fri, 18 Feb 2005 14:17:52 +0100
+Subject: [InDE-devel] release cycles
+In-Reply-To: <1108687091.1541.92.camel@jogix.sojox>
+References: <1108683175.1541.69.camel@jogix.sojox>	 <42153212.4090102@sten-net.de> <1108687091.1541.92.camel@jogix.sojox>
+Message-ID: <4215EB00.80200@sten-net.de>
+
+Jochen Rassler schrieb:
+
+>Hi Jannis.
+>
+>Am Freitag, den 18.02.2005, 01:08 +0100 schrieb Jannis Pohlmann:
+>  
+>
+>>In other words: I agree with you. I'm not that familiar with SVN 
+>>(although I'll teach myself some basics
+>>next week) so committing only running versions might be a good choice. 
+>>Perhaps we could run a little
+>>internal SVN server (I have a virtual debian server running on which we 
+>>could do this: www.gezeiten.org) to
+>>share our code. Only development snapshots would be released to the 
+>>official SVN and to our website.
+>>
+>>    
+>>
+>I think you misunderstood the point.
+>
+>We have a svn directory, why setting up another one?
+>
+>Only checking in running versions means, that you only check in changed
+>files, which you know of that they compile fine and that the code is
+>running. Bugs, well, who writes large amount of code without bugs? But
+>the version should compile and run. That is not for the users, but for
+>the other developers, as they most probably work on another module and
+>do not want to fix your code, that you had checked in not completely.
+>
+>If you follow this rule: often check in little changes, every check in
+>compiles and is runnable (or not used by other code), doesn't lead to
+>problems in the repository and also other developers can eventually
+>share your code.
+>
+>So every nightly build tarball (does berlios support this?) is runnable.
+>That means, if you think, there have been many chages to the repository,
+>many cool new features, check out - or take your actual workspace
+>(better to commit first) make a scons -c , cd .. , tar cfvz ..... and
+>upload it as a new release...
+>
+>Jochen
+>  
+>
+Ah, ok. Yes, I misunderstood your words. Now it's much clearer to me.
+
+It's a good idea to work with SVN that way.
+
+Regards,
+Jannis
+
+
+From devel at sten-net.de  Fri Feb 18 14:23:43 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Fri, 18 Feb 2005 14:23:43 +0100
+Subject: [InDE-devel] release cycles
+In-Reply-To: <1108687532.1541.95.camel@jogix.sojox>
+References: <1108683175.1541.69.camel@jogix.sojox> <1108687532.1541.95.camel@jogix.sojox>
+Message-ID: <4215EC5F.9030702@sten-net.de>
+
+Jochen Rassler schrieb:
+
+>Am Freitag, den 18.02.2005, 00:32 +0100 schrieb Jochen Ra?ler:
+>  
+>
+>>Hi.
+>>
+>>The discussion about the release cycles, as mentioned before...
+>>
+>>    
+>>
+>>>When the first stable version of InDE is ready to be announced I
+>>>think FOX might already be at 1.6. If this
+>>>sounds quite pessimistic - it isn't. There is really much to do, I don't 
+>>>suppose InDE 0.0.1 is going to be
+>>>finished before autumn 2005. And what's more important: FOX 1.5 is 
+>>>likely to bring some features we really
+>>>need - like internationalization and theming.
+>>>      
+>>>
+>>First, you are absolutly right: fox 1.5 will long expected features,
+>>that i really would like to add, like the mentioned internationalization
+>>and thememing.
+>>
+>>But what speaks against early and regularly releases? I don't see any
+>>point against early releases, as far as we stay in a development tree
+>>and do not have to include bug eleminating patches to probably old
+>>versions.
+>>
+>>There are many points, why I'd like to release early and regularly:
+>>* increased audience
+>>* maybe new killer features
+>>* bug reports for bugs we haven't seen yet
+>>* maybe some help on special topics, like e.g. cvs and svn support
+>>* as long as the IDE is usable as a simple editor, it is a benefit to
+>>the free software users
+>>* we only check in running version to svn, however, every check in could
+>>(theoretically) be a development snapshot numbered as a release. as soon
+>>as we think some cool new features are implemented, we show our users,
+>>that the development is still going on and they stay to use InDE
+>>* it is definetly self-motivation to see a (increasing) number of users
+>>use what you've done....
+>>
+>>    
+>>
+>
+>Forgot to mention, that i'd prefer to release the very first release
+>0.0.1 as soon as the editor is running (in a simple way) and the project
+>configuration works.
+>So the users may have a feeling, where this projects goes to.
+>  
+>
+Okay. For that we need to finish an editor widget (I'm working on this 
+at the moment) and InDE
+will have to be able to open/close/save single files and projects. This 
+won't be too much work, I
+think so we should be able to announce 0.0.1 by the end of the month - 
+if not earlier.
+
+What else has to be implemented for 0.0.1?
+
+Regards,
+Jannis
+
+
+From devel at sten-net.de  Fri Feb 18 14:28:23 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Fri, 18 Feb 2005 14:28:23 +0100
+Subject: [InDE-devel] Editor (with tabs and one toggleable fixed tab);
+ ProjectBrowser
+In-Reply-To: <1108686562.1541.83.camel@jogix.sojox>
+References: <42122F86.8020802@sten-net.de>  <4213378B.6060405@sten-net.de>	 <1108593387.1541.4.camel@jogix.sojox>  <42147475.1080309@sten-net.de>	 <1108637977.1541.14.camel@jogix.sojox>	 <1108644726.1541.19.camel@jogix.sojox>  <4214FB2B.4090107@sten-net.de>	 <1108682091.1541.59.camel@jogix.sojox>  <42153011.5010706@sten-net.de> <1108686562.1541.83.camel@jogix.sojox>
+Message-ID: <4215ED77.8030606@sten-net.de>
+
+Jochen Rassler schrieb:
+
+>Hi.
+>
+>Am Freitag, den 18.02.2005, 01:00 +0100 schrieb Jannis Pohlmann:
+>  
+>
+>>Concerning the project files used by SCons we speek of two different 
+>>things - at least I suppose we do.
+>>I thought about this: We use the directories defined in the project 
+>>directory settings to collect the files we
+>>need for the SCons script. That means: All *.cpp, *.c or *.cc files in 
+>>the source dir and all *.h, *.hpp files
+>>in the include dir. This would spare observing these directories 
+>>permanently. Every file copied/moved to
+>>or removed from them would directly be visible in the FXDirList and also 
+>>used by the SCons script.
+>>
+>>Thus, no unexpected problems would occur since there are directories 
+>>clearly marked as source, header
+>>and build directories.
+>>
+>>    
+>>
+>That's true as long as no files *not* in the project dir are included to
+>the project.
+>
+>Jochen
+>  
+>
+Hi Jochen.
+
+Why should someone's project depend on files somewhere else in the 
+filesystem? The only reason
+might be libraries but they are already handled by our project settings 
+and SCons.
+
+If someone wants to use a source/header file for his project it's only 
+logical to put it into the project directories.
+
+Or did I misunderstood you once more?
+
+Regards,
+Jannis
+
+
+
+From devel at sten-net.de  Fri Feb 18 22:52:39 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Fri, 18 Feb 2005 22:52:39 +0100
+Subject: [InDE-devel] release cycles
+In-Reply-To: <4215EB00.80200@sten-net.de>
+References: <1108683175.1541.69.camel@jogix.sojox>	 <42153212.4090102@sten-net.de> <1108687091.1541.92.camel@jogix.sojox> <4215EB00.80200@sten-net.de>
+Message-ID: <421663A7.6050209@sten-net.de>
+
+Jannis Pohlmann schrieb:
+
+> Jochen Rassler schrieb:
+>
+>> Hi Jannis.
+>>
+>> Am Freitag, den 18.02.2005, 01:08 +0100 schrieb Jannis Pohlmann:
+>>  
+>>
+>>> In other words: I agree with you. I'm not that familiar with SVN 
+>>> (although I'll teach myself some basics
+>>> next week) so committing only running versions might be a good 
+>>> choice. Perhaps we could run a little
+>>> internal SVN server (I have a virtual debian server running on which 
+>>> we could do this: www.gezeiten.org) to
+>>> share our code. Only development snapshots would be released to the 
+>>> official SVN and to our website.
+>>>
+>>>   
+>>
+>> I think you misunderstood the point.
+>>
+>> We have a svn directory, why setting up another one?
+>>
+>> Only checking in running versions means, that you only check in changed
+>> files, which you know of that they compile fine and that the code is
+>> running. Bugs, well, who writes large amount of code without bugs? But
+>> the version should compile and run. That is not for the users, but for
+>> the other developers, as they most probably work on another module and
+>> do not want to fix your code, that you had checked in not completely.
+>>
+>> If you follow this rule: often check in little changes, every check in
+>> compiles and is runnable (or not used by other code), doesn't lead to
+>> problems in the repository and also other developers can eventually
+>> share your code.
+>>
+>> So every nightly build tarball (does berlios support this?) is runnable.
+>> That means, if you think, there have been many chages to the repository,
+>> many cool new features, check out - or take your actual workspace
+>> (better to commit first) make a scons -c , cd .. , tar cfvz ..... and
+>> upload it as a new release...
+>>
+>> Jochen
+>>  
+>>
+> Ah, ok. Yes, I misunderstood your words. Now it's much clearer to me.
+>
+> It's a good idea to work with SVN that way.
+>
+> Regards,
+> Jannis
+
+I read this in the Xfce4-dev mailinglist recently:
+
+"We have basicly two branches, HEAD and xfce_4_2. HEAD is the 
+development branch, where you can break things, and which will result in 
+4.4.0. xfce_4_2 is the stable branch which gets only bugfixes, and from 
+which maintaince releases for 4.2 will be made."
+
+I don't know whether we are able to create two directories in our main 
+SVN but I suppose this is possible. So this perhaps would be a fine 
+solution once we have a stable program: One development tree and one for 
+the stable version which only gets bugfixes. What do you think?
+
+Regards,
+Jannis
+
+
+From jochen at cornmania.de  Sat Feb 19 12:09:46 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Sat, 19 Feb 2005 12:09:46 +0100
+Subject: [InDE-devel] Editor (with tabs and one toggleable fixed tab);
+	ProjectBrowser
+In-Reply-To: <4215ED77.8030606@sten-net.de>
+References: <42122F86.8020802@sten-net.de>  <4213378B.6060405@sten-net.de>
+	 <1108593387.1541.4.camel@jogix.sojox>  <42147475.1080309@sten-net.de>
+	 <1108637977.1541.14.camel@jogix.sojox>
+	 <1108644726.1541.19.camel@jogix.sojox>  <4214FB2B.4090107@sten-net.de>
+	 <1108682091.1541.59.camel@jogix.sojox>  <42153011.5010706@sten-net.de>
+	 <1108686562.1541.83.camel@jogix.sojox>  <4215ED77.8030606@sten-net.de>
+Message-ID: <1108811386.1541.4.camel@jogix.sojox>
+
+Hi Jannis.
+
+Am Freitag, den 18.02.2005, 14:28 +0100 schrieb Jannis Pohlmann:
+> Why should someone's project depend on files somewhere else in the 
+> filesystem? The only reason
+> might be libraries but they are already handled by our project settings 
+> and SCons.
+> 
+> If someone wants to use a source/header file for his project it's only 
+> logical to put it into the project directories.
+> 
+> Or did I misunderstood you once more?
+> 
+You are absolutly right. But i have seen the strangest things about such
+topics....
+
+CU
+	Jochen
+
+
+
+From jochen at cornmania.de  Sat Feb 19 12:18:42 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Sat, 19 Feb 2005 12:18:42 +0100
+Subject: [InDE-devel] release cycles
+In-Reply-To: <4215EC5F.9030702@sten-net.de>
+References: <1108683175.1541.69.camel@jogix.sojox>
+	 <1108687532.1541.95.camel@jogix.sojox>  <4215EC5F.9030702@sten-net.de>
+Message-ID: <1108811923.1541.14.camel@jogix.sojox>
+
+Hi Jannis.
+
+Am Freitag, den 18.02.2005, 14:23 +0100 schrieb Jannis Pohlmann:
+> >
+> Okay. For that we need to finish an editor widget (I'm working on this 
+> at the moment) and InDE
+> will have to be able to open/close/save single files and projects. This 
+> won't be too much work, I
+> think so we should be able to announce 0.0.1 by the end of the month - 
+> if not earlier.
+> 
+> What else has to be implemented for 0.0.1?
+> 
+Hey ;)
+I believe that we do not have to implement special features for special
+releases. I also believe, going on as planned will do best.
+As soon as the editor, the single file and project opening and saving
+works, InDE is usable - although it may not be very comfortable or
+powerfull. But you can use it.
+If we implement something until then it is ok. But i think implementing
+features only for this release should not be our concern. As soon as
+another nice feature is implemented and working, we could release 0.0.2
+and so on. Just for the user to see the progress and for our motivation
+if you see the download numbers and eventually get feedback.
+
+My thoughts about releasing are to proceed step by step, doing what has
+to be done and releasing as soon as you think it might be of interest.
+But not working for single releases but for the complete system.
+It will be different for the version 1.0.0 where you will have finished
+several features and the stability should be there. But not for the
+development line before.
+
+Just my 2 Cents ( as this fits more accurately than 5 years ago *g*)
+	Jochen
+
+
+
+From devel at sten-net.de  Sat Feb 19 12:28:17 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Sat, 19 Feb 2005 12:28:17 +0100
+Subject: [InDE-devel] release cycles
+In-Reply-To: <1108811923.1541.14.camel@jogix.sojox>
+References: <1108683175.1541.69.camel@jogix.sojox>	 <1108687532.1541.95.camel@jogix.sojox>  <4215EC5F.9030702@sten-net.de> <1108811923.1541.14.camel@jogix.sojox>
+Message-ID: <421722D1.3040408@sten-net.de>
+
+Jochen Rassler schrieb:
+
+>Hi Jannis.
+>
+>Am Freitag, den 18.02.2005, 14:23 +0100 schrieb Jannis Pohlmann:
+>  
+>
+>>Okay. For that we need to finish an editor widget (I'm working on this 
+>>at the moment) and InDE
+>>will have to be able to open/close/save single files and projects. This 
+>>won't be too much work, I
+>>think so we should be able to announce 0.0.1 by the end of the month - 
+>>if not earlier.
+>>
+>>What else has to be implemented for 0.0.1?
+>>
+>>    
+>>
+>Hey ;)
+>I believe that we do not have to implement special features for special
+>releases. I also believe, going on as planned will do best.
+>As soon as the editor, the single file and project opening and saving
+>works, InDE is usable - although it may not be very comfortable or
+>powerfull. But you can use it.
+>If we implement something until then it is ok. But i think implementing
+>features only for this release should not be our concern. As soon as
+>another nice feature is implemented and working, we could release 0.0.2
+>and so on. Just for the user to see the progress and for our motivation
+>if you see the download numbers and eventually get feedback.
+>
+>My thoughts about releasing are to proceed step by step, doing what has
+>to be done and releasing as soon as you think it might be of interest.
+>But not working for single releases but for the complete system.
+>It will be different for the version 1.0.0 where you will have finished
+>several features and the stability should be there. But not for the
+>development line before.
+>
+>Just my 2 Cents ( as this fits more accurately than 5 years ago *g*)
+>	Jochen
+>
+Hey, good Morning.
+
+You're right. As soon as file/project opening/saving works we can 
+release 0.0.1 (or should we say
+0.1.0?).
+
+Regards once again,
+Jannis
+
+-- 
+		- Jannis
+
+
+
+From jochen at cornmania.de  Sat Feb 19 12:40:12 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Sat, 19 Feb 2005 12:40:12 +0100
+Subject: [InDE-devel] release cycles
+In-Reply-To: <421663A7.6050209@sten-net.de>
+References: <1108683175.1541.69.camel@jogix.sojox>
+	 <42153212.4090102@sten-net.de> <1108687091.1541.92.camel@jogix.sojox>
+	 <4215EB00.80200@sten-net.de>  <421663A7.6050209@sten-net.de>
+Message-ID: <1108813212.1541.36.camel@jogix.sojox>
+
+Hi Jannis.
+
+Am Freitag, den 18.02.2005, 22:52 +0100 schrieb Jannis Pohlmann:
+> I read this in the Xfce4-dev mailinglist recently:
+> 
+> "We have basicly two branches, HEAD and xfce_4_2. HEAD is the 
+> development branch, where you can break things, and which will result in 
+> 4.4.0. xfce_4_2 is the stable branch which gets only bugfixes, and from 
+> which maintaince releases for 4.2 will be made."
+
+Yes, that's the way version control works. There are two things here:
+TAGS and BRANCHES.
+If you check in a revision of your code that seems to be a milestone or
+noteworthy in any other way, e.g. first check in of a new feature, you
+can give that revision a Tag. So, if you later want to see history or
+check out the initial version of this feature,... then you do not have
+to remember the revision number (maybe something like rev. 2763) but the
+Tag. Say you import initial version with cvs support your Tag may be
+called CVS. So to find the cvs add, you just have `svn CVS checkout` to
+find it again.
+The other things are branches. If you add a branch, it is initially just
+a copy of the source of data. For example you are releasing InDE 1.0.0
+then you might set a new branch called STABLE. This branch is for the
+maintanance of the stable line, the normal svn (mostly called HEAD) tree
+is the development tree.
+If you find a bug in the stable version and you want to fix it, you can
+fix it in the stable version (without changing the development version).
+
+This may be not the best example. Actually you see the branches in more
+detail in libgcj. They use the HEAD branch for normal library
+development and the GUI branch for special development concerning the
+GUI classes - this are AWT and Swing. Actually they are merging those
+branches to get the GUI features beack to the mainline. 
+This may be of some interest, if you fear that work on special parts of
+you system may force changes in other parts, but which are under heavy
+development for other features. So you can develop you things in your
+branch (here GUI) without concerning about the ongoing development in
+the main branch. As soon as you think your work is done or fits the
+needs and stability criteria and you may wish to add it to the main
+branch, you just merge it in.
+
+And just another word to the repository and the branches. SVN and CVS do
+not really save files, the change diff history files. Yes, the first
+check in of a file and the diff are quasi the same. But later on for a
+new revision there is only a very little diff file to be stored, instead
+of a (possible very large) file. The version control stores every
+revision of every file, so this method saves you lot of storage
+capacity.
+Based on this, opening a new branch is not a real copy, but just a link
+to a certain revision of a file. The two trees now have the same code
+base, but differ in future change history.
+
+Hope, things get a bit clearer now.... if not, feel free to ask.
+> 
+> I don't know whether we are able to create two directories in our main 
+> SVN but I suppose this is possible. So this perhaps would be a fine 
+> solution once we have a stable program: One development tree and one for 
+> the stable version which only gets bugfixes. What do you think?
+> 
+This is and must be possible.
+I think branches will not only be the tool of choice for maintaining
+stable versions, but may also be very important for several larger
+features, that may have the need to change more fundamental things in
+the (whole) project code.
+
+To get things even more clear, look at the graph for gcc versions:
+http://gcc.gnu.org/develop.html down at calender. There you see the main
+development line and different branches. This seems to fit for InDE,
+too, although in a not so large tree.
+
+regards
+	Jochen
+
+
+
+From jochen at cornmania.de  Sat Feb 19 13:03:58 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Sat, 19 Feb 2005 13:03:58 +0100
+Subject: [InDE-devel] release cycles
+In-Reply-To: <421722D1.3040408@sten-net.de>
+References: <1108683175.1541.69.camel@jogix.sojox>
+	 <1108687532.1541.95.camel@jogix.sojox>  <4215EC5F.9030702@sten-net.de>
+	 <1108811923.1541.14.camel@jogix.sojox>  <421722D1.3040408@sten-net.de>
+Message-ID: <1108814638.1541.41.camel@jogix.sojox>
+
+Moin moin.
+
+Am Samstag, den 19.02.2005, 12:28 +0100 schrieb Jannis Pohlmann:
+> Hey, good Morning.
+Also had a long night ?
+> 
+> You're right. As soon as file/project opening/saving works we can 
+> release 0.0.1 (or should we say
+> 0.1.0?).
+> 
+This is something i have thought about, too. As it seems, we use the GNU
+way of version numbering (even for stable, odd for unstable), we had to
+call it 0.1.0
+On the other hand it is a preliminary release.... 
+
+But you're right, calling it 0.1 would be the right way to follow our
+(internal) release number convention. All following releases will then
+be called 0.1.1, 0.1.2, 0.1.3,.... 
+
+Jochen
+
+
+
+From devel at sten-net.de  Sat Feb 19 13:12:25 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Sat, 19 Feb 2005 13:12:25 +0100
+Subject: [InDE-devel] release cycles
+In-Reply-To: <1108814638.1541.41.camel@jogix.sojox>
+References: <1108683175.1541.69.camel@jogix.sojox>	 <1108687532.1541.95.camel@jogix.sojox>  <4215EC5F.9030702@sten-net.de>	 <1108811923.1541.14.camel@jogix.sojox>  <421722D1.3040408@sten-net.de> <1108814638.1541.41.camel@jogix.sojox>
+Message-ID: <42172D29.1000103@sten-net.de>
+
+Jochen Rassler schrieb:
+
+>Moin moin.
+>
+>Am Samstag, den 19.02.2005, 12:28 +0100 schrieb Jannis Pohlmann:
+>  
+>
+>>Hey, good Morning.
+>>    
+>>
+>Also had a long night ?
+>  
+>
+>>You're right. As soon as file/project opening/saving works we can 
+>>release 0.0.1 (or should we say
+>>0.1.0?).
+>>
+>>    
+>>
+>This is something i have thought about, too. As it seems, we use the GNU
+>way of version numbering (even for stable, odd for unstable), we had to
+>call it 0.1.0
+>On the other hand it is a preliminary release.... 
+>
+>But you're right, calling it 0.1 would be the right way to follow our
+>(internal) release number convention. All following releases will then
+>be called 0.1.1, 0.1.2, 0.1.3,.... 
+>
+>Jochen
+>  
+>
+Yes, that exactly is what I thought about, too.
+
+Regards,
+Jannis
+
+
+From devel at sten-net.de  Sat Feb 19 15:32:02 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Sat, 19 Feb 2005 15:32:02 +0100
+Subject: [InDE-devel] Specs: Dialog structure
+Message-ID: <42174DE2.3070603@sten-net.de>
+
+Hi Jochen.
+
+It took a while to complete them but now they are somehow, I hope: the 
+specs for designing dialogs:
+http://inde.berlios.de/specs_dialog-structure.html
+
+Please have a look at it and tell me what you're thinking about that 
+(the page layout isn't important for
+now).
+
+SVN will be updated today (I'll send a message to this list, then) so we 
+can head on to the next steps
+tomorrow or even today in the evening.
+
+Best regards,
+Jannis
+
+
+
+From devel at sten-net.de  Sat Feb 19 16:17:49 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Sat, 19 Feb 2005 16:17:49 +0100
+Subject: [InDE-devel] New SVN structure; New stuff commited to SVN
+Message-ID: <4217589D.5010006@sten-net.de>
+
+Holla.
+
+I have restructured our SVN. We now have:
+
+trunk/
+tags/
+branches/
+
+trunk/ is the development directory where stuff is commited to, normally.
+
+tags/ is going to be the base directory for releases. Examples: 
+tags/0.1, tags/0.2 ... and some day tags/1.0
+
+branches/ could be used if we wanted to test and implement certain 
+features without completely rewriting
+the actual codebase and so on.
+
+--
+
+I have commited the new, better codebase to SVN. Jochen, if you want to 
+implement a project settings dialog
+you can get inspirations from SettingsDialog. NewProjectWizard can't use 
+the access methods you wrote since
+there might already be a project opened. But the rewritten 
+NewProjectWizard can of course be seen as a standard
+way to write dialogs without direct access to the settings structures 
+(see the dialogs specs regarding this).
+
+So far,
+Jannis
+
+
+From devel at sten-net.de  Sat Feb 19 16:49:37 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Sat, 19 Feb 2005 16:49:37 +0100
+Subject: [InDE-devel] New SVN structure; New stuff commited to SVN
+In-Reply-To: <4217589D.5010006@sten-net.de>
+References: <4217589D.5010006@sten-net.de>
+Message-ID: <42176011.9060908@sten-net.de>
+
+BTW: Jochen, as long as you don't add *.o, .sconsign.dblite and the InDE 
+binary to SVN they won't appear in the project's SVN. But I'm afraid
+I don't know whether .sconsign.dblite will have to be deleted each time 
+you run "svn update" in trunk in order to build InDE correctly afterwards.
+
+We'll see.
+
+Regards,
+Jannis
+
+
+From jochen at cornmania.de  Sun Feb 20 14:05:04 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Sun, 20 Feb 2005 14:05:04 +0100
+Subject: [InDE-devel] Specs: Dialog structure
+In-Reply-To: <42174DE2.3070603@sten-net.de>
+References: <42174DE2.3070603@sten-net.de>
+Message-ID: <1108904705.1542.5.camel@jogix.sojox>
+
+Hi Jannis.
+
+Am Samstag, den 19.02.2005, 15:32 +0100 schrieb Jannis Pohlmann:
+> Hi Jochen.
+> 
+> It took a while to complete them but now they are somehow, I hope: the 
+> specs for designing dialogs:
+> http://inde.berlios.de/specs_dialog-structure.html
+> 
+> Please have a look at it and tell me what you're thinking about that 
+> (the page layout isn't important for
+> now).
+
+What about a very basic project home website in this layout style. At
+least a very basic site with a few comments about the project and some
+(maybe dead) links for the first iteration. I guess, everything selfmade
+is better than the berlios-not-yet-uploaded website.
+
+BTW, i like the layout since it looks very similar to my intranet at
+home ;)
+> 
+> SVN will be updated today (I'll send a message to this list, then) so we 
+> can head on to the next steps
+> tomorrow or even today in the evening.
+> 
+> Best regards,
+> Jannis
+> 
+
+sincerly
+	Jochen
+> _______________________________________________
+> InDE-devel mailing list
+> InDE-devel at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/inde-devel
+> 
+
+
+
+From jochen at cornmania.de  Sun Feb 20 14:08:56 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Sun, 20 Feb 2005 14:08:56 +0100
+Subject: [InDE-devel] New SVN structure; New stuff commited to SVN
+In-Reply-To: <4217589D.5010006@sten-net.de>
+References: <4217589D.5010006@sten-net.de>
+Message-ID: <1108904936.1542.10.camel@jogix.sojox>
+
+Ei!
+
+Am Samstag, den 19.02.2005, 16:17 +0100 schrieb Jannis Pohlmann:
+> Holla.
+> 
+> I have restructured our SVN. We now have:
+> 
+> trunk/
+> tags/
+> branches/
+> 
+> trunk/ is the development directory where stuff is commited to, normally.
+> 
+> tags/ is going to be the base directory for releases. Examples: 
+> tags/0.1, tags/0.2 ... and some day tags/1.0
+> 
+> branches/ could be used if we wanted to test and implement certain 
+> features without completely rewriting
+> the actual codebase and so on.
+
+As far as i've understood the tags and branches, we can use tha tags for
+the development snapshot releases (0.1.x, 0.2.x), but should open new
+branches for the stable releases, to integrate bugfixes without changing
+the code base
+> 
+> --
+> 
+> I have commited the new, better codebase to SVN. Jochen, if you want to 
+> implement a project settings dialog
+> you can get inspirations from SettingsDialog. NewProjectWizard can't use 
+> the access methods you wrote since
+> there might already be a project opened. But the rewritten 
+> NewProjectWizard can of course be seen as a standard
+> way to write dialogs without direct access to the settings structures 
+> (see the dialogs specs regarding this).
+
+Yes, i know. i hadn't cared about the data. I wanted to build up the GUI
+in the first iteration and thinking about what else is needed, before
+going to implement the data connections.
+But that was the work, that you've done before i had any chance.
+
+Jochen
+
+
+
+From jochen at cornmania.de  Sun Feb 20 14:12:39 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Sun, 20 Feb 2005 14:12:39 +0100
+Subject: [InDE-devel] Code
+Message-ID: <1108905159.1542.14.camel@jogix.sojox>
+
+Hi Jannis.
+
+MainWindow::onCmdProjectLoadConfig does not load all config entries.
+Didn't you complete the load function or did you have something in mind?
+
+CU
+	Jochen
+
+
+
+From devel at sten-net.de  Sun Feb 20 14:08:58 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Sun, 20 Feb 2005 14:08:58 +0100
+Subject: [InDE-devel] Specs: Dialog structure
+In-Reply-To: <1108904705.1542.5.camel@jogix.sojox>
+References: <42174DE2.3070603@sten-net.de> <1108904705.1542.5.camel@jogix.sojox>
+Message-ID: <42188BEA.1000308@sten-net.de>
+
+Jochen Rassler schrieb:
+
+>Hi Jannis.
+>
+>Am Samstag, den 19.02.2005, 15:32 +0100 schrieb Jannis Pohlmann:
+>  
+>
+>>Hi Jochen.
+>>
+>>It took a while to complete them but now they are somehow, I hope: the 
+>>specs for designing dialogs:
+>>http://inde.berlios.de/specs_dialog-structure.html
+>>
+>>Please have a look at it and tell me what you're thinking about that 
+>>(the page layout isn't important for
+>>now).
+>>    
+>>
+>
+>What about a very basic project home website in this layout style. At
+>least a very basic site with a few comments about the project and some
+>(maybe dead) links for the first iteration. I guess, everything selfmade
+>is better than the berlios-not-yet-uploaded website.
+>
+>BTW, i like the layout since it looks very similar to my intranet at
+>home ;)
+>  
+>
+Hi Jochen.
+
+I hoped you like it. I already created most pages of the website as well 
+as a navigation structure
+and so on. A basic design (in the vein of this specs document) is 
+already done. I will upload
+it later today.
+
+Regards,
+Jannis
+
+-- 
+		- Jannis
+
+
+
+From devel at sten-net.de  Sun Feb 20 14:12:24 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Sun, 20 Feb 2005 14:12:24 +0100
+Subject: [InDE-devel] New SVN structure; New stuff commited to SVN
+In-Reply-To: <1108904936.1542.10.camel@jogix.sojox>
+References: <4217589D.5010006@sten-net.de> <1108904936.1542.10.camel@jogix.sojox>
+Message-ID: <42188CB8.2010005@sten-net.de>
+
+Jochen Rassler schrieb:
+
+>Ei!
+>
+>Am Samstag, den 19.02.2005, 16:17 +0100 schrieb Jannis Pohlmann:
+>  
+>
+>>Holla.
+>>
+>>I have restructured our SVN. We now have:
+>>
+>>trunk/
+>>tags/
+>>branches/
+>>
+>>trunk/ is the development directory where stuff is commited to, normally.
+>>
+>>tags/ is going to be the base directory for releases. Examples: 
+>>tags/0.1, tags/0.2 ... and some day tags/1.0
+>>
+>>branches/ could be used if we wanted to test and implement certain 
+>>features without completely rewriting
+>>the actual codebase and so on.
+>>    
+>>
+>
+>As far as i've understood the tags and branches, we can use tha tags for
+>the development snapshot releases (0.1.x, 0.2.x), but should open new
+>branches for the stable releases, to integrate bugfixes without changing
+>the code base
+>  
+>
+Yes, might be better. I'm not sure which one to use for development 
+snapshots and which one
+for releases. I read the subversion book at 
+http://svnbook.red-bean.com/en/1.0/index.html (especially
+the part about tags and branches is interesting). Perhaps you could have 
+a look at that, too.
+
+>>--
+>>
+>>I have commited the new, better codebase to SVN. Jochen, if you want to 
+>>implement a project settings dialog
+>>you can get inspirations from SettingsDialog. NewProjectWizard can't use 
+>>the access methods you wrote since
+>>there might already be a project opened. But the rewritten 
+>>NewProjectWizard can of course be seen as a standard
+>>way to write dialogs without direct access to the settings structures 
+>>(see the dialogs specs regarding this).
+>>    
+>>
+>
+>Yes, i know. i hadn't cared about the data. I wanted to build up the GUI
+>in the first iteration and thinking about what else is needed, before
+>going to implement the data connections.
+>But that was the work, that you've done before i had any chance.
+>  
+>
+I'm sorry about that. Hope the "specs" I composed are ok.
+
+Jannis
+
+
+From devel at sten-net.de  Sun Feb 20 14:37:14 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Sun, 20 Feb 2005 14:37:14 +0100
+Subject: [InDE-devel] Code
+In-Reply-To: <1108905159.1542.14.camel@jogix.sojox>
+References: <1108905159.1542.14.camel@jogix.sojox>
+Message-ID: <4218928A.7020201@sten-net.de>
+
+Jochen Rassler schrieb:
+
+>Hi Jannis.
+>
+>MainWindow::onCmdProjectLoadConfig does not load all config entries.
+>Didn't you complete the load function or did you have something in mind?
+>
+>CU
+>	Jochen
+>  
+>
+Hi Jochen.
+
+Seems as if I didn't finish it. Can you do it please? I'll have to catch 
+my train ...
+
+Regards,
+Jannis
+
+
+From jochen at cornmania.de  Sun Feb 20 15:51:00 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Sun, 20 Feb 2005 15:51:00 +0100
+Subject: [InDE-devel] Code
+In-Reply-To: <4218928A.7020201@sten-net.de>
+References: <1108905159.1542.14.camel@jogix.sojox>
+	 <4218928A.7020201@sten-net.de>
+Message-ID: <1108911060.1542.16.camel@jogix.sojox>
+
+Am Sonntag, den 20.02.2005, 14:37 +0100 schrieb Jannis Pohlmann:
+> Jochen Rassler schrieb:
+> 
+> >Hi Jannis.
+> >
+> >MainWindow::onCmdProjectLoadConfig does not load all config entries.
+> >Didn't you complete the load function or did you have something in mind?
+> >
+> >CU
+> >	Jochen
+> >  
+> >
+> Hi Jochen.
+> 
+> Seems as if I didn't finish it. Can you do it please? I'll have to catch 
+> my train ...
+> 
+jupp
+
+
+
+From jochen at cornmania.de  Sun Feb 20 15:53:33 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Sun, 20 Feb 2005 15:53:33 +0100
+Subject: [InDE-devel] New SVN structure; New stuff commited to SVN
+In-Reply-To: <42188CB8.2010005@sten-net.de>
+References: <4217589D.5010006@sten-net.de>
+	 <1108904936.1542.10.camel@jogix.sojox>  <42188CB8.2010005@sten-net.de>
+Message-ID: <1108911213.1542.20.camel@jogix.sojox>
+
+Hi Jannis.
+
+Am Sonntag, den 20.02.2005, 14:12 +0100 schrieb Jannis Pohlmann:
+> Yes, might be better. I'm not sure which one to use for development 
+> snapshots and which one
+> for releases. I read the subversion book at 
+> http://svnbook.red-bean.com/en/1.0/index.html (especially
+> the part about tags and branches is interesting). Perhaps you could have 
+> a look at that, too.
+
+I've already done that, but the 1.1 version
+Regarding to it, we can use the tags for the development
+snapshots/versions.
+But for stable releases, branches may be better, as far as only tested
+features from the development brnach will come to it as new versions. 
+> 
+> >
+> I'm sorry about that. Hope the "specs" I composed are ok.
+> 
+Jupp, they are ok.
+
+cheers
+	Jochen
+
+
+
+From jochen at cornmania.de  Sun Feb 20 15:55:21 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Sun, 20 Feb 2005 15:55:21 +0100
+Subject: [InDE-devel] Specs: Dialog structure
+In-Reply-To: <42188BEA.1000308@sten-net.de>
+References: <42174DE2.3070603@sten-net.de>
+	 <1108904705.1542.5.camel@jogix.sojox>  <42188BEA.1000308@sten-net.de>
+Message-ID: <1108911321.1542.23.camel@jogix.sojox>
+
+> I hoped you like it. I already created most pages of the website as well 
+> as a navigation structure
+> and so on. A basic design (in the vein of this specs document) is 
+> already done. I will upload
+> it later today.
+> 
+I look forward to see it.
+
+Just to mention before uploading: please make sure, the files are owned
+by the group or have rw-rw-r-- rights permissions, so that i have a
+chance to modify them, if i need to update them.
+
+cheers
+	Jochen
+
+
+
+From jochen at cornmania.de  Tue Feb 22 23:52:52 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Tue, 22 Feb 2005 23:52:52 +0100
+Subject: [InDE-devel] Editor (with tabs and one toggleable fixed tab);
+	ProjectBrowser
+In-Reply-To: <42122F86.8020802@sten-net.de>
+References: <42122F86.8020802@sten-net.de>
+Message-ID: <1109112773.2889.14.camel@jogix.sojox>
+
+Hi Jannis.
+
+Am Dienstag, den 15.02.2005, 18:21 +0100 schrieb Jannis Pohlmann:
+> Next point: I probably will be able to commit an Editor class which 
+> supports browsing documents with the help of tabs and a toggleable
+> fixed tab for immediate document view (like it is in Adie) as well. I 
+> already had done most of it during my first tests for InDE and I think
+> it won't be too difficult to merge it with our current code.
+> 
+As far as i don't know the details you're working on, this hint may be a
+shot in the blue.... but
+
+Have you had a look at
+http://savannah.nongnu.org/projects/fxscintilla/ ?
+This may be a very interesting widget for our editor as it will do some
+of the work we plan to implement. So why do it twice and introduce
+unneeded bugs, if this does exactly what we want.
+
+It also may not be what you desire, then just throw away this hint...
+
+<snip>
+Am Rande: ich bin die n?chsten drei Tage an der Uni um ein furchtbar
+spannendes CAD-Praktikum zu absolvieren und habe Montag und Dienstag je
+eine Diplompr?fung. Du brauchst also bis Dienstag bei mir nicht mit viel
+zu rechnen.....
+<snap>
+
+sincerly
+	Jochen
+
+
+
+From jochen at cornmania.de  Wed Feb 23 19:29:22 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Wed, 23 Feb 2005 19:29:22 +0100
+Subject: [InDE-devel] Editor (with tabs and one toggleable fixed
+	tab); ProjectBrowser
+In-Reply-To: <20050222232613.28397128542@dd6918.kasserver.com>
+References: <20050222232613.28397128542@dd6918.kasserver.com>
+Message-ID: <1109183362.1556.4.camel@jogix.sojox>
+
+Hi Jannis.
+
+Am Mittwoch, den 23.02.2005, 00:26 +0100 schrieb devel at sten-net.de:
+
+> FXScintilla might be interesting, yes. I already had a look at it but it didn't satisfy myself. If we want to use Adies Syntaxhighlighting we won't need FXScintilla, I think. But I will look at it again. 
+
+If I've seen right, Scintilla also supports syntax / auto completion.
+this is the far more interesting feature ;)
+> 
+> Just to inform you: I actually have very limited access to the internet until next weekend. I managed to upload our website to inde.berlios.de. It's far better than nothing at the moment.
+
+Jupp, i've noticed this morning.
+I really like the design!
+BTW, every single file has the last change date from february 2004 -
+hey, we already are in 2005 ;)
+I will have a look if i can change it this night - or tomorrow evening,
+if you haven't done it until then.
+
+> 
+> Until next weekend I will continue working on the FXTabBook structure I plan to put the documents in. 
+
+I will continue the project settings this weekend and maybe right the
+virtual project FS - if enough time is left.
+> 
+
+> Dann hoffe ich mal, dass alles halbwegs gut ?ber die B?hne gegangen ist, mittlerweile ist es ja schon wieder Mittwoch ...
+yo, the exam is upcoming tuesday.... ;p
+
+CU
+Jochen
+
+
+
+From devel at sten-net.de  Wed Feb 23 20:04:11 2005
+From: devel at sten-net.de (devel at sten-net.de)
+Date: Wed, 23 Feb 2005 20:04:11 +0100 (CET)
+Subject: [InDE-devel] Editor (with tabs and one toggleable fixed tab); ProjectBrowser
+Message-ID: <20050223190411.B4A1A128781@dd6918.kasserver.com>
+
+Hi Jochen.
+ 
+> If I've seen right, Scintilla also supports syntax / auto completion.
+> this is the far more interesting feature ;)
+
+If it does, that would indeed be a pro of FXScintilla. At least, we could use it until we have something better.
+
+
+> I really like the design!
+> BTW, every single file has the last change date from february 2004 -
+> hey, we already are in 2005 ;)
+
+Erm, I noticed something like this on my local webserver but ... I thought of having corrected it. If you haven't done that yet, I will do it immediately.
+
+> I will continue the project settings this weekend and maybe right the
+> virtual project FS - if enough time is left.
+
+Yes, great. And I will have a look into FXScintilla once again. May take some time but after having a project settings dialog and good editor widgets we would be able to release a first development snapshot.
+
+> > Dann hoffe ich mal, dass alles halbwegs gut ?ber die B?hne gegangen ist, mittlerweile ist es ja schon wieder Mittwoch ...
+> yo, the exam is upcoming tuesday.... ;p
+
+Ah, ok. Good luck, then.
+
+Best regards,
+Jannis
+
+
+From devel at sten-net.de  Sat Feb 26 20:58:57 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Sat, 26 Feb 2005 20:58:57 +0100
+Subject: [InDE-devel] Note
+Message-ID: <4220D501.9030001@sten-net.de>
+
+Hi Jochen.
+
+I only wanted to let you know that I'm heavily working on the tabbed 
+editor as well as on the text edit widget.
+
+Already done:
+    - Additional settings option settings.editor.font (I added this to 
+the InDE settings dialog as well)
+    - Tab context menu (like it is in Firefox/Mozilla) with options "New 
+Tab", "Close", "Close others", "Close all".
+      These options actually work.
+    - Fix document view (without sense at the moment, perhaps this 
+feature will be removed)
+    - Files can be opened by double clicking on an item in the 
+filesystem/project browser
+    - Dummy function for saving the file
+
+Things I'm still working on:
+    - Undo list for each file opened
+    - setModified() method that is called every time the text content of 
+a file is changed in the editor
+    - saving of a file (depends on previous problem)
+    - Context menu for filesystem/project browser
+
+I will commit these changes as soon as the things I'm still working on 
+are done.
+
+Best regards,
+Jannis
+
+
+From jochen at cornmania.de  Sat Feb 26 21:45:19 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Sat, 26 Feb 2005 21:45:19 +0100
+Subject: [InDE-devel] Note
+In-Reply-To: <4220D501.9030001@sten-net.de>
+References: <4220D501.9030001@sten-net.de>
+Message-ID: <1109450719.1598.18.camel@jogix.sojox>
+
+Hi Jannis.
+
+Am Samstag, den 26.02.2005, 20:58 +0100 schrieb Jannis Pohlmann:
+> Hi Jochen.
+> 
+> I only wanted to let you know that I'm heavily working on the tabbed 
+> editor as well as on the text edit widget.
+> 
+> Already done:
+>     - Additional settings option settings.editor.font (I added this to 
+> the InDE settings dialog as well)
+>     - Tab context menu (like it is in Firefox/Mozilla) with options "New 
+> Tab", "Close", "Close others", "Close all".
+>       These options actually work.
+>     - Fix document view (without sense at the moment, perhaps this 
+> feature will be removed)
+>     - Files can be opened by double clicking on an item in the 
+> filesystem/project browser
+>     - Dummy function for saving the file
+> 
+> Things I'm still working on:
+>     - Undo list for each file opened
+>     - setModified() method that is called every time the text content of 
+> a file is changed in the editor
+>     - saving of a file (depends on previous problem)
+>     - Context menu for filesystem/project browser
+> 
+> I will commit these changes as soon as the things I'm still working on 
+> are done.
+> 
+Nice to hear things evolve that fast!
+
+I've added two things to the project faq this morning: the license and
+the meaning of the name. The faq.html now contains the link targets ;)
+
+BTW, I am working at the project settings dialog by now and will
+complete it this evening.
+
+As far as I am learning the whole day things are going on very slow :(
+
+I also hope to find the time to start implementing the projectFS
+tomorrow, maybe starting tonight.... if it's done i come back to the
+project settings to implement the new file feature.
+What about the inclusion of the #ifndef FILE_H #define FILE_H for the
+headers? I think it would be a nice to have feature.
+
+Seems like the first development snapshot isn't far away anymore.
+
+CU
+	Jochen
+
+
+
+From jochen at cornmania.de  Sat Feb 26 23:59:15 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Sat, 26 Feb 2005 23:59:15 +0100
+Subject: [InDE-devel] Note
+In-Reply-To: <1109450719.1598.18.camel@jogix.sojox>
+References: <4220D501.9030001@sten-net.de>
+	 <1109450719.1598.18.camel@jogix.sojox>
+Message-ID: <1109458755.1598.21.camel@jogix.sojox>
+
+Am Samstag, den 26.02.2005, 21:45 +0100 schrieb Jochen Rassler:
+> Hi Jannis.
+
+once again..... ;)
+> 
+> BTW, I am working at the project settings dialog by now and will
+> complete it this evening.
+> 
+I've just commited it, so please make sure to svn update before
+commiting.
+
+CU
+	Jochen
+
+
+
+From devel at sten-net.de  Sun Feb 27 00:43:40 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Sun, 27 Feb 2005 00:43:40 +0100
+Subject: [InDE-devel] Note
+In-Reply-To: <1109450719.1598.18.camel@jogix.sojox>
+References: <4220D501.9030001@sten-net.de> <1109450719.1598.18.camel@jogix.sojox>
+Message-ID: <422109AC.8090408@sten-net.de>
+
+Jochen Rassler schrieb:
+
+>Hi Jannis.
+>
+>Am Samstag, den 26.02.2005, 20:58 +0100 schrieb Jannis Pohlmann:
+>
+>>Hi Jochen.
+>>
+>>I only wanted to let you know that I'm heavily working on the tabbed 
+>>editor as well as on the text edit widget.
+>>
+>>Already done:
+>>    - Additional settings option settings.editor.font (I added this to 
+>>the InDE settings dialog as well)
+>>    - Tab context menu (like it is in Firefox/Mozilla) with options "New 
+>>Tab", "Close", "Close others", "Close all".
+>>      These options actually work.
+>>    - Fix document view (without sense at the moment, perhaps this 
+>>feature will be removed)
+>>    - Files can be opened by double clicking on an item in the 
+>>filesystem/project browser
+>>    - Dummy function for saving the file
+>>
+>>Things I'm still working on:
+>>    - Undo list for each file opened
+>>    - setModified() method that is called every time the text content of 
+>>a file is changed in the editor
+>>    - saving of a file (depends on previous problem)
+>>    - Context menu for filesystem/project browser
+>>
+>>I will commit these changes as soon as the things I'm still working on 
+>>are done.
+>>
+>>
+>Nice to hear things evolve that fast!
+>
+>I've added two things to the project faq this morning: the license and
+>the meaning of the name. The faq.html now contains the link targets ;)
+>
+>BTW, I am working at the project settings dialog by now and will
+>complete it this evening.
+>
+Good to hear. The editor stuff is a lot of work. Maybe I can finish it 
+until next weekend (there
+are some basics I'm not sure how to implement them yet).
+
+>
+>As far as I am learning the whole day things are going on very slow :(
+>
+We have enough time, reserve as much as you need of it for your exams. 
+That's no problem.
+
+>
+>I also hope to find the time to start implementing the projectFS
+>tomorrow, maybe starting tonight.... if it's done i come back to the
+>project settings to implement the new file feature.
+>
+New file feature? Do you mean a menu command to create a source/header 
+file?
+
+We could provide three menu commands for this:
+    1. New file (Ctrl+N) for a new tab named "Untitled"
+    2. New file (Ctrl+Shift+N - or something different) for a dialog 
+where one could select the
+       type of the file (source, header, other...)
+    3. New class (Ctrl+Shift+C) for a dialog where the user can add 
+methods. This dialog could
+       create either a header/source file pair (if project is a C/C++ 
+project) or one file with
+       the class sceleton (if project is a script language like Ruby or 
+Python)
+
+Is this what you meant with "new file feature"?
+
+>What about the inclusion of the #ifndef FILE_H #define FILE_H for the
+>headers? I think it would be a nice to have feature.
+>
+Hum?
+
+>
+>Seems like the first development snapshot isn't far away anymore.
+>
+Yes. I image the 1st of april for that. Hehe. Nah, perhaps that's a 
+little late - we'll see.
+
+Best regards,
+Jannis
+
+
+From devel at sten-net.de  Sun Feb 27 00:56:44 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Sun, 27 Feb 2005 00:56:44 +0100
+Subject: [InDE-devel] Note
+In-Reply-To: <1109458755.1598.21.camel@jogix.sojox>
+References: <4220D501.9030001@sten-net.de>	 <1109450719.1598.18.camel@jogix.sojox> <1109458755.1598.21.camel@jogix.sojox>
+Message-ID: <42210CBC.7070100@sten-net.de>
+
+Jochen Rassler schrieb:
+
+>Am Samstag, den 26.02.2005, 21:45 +0100 schrieb Jochen Rassler:
+>  
+>
+>>Hi Jannis.
+>>    
+>>
+>
+>once again..... ;)
+>  
+>
+>>BTW, I am working at the project settings dialog by now and will
+>>complete it this evening.
+>>
+>>    
+>>
+>I've just commited it, so please make sure to svn update before
+>commiting.
+>
+>CU
+>	Jochen
+>  
+>
+Hi Jochen.
+
+I had a look at it already. Very good. You even noticed the button 
+paddings and
+used them for your buttons. That's great.
+
+So far,
+Jannis
+
+
+From devel at sten-net.de  Sun Feb 27 01:00:09 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Sun, 27 Feb 2005 01:00:09 +0100
+Subject: [InDE-devel] Note
+In-Reply-To: <422109AC.8090408@sten-net.de>
+References: <4220D501.9030001@sten-net.de> <1109450719.1598.18.camel@jogix.sojox> <422109AC.8090408@sten-net.de>
+Message-ID: <42210D89.1030809@sten-net.de>
+
+>> I also hope to find the time to start implementing the projectFS
+>> tomorrow, maybe starting tonight.... if it's done i come back to the
+>> project settings to implement the new file feature.
+>>
+> New file feature? Do you mean a menu command to create a source/header 
+> file?
+>
+> We could provide three menu commands for this:
+>    1. New file (Ctrl+N) for a new tab named "Untitled"
+>    2. New file (Ctrl+Shift+N - or something different) for a dialog 
+> where one could select the
+>       type of the file (source, header, other...)
+>    3. New class (Ctrl+Shift+C) for a dialog where the user can add 
+> methods. This dialog could
+>       create either a header/source file pair (if project is a C/C++ 
+> project) or one file with
+>       the class sceleton (if project is a script language like Ruby or 
+> Python)
+>
+> Is this what you meant with "new file feature"?
+>
+
+BTW, perhaps we should remove the project type (C/C++, Ruby, Python, 
+...) as far as we don't have
+a stable source. C/C++ will allways have highest priority and adding 
+project support for other
+languages will be much easier as soon as we have a little more 
+experience. Don't you think?
+
+Regards,
+Jannis
+
+
+From jochen at cornmania.de  Sun Feb 27 01:57:04 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Sun, 27 Feb 2005 01:57:04 +0100
+Subject: [InDE-devel] Note
+In-Reply-To: <422109AC.8090408@sten-net.de>
+References: <4220D501.9030001@sten-net.de>
+	 <1109450719.1598.18.camel@jogix.sojox>  <422109AC.8090408@sten-net.de>
+Message-ID: <1109465824.1598.30.camel@jogix.sojox>
+
+Hi Jannis.
+
+Am Sonntag, den 27.02.2005, 00:43 +0100 schrieb Jannis Pohlmann:
+> New file feature? Do you mean a menu command to create a source/header 
+> file?
+> 
+> We could provide three menu commands for this:
+>     1. New file (Ctrl+N) for a new tab named "Untitled"
+>     2. New file (Ctrl+Shift+N - or something different) for a dialog 
+> where one could select the
+>        type of the file (source, header, other...)
+>     3. New class (Ctrl+Shift+C) for a dialog where the user can add 
+> methods. This dialog could
+>        create either a header/source file pair (if project is a C/C++ 
+> project) or one file with
+>        the class sceleton (if project is a script language like Ruby or 
+> Python)
+> 
+> Is this what you meant with "new file feature"?
+
+Something like this. I haven't thought in detail about this, but
+imagined something like this (kind of eclipse new file / class / ...).
+And basically adding the license header to every new file! That's why i
+included author, email, license and license header if no standard
+license (GPL, LGPL by now, more to come like CPL, MPL,...)
+
+And here we also could add the #ifndef ... #define ... skeleton for the
+header files.
+
+As another feature here i thought about something like this:
+if you choose to add a new source or header file, you get a little
+dialog box, which asks you to enter the file's name and shows you a
+check box, which means to also add the new corresponding file
+(header/source). So you only need to define the new header and get the
+source as well or vice versa. I liked that in Diasce2.
+> 
+> >What about the inclusion of the #ifndef FILE_H #define FILE_H for the
+> >headers? I think it would be a nice to have feature.
+> >
+> Hum?
+> 
+> >
+> >Seems like the first development snapshot isn't far away anymore.
+> >
+> Yes. I image the 1st of april for that. Hehe. Nah, perhaps that's a 
+> little late - we'll see.
+
+Although i like an early release, i prefer the debian way: it is
+finished if it's finished ;)
+
+
+Jochen
+
+
+
+From jochen at cornmania.de  Sun Feb 27 01:58:35 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Sun, 27 Feb 2005 01:58:35 +0100
+Subject: [InDE-devel] Note
+In-Reply-To: <42210D89.1030809@sten-net.de>
+References: <4220D501.9030001@sten-net.de>
+	 <1109450719.1598.18.camel@jogix.sojox> <422109AC.8090408@sten-net.de>
+	 <42210D89.1030809@sten-net.de>
+Message-ID: <1109465915.1598.33.camel@jogix.sojox>
+
+Hi Jannis.
+
+Am Sonntag, den 27.02.2005, 01:00 +0100 schrieb Jannis Pohlmann:
+> BTW, perhaps we should remove the project type (C/C++, Ruby, Python, 
+> ...) as far as we don't have
+> a stable source. C/C++ will allways have highest priority and adding 
+> project support for other
+> languages will be much easier as soon as we have a little more 
+> experience. Don't you think?
+> 
+But keeping the project type box. I don't mind deleting it or having it
+without functionality in this early state.
+
+Jochen
+
+
+
+From devel at sten-net.de  Sun Feb 27 02:32:02 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Sun, 27 Feb 2005 02:32:02 +0100
+Subject: [InDE-devel] Note
+In-Reply-To: <1109465824.1598.30.camel@jogix.sojox>
+References: <4220D501.9030001@sten-net.de>	 <1109450719.1598.18.camel@jogix.sojox>  <422109AC.8090408@sten-net.de> <1109465824.1598.30.camel@jogix.sojox>
+Message-ID: <42212312.7010204@sten-net.de>
+
+Jochen Rassler schrieb:
+
+>Hi Jannis.
+>
+>Am Sonntag, den 27.02.2005, 00:43 +0100 schrieb Jannis Pohlmann:
+>  
+>
+>>New file feature? Do you mean a menu command to create a source/header 
+>>file?
+>>
+>>We could provide three menu commands for this:
+>>    1. New file (Ctrl+N) for a new tab named "Untitled"
+>>    2. New file (Ctrl+Shift+N - or something different) for a dialog 
+>>where one could select the
+>>       type of the file (source, header, other...)
+>>    3. New class (Ctrl+Shift+C) for a dialog where the user can add 
+>>methods. This dialog could
+>>       create either a header/source file pair (if project is a C/C++ 
+>>project) or one file with
+>>       the class sceleton (if project is a script language like Ruby or 
+>>Python)
+>>
+>>Is this what you meant with "new file feature"?
+>>    
+>>
+>
+>Something like this. I haven't thought in detail about this, but
+>imagined something like this (kind of eclipse new file / class / ...).
+>And basically adding the license header to every new file! That's why i
+>included author, email, license and license header if no standard
+>license (GPL, LGPL by now, more to come like CPL, MPL,...)
+>  
+>
+I see. Okay, sounds good so far.
+
+>And here we also could add the #ifndef ... #define ... skeleton for the
+>header files.
+>  
+>
+Ah, ok. We could by default use the basename of the file (e.g. by using 
+FXFile::name()) in upper
+case letters plus _H (examples: MAINWINDOW_H, MYDIALOG_H). That's the 
+easiest way.
+Another idea would be to add an underscore in front of each upper case 
+letter in the filename
+(examples: MainWindow.h => MAIN_WINDOW_H, MyDialog.h => MY_DIALOG_H). I 
+don't know
+how easy detecting those upper case letters is.
+For InDE we use the first method.
+
+>Although i like an early release, i prefer the debian way: it is
+>finished if it's finished ;)
+>  
+>
+Jepp. Hehe. That's it.
+
+Jannis
+
+
+From devel at sten-net.de  Sun Feb 27 02:35:15 2005
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Sun, 27 Feb 2005 02:35:15 +0100
+Subject: [InDE-devel] Note
+In-Reply-To: <1109465915.1598.33.camel@jogix.sojox>
+References: <4220D501.9030001@sten-net.de>	 <1109450719.1598.18.camel@jogix.sojox> <422109AC.8090408@sten-net.de>	 <42210D89.1030809@sten-net.de> <1109465915.1598.33.camel@jogix.sojox>
+Message-ID: <422123D3.30000@sten-net.de>
+
+Jochen Rassler schrieb:
+
+>Hi Jannis.
+>
+>Am Sonntag, den 27.02.2005, 01:00 +0100 schrieb Jannis Pohlmann:
+>  
+>
+>>BTW, perhaps we should remove the project type (C/C++, Ruby, Python, 
+>>...) as far as we don't have
+>>a stable source. C/C++ will allways have highest priority and adding 
+>>project support for other
+>>languages will be much easier as soon as we have a little more 
+>>experience. Don't you think?
+>>
+>>    
+>>
+>But keeping the project type box. I don't mind deleting it or having it
+>without functionality in this early state.
+>
+>Jochen
+>  
+>
+You're right. Now that we have prepared all variables and functions for 
+this option it would be stupid
+to remove it, just to add it again some day in the same way we already did!
+
+We'll keep it then, but we won't make any use of it until we are ready 
+for implementing support for
+other languages.
+
+Jannis
+
+
+From jochen at cornmania.de  Mon Feb 28 09:21:59 2005
+From: jochen at cornmania.de (Jochen Rassler)
+Date: Mon, 28 Feb 2005 09:21:59 +0100
+Subject: [InDE-devel] Artworker
+Message-ID: <1109578919.1541.1.camel@jogix.sojox>
+
+Hi Jannis.
+
+Just to mention: I have added our request to the berlios jobboard:
+https://developer.berlios.de/people/
+
+Jochen
+
+
+

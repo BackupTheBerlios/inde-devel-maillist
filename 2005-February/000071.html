@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] Editor (with tabs and one toggleable fixed tab); ProjectBrowser
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-February/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Editor%20%28with%20tabs%20and%20one%20toggleable%20fixed%20tab%29%3B%0A%20ProjectBrowser&In-Reply-To=%3C4215ED77.8030606%40sten-net.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000066.html">
+   <LINK REL="Next"  HREF="000073.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] Editor (with tabs and one toggleable fixed tab); ProjectBrowser</H1>
+    <B>Jannis Pohlmann</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Editor%20%28with%20tabs%20and%20one%20toggleable%20fixed%20tab%29%3B%0A%20ProjectBrowser&In-Reply-To=%3C4215ED77.8030606%40sten-net.de%3E"
+       TITLE="[InDE-devel] Editor (with tabs and one toggleable fixed tab); ProjectBrowser">devel at sten-net.de
+       </A><BR>
+    <I>Fri Feb 18 14:28:23 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000066.html">[InDE-devel] Editor (with tabs and one toggleable fixed tab);	ProjectBrowser
+</A></li>
+        <LI>Next message: <A HREF="000073.html">[InDE-devel] Editor (with tabs and one toggleable fixed tab);	ProjectBrowser
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#71">[ date ]</a>
+              <a href="thread.html#71">[ thread ]</a>
+              <a href="subject.html#71">[ subject ]</a>
+              <a href="author.html#71">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Jochen Rassler schrieb:
+
+&gt;<i>Hi.
+</I>&gt;<i>
+</I>&gt;<i>Am Freitag, den 18.02.2005, 01:00 +0100 schrieb Jannis Pohlmann:
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>&gt;&gt;<i>Concerning the project files used by SCons we speek of two different 
+</I>&gt;&gt;<i>things - at least I suppose we do.
+</I>&gt;&gt;<i>I thought about this: We use the directories defined in the project 
+</I>&gt;&gt;<i>directory settings to collect the files we
+</I>&gt;&gt;<i>need for the SCons script. That means: All *.cpp, *.c or *.cc files in 
+</I>&gt;&gt;<i>the source dir and all *.h, *.hpp files
+</I>&gt;&gt;<i>in the include dir. This would spare observing these directories 
+</I>&gt;&gt;<i>permanently. Every file copied/moved to
+</I>&gt;&gt;<i>or removed from them would directly be visible in the FXDirList and also 
+</I>&gt;&gt;<i>used by the SCons script.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>Thus, no unexpected problems would occur since there are directories 
+</I>&gt;&gt;<i>clearly marked as source, header
+</I>&gt;&gt;<i>and build directories.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>That's true as long as no files *not* in the project dir are included to
+</I>&gt;<i>the project.
+</I>&gt;<i>
+</I>&gt;<i>Jochen
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Hi Jochen.
+
+Why should someone's project depend on files somewhere else in the 
+filesystem? The only reason
+might be libraries but they are already handled by our project settings 
+and SCons.
+
+If someone wants to use a source/header file for his project it's only 
+logical to put it into the project directories.
+
+Or did I misunderstood you once more?
+
+Regards,
+Jannis
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000066.html">[InDE-devel] Editor (with tabs and one toggleable fixed tab);	ProjectBrowser
+</A></li>
+	<LI>Next message: <A HREF="000073.html">[InDE-devel] Editor (with tabs and one toggleable fixed tab);	ProjectBrowser
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#71">[ date ]</a>
+              <a href="thread.html#71">[ thread ]</a>
+              <a href="subject.html#71">[ subject ]</a>
+              <a href="author.html#71">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

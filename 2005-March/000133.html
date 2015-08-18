@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] API changes/news
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-March/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20API%20changes/news&In-Reply-To=%3C422E0257.6020106%40sten-net.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000145.html">
+   <LINK REL="Next"  HREF="000135.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] API changes/news</H1>
+    <B>Jannis Pohlmann</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20API%20changes/news&In-Reply-To=%3C422E0257.6020106%40sten-net.de%3E"
+       TITLE="[InDE-devel] API changes/news">devel at sten-net.de
+       </A><BR>
+    <I>Tue Mar  8 20:51:51 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000145.html">[InDE-devel] Instructions: Using NaturalDocs for generating	API docs
+</A></li>
+        <LI>Next message: <A HREF="000135.html">[InDE-devel] API changes/news
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#133">[ date ]</a>
+              <a href="thread.html#133">[ thread ]</a>
+              <a href="subject.html#133">[ subject ]</a>
+              <a href="author.html#133">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Jochen.
+
+I finally got my stuff commited to SVN. I removed your dialogs since the 
+current SVN trunk
+wouldn't build anymore with them (and I didn't want to do your work by 
+changing them). You
+may of course integrate them again.
+
+Some notes (besides the API docs you can look at in doc/index.html) on 
+the most
+important API changes:
+
+Class: InDE (previously called &quot;App&quot;)
+    - removed syntax file loading functionality (is now handled by 
+TabEditor)
+
+Class: MainWindow
+    - all onCmd... and onUpd... functions
+    + a public member variable &quot;settings&quot; which is an object of the 
+class Settings
+    &gt; onCmdEditSettings() to editSettings()
+    + methods applySettings(), resetSettings()
+    + method readSettings() - default values are defined here
+    + methods to build menus and content: buildMenu(), buildContent()
+    + variable &quot;editor&quot; (class TabEditor) and method getEditor()
+    &gt; settings file is now created in ~/.InDE/. It's called &quot;settings&quot; 
+without
+      any extension on linux. On Windows, it is created as 
+~/InDE/settings.ini
+    ...
+
+Class: SettingsDialog
+    + method run() to execute the dialog
+    + methods loadValues() and storeValues() (that's no longer handled 
+by MainWindow)
+    + some options
+
+Class: Settings
+    + All methods are written in two ways: with and without section 
+parameter. The ones
+      without a section parameter use section &quot;GENERAL&quot;
+    + methods: setDefault() for integer and string values.
+    + methods: getStringValue(), getIntValue() and getFormatValue() (the 
+latter probably
+      won't work already)
+    + methods setStringValue, setIntValue() and setFormatValue() (the 
+latter probably
+      won't work)
+    + methods parse(), read() and write()
+    + method defaults(FXbool) for either filling missing values or 
+filling and replacing
+      all values with defaults defined using setDefault
+
+Class: TabItem
+    + Enhancement of FXTabItem. Can send messages to a target.
+
+Class: Edit
+    + represents an opened document/file
+    + methods getFilename(), setFilename(), isModified() and setModified()
+    + method setTitleTab() for connecting to a TabItem object which 
+displays the
+      file's basename
+    + method setSyntax() for settings the syntax for the document
+
+Class: TabEditor
+    + tons of methods for loading a syntax file, determining the syntax 
+of documents,
+      opening, closing and saving one, more or all documents, and so on ...
+
+Class: FileBrowser
+    + Enhanced FXDirList. Provides context menus for files and 
+directories like opening,
+      importing and deleting.
+
+I hope this helps. If you have any questions - ask them!
+
+Kind regards,
+Jannis
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000145.html">[InDE-devel] Instructions: Using NaturalDocs for generating	API docs
+</A></li>
+	<LI>Next message: <A HREF="000135.html">[InDE-devel] API changes/news
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#133">[ date ]</a>
+              <a href="thread.html#133">[ thread ]</a>
+              <a href="subject.html#133">[ subject ]</a>
+              <a href="author.html#133">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

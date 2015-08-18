@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] release cycles
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-February/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20release%20cycles&In-Reply-To=%3C421663A7.6050209%40sten-net.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000069.html">
+   <LINK REL="Next"  HREF="000076.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] release cycles</H1>
+    <B>Jannis Pohlmann</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20release%20cycles&In-Reply-To=%3C421663A7.6050209%40sten-net.de%3E"
+       TITLE="[InDE-devel] release cycles">devel at sten-net.de
+       </A><BR>
+    <I>Fri Feb 18 22:52:39 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000069.html">[InDE-devel] release cycles
+</A></li>
+        <LI>Next message: <A HREF="000076.html">[InDE-devel] release cycles
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#72">[ date ]</a>
+              <a href="thread.html#72">[ thread ]</a>
+              <a href="subject.html#72">[ subject ]</a>
+              <a href="author.html#72">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Jannis Pohlmann schrieb:
+
+&gt;<i> Jochen Rassler schrieb:
+</I>&gt;<i>
+</I>&gt;&gt;<i> Hi Jannis.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Am Freitag, den 18.02.2005, 01:08 +0100 schrieb Jannis Pohlmann:
+</I>&gt;&gt;<i>  
+</I>&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> In other words: I agree with you. I'm not that familiar with SVN 
+</I>&gt;&gt;&gt;<i> (although I'll teach myself some basics
+</I>&gt;&gt;&gt;<i> next week) so committing only running versions might be a good 
+</I>&gt;&gt;&gt;<i> choice. Perhaps we could run a little
+</I>&gt;&gt;&gt;<i> internal SVN server (I have a virtual debian server running on which 
+</I>&gt;&gt;&gt;<i> we could do this: www.gezeiten.org) to
+</I>&gt;&gt;&gt;<i> share our code. Only development snapshots would be released to the 
+</I>&gt;&gt;&gt;<i> official SVN and to our website.
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>   
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> I think you misunderstood the point.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> We have a svn directory, why setting up another one?
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Only checking in running versions means, that you only check in changed
+</I>&gt;&gt;<i> files, which you know of that they compile fine and that the code is
+</I>&gt;&gt;<i> running. Bugs, well, who writes large amount of code without bugs? But
+</I>&gt;&gt;<i> the version should compile and run. That is not for the users, but for
+</I>&gt;&gt;<i> the other developers, as they most probably work on another module and
+</I>&gt;&gt;<i> do not want to fix your code, that you had checked in not completely.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> If you follow this rule: often check in little changes, every check in
+</I>&gt;&gt;<i> compiles and is runnable (or not used by other code), doesn't lead to
+</I>&gt;&gt;<i> problems in the repository and also other developers can eventually
+</I>&gt;&gt;<i> share your code.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> So every nightly build tarball (does berlios support this?) is runnable.
+</I>&gt;&gt;<i> That means, if you think, there have been many chages to the repository,
+</I>&gt;&gt;<i> many cool new features, check out - or take your actual workspace
+</I>&gt;&gt;<i> (better to commit first) make a scons -c , cd .. , tar cfvz ..... and
+</I>&gt;&gt;<i> upload it as a new release...
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Jochen
+</I>&gt;&gt;<i>  
+</I>&gt;&gt;<i>
+</I>&gt;<i> Ah, ok. Yes, I misunderstood your words. Now it's much clearer to me.
+</I>&gt;<i>
+</I>&gt;<i> It's a good idea to work with SVN that way.
+</I>&gt;<i>
+</I>&gt;<i> Regards,
+</I>&gt;<i> Jannis
+</I>
+I read this in the Xfce4-dev mailinglist recently:
+
+&quot;We have basicly two branches, HEAD and xfce_4_2. HEAD is the 
+development branch, where you can break things, and which will result in 
+4.4.0. xfce_4_2 is the stable branch which gets only bugfixes, and from 
+which maintaince releases for 4.2 will be made.&quot;
+
+I don't know whether we are able to create two directories in our main 
+SVN but I suppose this is possible. So this perhaps would be a fine 
+solution once we have a stable program: One development tree and one for 
+the stable version which only gets bugfixes. What do you think?
+
+Regards,
+Jannis
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000069.html">[InDE-devel] release cycles
+</A></li>
+	<LI>Next message: <A HREF="000076.html">[InDE-devel] release cycles
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#72">[ date ]</a>
+              <a href="thread.html#72">[ thread ]</a>
+              <a href="subject.html#72">[ subject ]</a>
+              <a href="author.html#72">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

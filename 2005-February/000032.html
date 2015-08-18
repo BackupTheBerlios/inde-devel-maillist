@@ -1,0 +1,221 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] Preliminary roadmap for InDE
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-February/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Preliminary%20roadmap%20for%20InDE&In-Reply-To=%3C42109EC5.6030108%40sten-net.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000029.html">
+   <LINK REL="Next"  HREF="000036.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] Preliminary roadmap for InDE</H1>
+    <B>Jannis Pohlmann</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Preliminary%20roadmap%20for%20InDE&In-Reply-To=%3C42109EC5.6030108%40sten-net.de%3E"
+       TITLE="[InDE-devel] Preliminary roadmap for InDE">devel at sten-net.de
+       </A><BR>
+    <I>Mon Feb 14 13:51:17 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000029.html">[InDE-devel] Preliminary roadmap for InDE
+</A></li>
+        <LI>Next message: <A HREF="000036.html">[InDE-devel] Preliminary roadmap for InDE
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#32">[ date ]</a>
+              <a href="thread.html#32">[ thread ]</a>
+              <a href="subject.html#32">[ subject ]</a>
+              <a href="author.html#32">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi once again.
+
+&gt;&gt;<i>Q1.1 - Which variables / options might be needed?
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>Editorfont, Syntaxcoloring, Autosave, Autocompile, Autoheaders and the
+</I>&gt;<i>license, Keybindings,... more to come if the editor evolves
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Correct. I will set up some setting options but we still have to wait 
+for the certain widgets
+to appear in order to know which ones we really need.
+
+&gt;&gt;<i>Q1.2 - In which sections should they be divided?
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>As you've written in the other mails they can be divided into structs,
+</I>&gt;<i>and these structs couls be the sections
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>&gt;&gt;<i>Q1.3 - How should settings be stored in the MainWindow class?
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>Once again the structs
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>&gt;&gt;<i>Q1.4 - How should settings be accessed by dialogs (and other classes in 
+</I>&gt;&gt;<i>general)?
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>and once again...
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Yes, Q1.1 - Q1.4 are answered. I agree.
+
+&gt;&gt;<i>T1.1 - Realization of the settings structure the way we decided in Q1.3
+</I>&gt;&gt;<i>T1.2 - Realization of the interface for other classes to access the 
+</I>&gt;&gt;<i>settings the way it was decided in Q1.4
+</I>&gt;&gt;<i>T1.3 - InDE settings dialog using interface from T1.2
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>This will be my part.
+
+&gt;&gt;<i>
+</I>&gt;&gt;<i>2. InDE project dialog and config structure
+</I>&gt;&gt;<i>-------------------------------------------
+</I>&gt;&gt;<i>Having done this we will be able to discuss about which way we will 
+</I>&gt;&gt;<i>design our SCons scripts
+</I>&gt;&gt;<i>will be organized after this.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>Q2.1 - Which variables / options might be needed? (We partly have done 
+</I>&gt;&gt;<i>this already)
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>Info: Name, Description, Target, maybe Target machine and OS?( do we
+</I>&gt;<i>need crosscompilation option? does any compiler other than gcc support
+</I>&gt;<i>this?), Version(here?)
+</I>&gt;<i>Path and Libs: self speaking
+</I>&gt;<i>Switches: several compiler switches, like debug switch, optimization,
+</I>&gt;<i>warnings,...
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>I thought about two more variables: project include dir, project source 
+dir (perhaps in plural form)
+This would mean the user can define two (or more) directories for this 
+which will automatically included
+in a central SConstruct file. This would make SConscripts in the source 
+directory redundant.
+
+What do you think? Would this be usefull?
+
+&gt;&gt;<i>Q2.2 - In which sections should they be divided?
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>Sections as you described in &quot;project configuration file&quot; mail plus the
+</I>&gt;<i>switches section
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>&gt;&gt;<i>Q2.3 - How should the project configuration be stored in the MainWindow 
+</I>&gt;&gt;<i>class?
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>linke InDE settings i guess: structs
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>&gt;&gt;<i>Q2.4 - How should the project configuration be access by other classes?
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>reading the structs
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>&gt;&gt;<i>Note: Q2.3 and Q2.4 may be easily answered when Q1.3 and Q1.4 are done.
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>They are!
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Yes. Very, very fine.
+
+&gt;&gt;<i>T2.1 - Realization of the project config structure the way we decided to 
+</I>&gt;&gt;<i>in Q2.3
+</I>&gt;&gt;<i>T2.2 - Realization of the interface discussed in Q2.3
+</I>&gt;&gt;<i>T2.3 - &quot;Create new project&quot; dialog
+</I>&gt;&gt;<i>T2.4 - &quot;Project settings&quot; dialog
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>And that's gonna be your part, I think. You seem to be very willing to 
+do this, hehe.
+
+&gt;&gt;<i>3. SCons scripts
+</I>&gt;&gt;<i>----------------
+</I>&gt;&gt;<i>This means we will discuss some general questions about their structure 
+</I>&gt;&gt;<i>and what things we
+</I>&gt;&gt;<i>need to realize in them in order to fit most (not: all) thinkable projects.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>Q3.1 - Do we want to split the SConstruct files by platform (e.g. 
+</I>&gt;&gt;<i>SConscript.linux, SConscript.win32 and so on)?
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>I am not able to answer this question because i am not familiar with
+</I>&gt;<i>windows
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>I am not familiar with SCons on Windows, too. But I will have a look at 
+that soon. I develop with FOX
+on Win32 as well as on Linux - that's why I want something like a MSVS 
+project export function.
+
+&gt;&gt;<i>Q3.2 - Do we want to support SConscripts in subdirectories - would it be 
+</I>&gt;&gt;<i>to complicated? (perhaps we shouldn't think about this as long as we 
+</I>&gt;&gt;<i>don't support subprojects)
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>what about SConscript files in the src directory?
+</I>&gt;<i>We need them for subprojects, yes, so do we want to enable them in
+</I>&gt;<i>general? This question may be answered as soon as we implement the
+</I>&gt;<i>creation of them and see what may fit best.
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>I illustrated my opinion about this above (Q2.1).
+
+&gt;&gt;<i>Q3.3 - Probably on of the most difficult questions: If we want to 
+</I>&gt;&gt;<i>support single file compilation (on saving/button click), how may SCons 
+</I>&gt;&gt;<i>do this?
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>I think i have answered it in the commuted stuff mail
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Right.
+
+&gt;&gt;<i>T3.1 - Writing standard SConstructs/SConscripts for targets (executable, 
+</I>&gt;&gt;<i>shared or static library, MSVC project, ...)
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>This probably will require some extra discussion. But lets make the 
+settings and our dialogs first.
+
+Best regards,
+Jannis
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000029.html">[InDE-devel] Preliminary roadmap for InDE
+</A></li>
+	<LI>Next message: <A HREF="000036.html">[InDE-devel] Preliminary roadmap for InDE
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#32">[ date ]</a>
+              <a href="thread.html#32">[ thread ]</a>
+              <a href="subject.html#32">[ subject ]</a>
+              <a href="author.html#32">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] OS-dependencies
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-March/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20OS-dependencies&In-Reply-To=%3C42362614.7090601%40sten-net.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000178.html">
+   <LINK REL="Next"  HREF="000181.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] OS-dependencies</H1>
+    <B>Jannis Pohlmann</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20OS-dependencies&In-Reply-To=%3C42362614.7090601%40sten-net.de%3E"
+       TITLE="[InDE-devel] OS-dependencies">devel at sten-net.de
+       </A><BR>
+    <I>Tue Mar 15 01:02:28 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000178.html">[InDE-devel] OS-dependencies
+</A></li>
+        <LI>Next message: <A HREF="000181.html">[InDE-devel] OS-dependencies
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#179">[ date ]</a>
+              <a href="thread.html#179">[ thread ]</a>
+              <a href="subject.html#179">[ subject ]</a>
+              <a href="author.html#179">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Jochen.
+
+&gt;<i>I could swear I had seen a function in FXFile or elsewhere, that
+</I>&gt;<i>returned you the platform dependend directory character (/ on Unix, \ on
+</I>&gt;<i>Win32). But I can't find it anymore. Do you have any hint?
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>As far as I can see there is no function like this. But whenever you 
+want to access
+something in the filesystem you can use the following functions to merge 
+directory
+and file names. Normally, this should be enough since there won't be a 
+single
+directory which wasn't either selected by using FXDirSelector etc. or 
+directly
+entered by the user (then, it is his problem if the directory doesn't 
+exist).
+
+/// Return absolute path from current directory and file name
+FXString FXAPI absolute(const FXString&amp; file);
+
+/// Return absolute path from base directory and file name
+FXString FXAPI absolute(const FXString&amp; base,const FXString&amp; file);
+
+/// Return relative path of file to the current directory
+FXString FXAPI relative(const FXString&amp; file);
+
+/// Return relative path of file to given base directory
+FXString FXAPI relative(const FXString&amp; base,const FXString&amp; file);
+
+&gt;<i>BTW, what about a &quot;os.h&quot; file, where all dependencies can be collected
+</I>&gt;<i>in a large 
+</I>&gt;<i>#ifdef WIN32
+</I>&gt;<i>#else
+</I>&gt;<i>#endif 
+</I>&gt;<i>loop to avoid all those nice statements in normal class files. This
+</I>&gt;<i>could make portability easier and clearer, in particular if any other
+</I>&gt;<i>platform we eventually will move our code to has some diffences to
+</I>&gt;<i>Linux.
+</I>&gt;<i>This also could be the case if we use external tools at any time in
+</I>&gt;<i>future (can't actually imagine an example, but there most probably will
+</I>&gt;<i>be...)
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Do we really need that? Okay, perhaps we will, but at the moment I see 
+now reason
+for creating a structure of this kind. There is no platform-specific 
+code yet - as far
+as I can see. If you really need to add a DIR_SEPARATOR constant/define 
+doing that
+in InDE.h probably would be best.
+
+Regards,
+Jannis
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000178.html">[InDE-devel] OS-dependencies
+</A></li>
+	<LI>Next message: <A HREF="000181.html">[InDE-devel] OS-dependencies
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#179">[ date ]</a>
+              <a href="thread.html#179">[ thread ]</a>
+              <a href="subject.html#179">[ subject ]</a>
+              <a href="author.html#179">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

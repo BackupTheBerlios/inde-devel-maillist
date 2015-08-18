@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] Project configuration file
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-February/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Project%20configuration%20file&In-Reply-To=%3C1108293624.1556.29.camel%40jogix.sojox%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000010.html">
+   <LINK REL="Next"  HREF="000013.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] Project configuration file</H1>
+    <B>Jochen Rassler</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Project%20configuration%20file&In-Reply-To=%3C1108293624.1556.29.camel%40jogix.sojox%3E"
+       TITLE="[InDE-devel] Project configuration file">jochen at cornmania.de
+       </A><BR>
+    <I>Sun Feb 13 12:20:24 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000010.html">[InDE-devel] Project configuration file
+</A></li>
+        <LI>Next message: <A HREF="000013.html">[InDE-devel] Project configuration file
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#11">[ date ]</a>
+              <a href="thread.html#11">[ thread ]</a>
+              <a href="subject.html#11">[ subject ]</a>
+              <a href="author.html#11">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Jannis.
+
+Am Sonntag, den 13.02.2005, 11:27 +0100 schrieb Jannis Pohlmann:
+&gt;<i> I thought about something like this:
+</I>&gt;<i> 
+</I>&gt;<i> InDE will have a global variable which defines the base directory for 
+</I>&gt;<i> all projects (that's
+</I>&gt;<i> how most of the IDEs work, I think - Eclipse, Anjuta etc.). Of course it 
+</I>&gt;<i> will appear in some
+</I>&gt;<i> kind of global settings dialog.
+</I>ok. This may placed in ~/.foxrc/InDE
+&gt;<i> 
+</I>&gt;<i> The user creates a project and defines name and version number for it. 
+</I>&gt;<i> InDE will then create
+</I>&gt;<i> a project directory which includes both (e.g. InDE-0.0.1 or FOX-1.4). In 
+</I>&gt;<i> this directory a
+</I>&gt;<i> project configuration file (let's call it &quot;project.ini&quot; or 
+</I>&gt;<i> &quot;project.cfg&quot;) is placed by InDE.
+</I>&gt;<i> All project settings (divided into severeal sections - see my last mail) 
+</I>&gt;<i> are written into
+</I>&gt;<i> this file.
+</I>Hm. I do not like InDE-0.0.1 as you have to create a new project for a
+new version.
+It were ok, if you only defined InDe-0.0 and the patchlevel is the build
+target. But, both ways, will restrict the users to follow our release
+numbering scheme.
+
+Before discussing this in more detail, another demand, as i believe we
+should include.
+Take a compiler project for example. The compiler project may be divided
+into a preprocesor subproject, a parser (or many, e.g. to support many
+languages like gcc) subproject, and last but not least the targets
+subprojects (i386, ppc, mipsel,...).
+So you will create one project, named compiler, and several subproject,
+named parser, preprocessor, target,... they all will build as objects
+(libs) and build together with several rules to a complete compiler.
+So you need to create subprojects, which will be handled as severel
+directories in the IDE and will build at once, if you push the build
+project button. And you may specify several subprojects to be included
+or not for the build target (e.g. preprocessor + cpp-parser +
+target-amd64)
+
+I'd prefer it to have the subprojects (if any) named with the main
+version numbers, not the base project. So you may specify the workplace
+version-dependend and for example fix bugs in the stable branch while
+you normally develop in the unstable branch. This also would require a
+diff and merge tool to integrate code from one branch into the other.
+This also is in need for a new subproject, but this could be handled
+like this: subproject -&gt; new version tree -&gt; get new version number -&gt;
+based on old version number -&gt; inDe creates new subdirectory/subproject
+and copies the files from the base to the new directory. But, taking fox
+versions as base, the subproject's version directories are named
+fox-1.4, the patchlevel is then used for the new build target for a
+release build.
+
+And maybe you could include something like Make's make distcheck, wich
+throws out an ready to ship tar.gz, which also could be easyly archived,
+working together with a archive old branch function.
+
+The above way to handle projects and version numbers relies on a
+straightforward SConsript file tree, but is easyly supported by SCons.
+
+What do you think about this project structure?
+
+&gt;<i> That's it. Perhaps there will be some more files besides project.cfg
+</I>&gt;<i> which have to be initially put into the project directory like e.g.
+</I>&gt;<i> SConstructs or something like this. We'll see.
+</I>project.cfg and SConscript will be all files needed. And the SConstruct
+file in the major project dir.
+
+
+&gt;<i> If you don't have ideas about import configuration sections/variables
+</I>&gt;<i> for project.cfg, I'll create the &quot;Create new project&quot; dialog. This will
+</I>&gt;<i> be a first example of how the other dialogs could be designed and how
+</I>&gt;<i> they could be integrated into the main window class. That having done
+</I>&gt;<i> I will be able to share the code via SVN so we can discuss about the
+</I>&gt;<i> next steps.
+</I>That's not the problem....
+I am just thinking about how to contribute. What do you actually expect?
+If i should implement just the advanced setting class, i do not need any
+InDE code, because it's a standalone class derived from fox.
+But implementing the create new dialog based on the settings class will
+need the code base to include it.
+&gt;<i> 
+</I>&gt;<i> Any objections?
+</I>More than enough.
+&gt;<i> 
+</I>Later
+	Jochen
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000010.html">[InDE-devel] Project configuration file
+</A></li>
+	<LI>Next message: <A HREF="000013.html">[InDE-devel] Project configuration file
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#11">[ date ]</a>
+              <a href="thread.html#11">[ thread ]</a>
+              <a href="subject.html#11">[ subject ]</a>
+              <a href="author.html#11">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

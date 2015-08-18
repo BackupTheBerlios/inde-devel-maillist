@@ -1,0 +1,371 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] Thoughts and ideas
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-March/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Thoughts%20and%20ideas&In-Reply-To=%3C423ACC0B.1060208%40sten-net.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000223.html">
+   <LINK REL="Next"  HREF="000227.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] Thoughts and ideas</H1>
+    <B>Jannis Pohlmann</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Thoughts%20and%20ideas&In-Reply-To=%3C423ACC0B.1060208%40sten-net.de%3E"
+       TITLE="[InDE-devel] Thoughts and ideas">devel at sten-net.de
+       </A><BR>
+    <I>Fri Mar 18 13:39:39 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000223.html">[InDE-devel] Thoughts and ideas
+</A></li>
+        <LI>Next message: <A HREF="000227.html">[InDE-devel] Thoughts and ideas
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#225">[ date ]</a>
+              <a href="thread.html#225">[ thread ]</a>
+              <a href="subject.html#225">[ subject ]</a>
+              <a href="author.html#225">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Jochen.
+
+&gt;<i>Hi Jannis.
+</I>&gt;<i>
+</I>&gt;<i>Am Freitag, den 18.03.2005, 03:47 +0100 schrieb Jannis Pohlmann:
+</I>&gt;<i>
+</I>&gt;&gt;<i>Hi all.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>I observed progress on the project management a little and tested the 
+</I>&gt;&gt;<i>NewClassDialog
+</I>&gt;&gt;<i>recently. Although there are good approaches I'd like to point out some 
+</I>&gt;&gt;<i>weak points regarding
+</I>&gt;&gt;<i>some of our concepts.
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>Thanks for the flowers.
+</I>&gt;<i>
+</I>&gt;&gt;<i>The project management lacks of strategy although that's not your fault, 
+</I>&gt;&gt;<i>Jochen. 
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>It lacks strategy and it's not my fault ???
+</I>&gt;<i>Thanks in advance!
+</I>&gt;<i>
+</I>InDE evolves, that's clear. It's only that I noticed parts of our code 
+aren't very well
+thought-out and thus, there are many sources of error. I wanted to introduce
+new ideas, not an immediate reorganization of the code.
+
+&gt;<i>
+</I>&gt;<i>But maybe you should wait untill things progress. If you've noticed, I
+</I>&gt;<i>don't code weeks and weeks, before i commit the stuff to svn. So you
+</I>&gt;<i>only notice the structure that is in the repository, but not what is in
+</I>&gt;<i>mind. Keep on watching before kicking it.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;&gt;<i>I established
+</I>&gt;&gt;<i>preprocessor defines for the project type and that's been a really bad 
+</I>&gt;&gt;<i>idea. 
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>What an ugly design decission.
+</I>&gt;<i>There is absolutely no need for preprocessor defines! Just let me
+</I>&gt;<i>improve the code and you will see, what way to go.
+</I>&gt;<i>
+</I>Yes, I know. Replacing them with something better fortunately won't be 
+much work.
+
+&gt;<i>
+</I>&gt;<i>BTW, have you ever coded larger apps in Java? There are no preprocessor
+</I>&gt;<i>defines, because you do not need them, if you use a good design.
+</I>&gt;<i>Or do you just mean the PROJECT_TYPE_CPP,... which are from you and will
+</I>&gt;<i>be removed soon?
+</I>&gt;<i>
+</I>&gt;&gt;<i>We should
+</I>&gt;&gt;<i>better implement things like that using enum typedefs.
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>That's what is planned.
+</I>&gt;<i>
+</I>&gt;&gt;<i>Currently, nearly all actions concerning a project are handled by 
+</I>&gt;&gt;<i>ProjectBrowser. Same with
+</I>&gt;&gt;<i>actions concerning the filesystem. That's ok for now but in the near 
+</I>&gt;&gt;<i>future there are
+</I>&gt;&gt;<i>far more objects which will need to access those actions/methods. The 
+</I>&gt;&gt;<i>class browser or the
+</I>&gt;&gt;<i>CtagHandle for example. 
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>Well, the project browser implements only those methods, which
+</I>&gt;<i>correspond to the project browser. Except the opening of a file, but
+</I>&gt;<i>this seems to be another discussion. For those things we can start a new
+</I>&gt;<i>thread to discuss.
+</I>&gt;<i>
+</I>It currently also is responsible for opening a project and that will 
+lead into conflicts
+with - for example - the class browser. A kind of ProjectManager class 
+with a list of
+projects located in MainWindow simply would be better.
+
+&gt;<i>
+</I>&gt;<i>Also, if it is needed to give things a better structure or way to
+</I>&gt;<i>access, while implementing new features, THIS is the time to build this
+</I>&gt;<i>structure, not any hour earlier!
+</I>&gt;<i>
+</I>&gt;&gt;<i>This means, instead of using ProjectBrowser for 
+</I>&gt;&gt;<i>all things concerning
+</I>&gt;&gt;<i>the projects we should use some meta-class like objects. I'd call them 
+</I>&gt;&gt;<i>Project and ProjectManager
+</I>&gt;&gt;<i>(a class managing a FXObjectListOf&lt;Project*&gt;, handling stuff like 
+</I>&gt;&gt;<i>getProjectByPath(),
+</I>&gt;&gt;<i>getCurrentProject() and so on).
+</I>&gt;&gt;<i>This would have many advantages. For example, project and class browsers 
+</I>&gt;&gt;<i>could set the current
+</I>&gt;&gt;<i>project independently whenever they get focus or you select a certain 
+</I>&gt;&gt;<i>item in them.
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>I remember you wouldn't even support several projects at once. What
+</I>&gt;<i>should those classes do?
+</I>&gt;<i>
+</I>Several projects would be no problem (that's what a ProjectManager would 
+be responsible
+for - handling projects). The Project class could be seen as a layer 
+over ProjectSettings,
+providing useful things like a project directory/files iterator class 
+and things like that. I read
+a lot about design patterns recently. That could be useful.
+
+&gt;<i>
+</I>&gt;&gt;<i>We also could add functions like
+</I>&gt;&gt;<i>     enum ProjectType Project::getProjectType()
+</I>&gt;&gt;<i>to those classes.
+</I>&gt;&gt;<i>
+</I>&gt;<i>Why? A project may be a Java project, but uses several C++ classes or C
+</I>&gt;<i>code to access system calls..... 
+</I>&gt;<i>Having such a static project setting would kick out the need for SCons.
+</I>&gt;<i>
+</I>The projectType must not be used as a static setting - but it could (yet 
+must not) be
+used for the File =&gt; New ... =&gt; Class. I'm thinking of a projectType 
+dependent
+Factory for the class creation, support several languages (each with 
+their own
+builder). Practical design patterns once again.
+
+&gt;&gt;<i>Instead of a static list of natively supported licenses we could simply 
+</I>&gt;&gt;<i>provide a dialog
+</I>&gt;&gt;<i>to change the content of the LICENSE file (lets say in the main project 
+</I>&gt;&gt;<i>dir). Depending on files
+</I>&gt;&gt;<i>anywhere in the filesystem always equals chaos. 
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>You don't know how it will be implemented. So please don't argue about
+</I>&gt;<i>that before you know how things will be done.
+</I>&gt;<i>The only dependency to the file system occurs, if the user chooses a non
+</I>&gt;<i>supported (non-standard) license.
+</I>&gt;<i>Also wait and see before accusing it!
+</I>&gt;<i>
+</I>No need to get angry. I'm not going to change anything of the code until 
+I've
+seen something more complete. But a single LICENSE file where you can
+paste text into using a dialog doesn't require much work and a simple check
+if the file exists when creating a class file should be no problem either.
+
+If you think of being able to provide something easier and user friendly 
+- good!
+
+&gt;<i>
+</I>&gt;&gt;<i>Same applies to the 
+</I>&gt;&gt;<i>syntax file. We simply could
+</I>&gt;&gt;<i>support a syntax file located in the user's InDE directory (copied there 
+</I>&gt;&gt;<i>on first startup), not
+</I>&gt;&gt;<i>allowing the user to select a file located anywhere. A little dialog to 
+</I>&gt;&gt;<i>edit it using an instance
+</I>&gt;&gt;<i>of the Edit class (or a class similar to TabEditor just without tabs) 
+</I>&gt;&gt;<i>would be enough, then.
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>That's right, but not my job.
+</I>&gt;<i>
+</I>&gt;&gt;<i>For the syntax highlighting we will also need a more elegant color 
+</I>&gt;&gt;<i>editing solution than Adie uses.
+</I>&gt;&gt;<i>In Adie, some rule colors of different styles overlap due to similar names.
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>That's what i always said. But if you remember, we decided not to change
+</I>&gt;<i>this before other basic things are implemented and/or improved.
+</I>&gt;<i>For example, the editor is very unstable. Why not first improve the
+</I>&gt;<i>editor code base to eliminate all those ugly seg faults? InDE is
+</I>&gt;<i>absolutly useless as long the editor doesn't work properly!
+</I>&gt;<i>
+</I>&gt;<i>
+</I>Yes, tri-state return values for saveDocument() are coming. That's the 
+most disturbing
+issue at the moment (from my point of view). The rest works as far as I 
+can see.
+
+&gt;&gt;<i>What we'll probably need some day is a kind of terminal widget. I 
+</I>&gt;&gt;<i>already tried to implement one
+</I>&gt;&gt;<i>using FOX during the last days but it seems to be too complex for the 
+</I>&gt;&gt;<i>moment.
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>You told me, you had written some code, that executes external commands
+</I>&gt;<i>and fetches the output. Maybe you'll give me that code, i will see what
+</I>&gt;<i>can be done to this.
+</I>&gt;<i>
+</I>That wasn't C++. It was written in Ruby. A terminal still is something 
+completely
+different as it includes getting a TTY device as well as writing and 
+reading from it.
+
+&gt;<i>
+</I>&gt;<i>And one day means, that it is one day needed. No need to get a headache
+</I>&gt;<i>by now!
+</I>&gt;<i>
+</I>No, I was intended as a short sidenote, nothing more.
+
+&gt;&gt;<i>Remember we wanted to release an early version of InDE this weekend? I 
+</I>&gt;&gt;<i>guess we won't. There's
+</I>&gt;&gt;<i>to much reformation needed to get things working.
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>Hey, slowly!
+</I>&gt;<i>If you mean a reformation like the last, simply forget it! 
+</I>&gt;<i>You removed several classes, deleted code,.....
+</I>&gt;<i>I had two days work to get all functionality back to InDE and back to
+</I>&gt;<i>work. If you start a new reformation such this one, I'd need more time.
+</I>&gt;<i>And i hate to implement everything twice. 
+</I>&gt;<i>Maybe you should read &quot;Software entwickeln mit eXtreme Programming&quot; von
+</I>&gt;<i>Lippert, Roock, Wolf. I really recomend that book. And for you
+</I>&gt;<i>especially the parts of Refactoring.
+</I>&gt;<i>
+</I>Maybe I should. But you have to think about at least two things: An IDE 
+is not a tiny
+program, instead it's complex. And we should have had more discussions about
+it before writing code. It's true that you can't think of everything and 
+write
+a program from the scratch without problems - but one should at least try to
+develop concepts before starting. That's what I learn with every day I 
+deal with
+InDE.
+
+Maybe we're not sophisticated programmes yet, so we have to realize that
+development sometimes leads to a dead end where you have to reconsider
+things. If we're honest, there is not much code yet. Most parts are attempts
+which will be rewritten - maybe from the scratch - either way.
+
+InDE is not an application written down in a month or two. I'm not afraid
+of rewriting core stuff that will be important for nearly everything in the
+near future if it makes the software more sophisticated.
+
+&gt;<i>
+</I>&gt;<i>We can discuss about code improvements and than do it step by step. But
+</I>&gt;<i>i will not support this, if the discussion or improvement is done with
+</I>&gt;<i>the sledge hammer, like this mail or the last restructuring!
+</I>&gt;<i>
+</I>It's not intended to be a &quot;sledge hammer&quot;. It's just brainstorming and 
+writing
+down experiences. Sure we could do everything step by step but that exactly
+is the problem. If you add something like the ProjectManager (and 
+Project) as
+I suggested, more things have to be reviewed. If we had a comfortable 
+project
+directory/files iterator the listing in the ProjectBrowser would be much 
+easier.
+
+The only problem is, those ideas require a complete review of InDE. I 
+will do
+that anyway (and make it a folder InDE-rev on my harddisk) but I won't 
+apply
+the code to the official InDE until you agree on it.
+
+&gt;<i>
+</I>&gt;<i>And, I still believe, it's best to get things actually working,
+</I>&gt;<i>releasing a snapshot and working on new features and improvements of old
+</I>&gt;<i>features.
+</I>&gt;<i>
+</I>Features aren't a problem, it's the way they're implemented currently. 
+That's not
+your fault, as project leader I had to kick development into the right 
+direction but
+unfortunately I didn't. I'm not that experienced yet.
+
+&gt;<i>
+</I>&gt;<i>It looks like every time you think about a new feature which could be
+</I>&gt;<i>added any time, you find the InDE code not fitting anymore and rewriting
+</I>&gt;<i>the complete code every time.
+</I>&gt;<i>This isn't only ineffective, but also senseless and short viewed.
+</I>&gt;<i>
+</I>&gt;&gt;<i>Yet, I'm proud our project actually evolves and there's still notable 
+</I>&gt;&gt;<i>activity and interest on
+</I>&gt;&gt;<i>the part of the (little team of) developers.
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>Keep it so!
+</I>&gt;<i>
+</I>&gt;&gt;<i>So what will be the next steps?
+</I>&gt;&gt;<i>Jochen, I know you'd like to schedule a release as early as possible but 
+</I>&gt;&gt;<i>if we don't want to
+</I>&gt;&gt;<i>stubmle into chaos we will have to discuss and share exchange views once 
+</I>&gt;&gt;<i>again before (likely)
+</I>&gt;&gt;<i>reorganizing part of the code.
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>If you don't want to end in chaos, follow a clear line and don't loose
+</I>&gt;<i>in senseless reorganizations every two weeks.
+</I>&gt;<i>Sure, little reorganizations are needed all times, but little. I don't
+</I>&gt;<i>support a rewrite every two weeks.
+</I>&gt;<i>
+</I>That's one of my vices. I know that I'm always running the risk of 
+losing partners
+this way but in this case we're simply naive when thinking the codebase 
+is mature
+or even ready for features do be written on the top of it.
+
+We have to go step by step but that's not what we did in the beginning. 
+Hm, it's
+hard to properly describe my thoughts.
+
+&gt;<i>
+</I>&gt;<i>And, let me do the restructuring of my code! I don't want to rewrite it
+</I>&gt;<i>every time!
+</I>&gt;<i>
+</I>I understand that completely. But there's no need to shed tears about 
+written
+code when you are are going to write something new which adds to it.
+
+- Jannis
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000223.html">[InDE-devel] Thoughts and ideas
+</A></li>
+	<LI>Next message: <A HREF="000227.html">[InDE-devel] Thoughts and ideas
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#225">[ date ]</a>
+              <a href="thread.html#225">[ thread ]</a>
+              <a href="subject.html#225">[ subject ]</a>
+              <a href="author.html#225">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] [Q1.3, Q1.4] How should settings be stored in the	MainWindow class?
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-February/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20%5BQ1.3%2C%20Q1.4%5D%20How%20should%20settings%20be%20stored%20in%20the%0A%09MainWindow%20class%3F&In-Reply-To=%3C1108403319.1555.42.camel%40jogix.sojox%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000031.html">
+   <LINK REL="Next"  HREF="000040.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] [Q1.3, Q1.4] How should settings be stored in the	MainWindow class?</H1>
+    <B>Jochen Rassler</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20%5BQ1.3%2C%20Q1.4%5D%20How%20should%20settings%20be%20stored%20in%20the%0A%09MainWindow%20class%3F&In-Reply-To=%3C1108403319.1555.42.camel%40jogix.sojox%3E"
+       TITLE="[InDE-devel] [Q1.3, Q1.4] How should settings be stored in the	MainWindow class?">jochen at cornmania.de
+       </A><BR>
+    <I>Mon Feb 14 18:48:39 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000031.html">[InDE-devel] [Q1.3, Q1.4] How should settings be stored in the MainWindow class?
+</A></li>
+        <LI>Next message: <A HREF="000040.html">[InDE-devel] [Q1.3, Q1.4] How should settings be stored in the MainWindow class?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#37">[ date ]</a>
+              <a href="thread.html#37">[ thread ]</a>
+              <a href="subject.html#37">[ subject ]</a>
+              <a href="author.html#37">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Jannis.
+
+&gt;<i> Fine. Of course, load and save functions are needed as well.
+</I>&gt;<i> With a settings structure like this we now have a good starting point 
+</I>&gt;<i> for the first dialogs.
+</I>&gt;<i> Feel free to work the project settings dialog. I will add this to the 
+</I>&gt;<i> task manager on berliOS.
+</I>&gt;<i> 
+</I>What about something like this:
+
+struct InDE_Settings {
+	int loadSettings();
+	int saveSettings();
+}
+
+struct EditorSettings: public InDE_Settings {
+	Font *font;
+	//...
+}
+
+int EditorSettings::loadSettings() {
+	//...
+}
+(or implementing those functions in the base settings struct and take
+the path and file as params)
+doing it this way may provide a clear settings API
+
+CU 
+Jochen
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000031.html">[InDE-devel] [Q1.3, Q1.4] How should settings be stored in the MainWindow class?
+</A></li>
+	<LI>Next message: <A HREF="000040.html">[InDE-devel] [Q1.3, Q1.4] How should settings be stored in the MainWindow class?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#37">[ date ]</a>
+              <a href="thread.html#37">[ thread ]</a>
+              <a href="subject.html#37">[ subject ]</a>
+              <a href="author.html#37">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

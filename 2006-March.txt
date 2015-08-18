@@ -1,0 +1,146 @@
+From jochen.rassler at web.de  Mon Mar 20 00:58:40 2006
+From: jochen.rassler at web.de (=?ISO-8859-15?Q?Jochen_Ra=DFler?=)
+Date: Mon, 20 Mar 2006 00:58:40 +0100
+Subject: [InDE-devel] Development
+Message-ID: <441DF030.9070802@web.de>
+
+Hi Jannis, hi List.
+
+Long time since last traffic on this list and last code contribution....
+
+Actually i am writing my diplom thesis and am moving to a new home. So 
+that's what up with me. After finishing moving I surly will have some 
+free time for coding -- and i need an editor or something more that fits 
+my needs for coding. So why not awake this project, maybe giving it a 
+new direction and just continue the cool stuff?!
+
+If you, Jannis, don't like or have not the time, i will understand and 
+continue anyway, but coding together actually is just more fun. I hope 
+to get you motivated and for sure we will find a way to keep things going.
+
+That's it for now, just to say hello
+
+cheers,
+Jochen
+
+
+From devel at sten-net.de  Mon Mar 20 14:13:50 2006
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Mon, 20 Mar 2006 14:13:50 +0100
+Subject: [InDE-devel] Development
+In-Reply-To: <441DF030.9070802@web.de>
+References: <441DF030.9070802@web.de>
+Message-ID: <20060320141350.d68a636a.devel@sten-net.de>
+
+Hey Jochen,
+
+On Mon, 20 Mar 2006 00:58:40 +0100
+Jochen Ra?ler <jochen.rassler at web.de> wrote:
+
+> Hi Jannis, hi List.
+> 
+> Long time since last traffic on this list and last code
+> contribution....
+> 
+> Actually i am writing my diplom thesis and am moving to a new home.
+> So that's what up with me. After finishing moving I surly will have
+> some free time for coding -- and i need an editor or something more
+> that fits my needs for coding. So why not awake this project, maybe
+> giving it a new direction and just continue the cool stuff?!
+
+Personally, I don't feel the need for a better editor/IDE anymore. I
+got used to gvim and wouldn't want to use an editor not featuring
+things like separate edit/write modes etc. anmore.
+
+Having said this, I should probably mention that the only thing I'm
+really missing in gvim is project management. There are attempts to
+integrate it into the user interface, but all of them are almost
+unusable.
+
+If I would want to write an IDE again, I'd write a project manager
+and code browser and would try to embed vim, like e.g.
+http://pida.berlios.de/ does.
+
+> If you, Jannis, don't like or have not the time, i will understand
+> and continue anyway, but coding together actually is just more fun. I
+> hope to get you motivated and for sure we will find a way to keep
+> things going.
+
+I'm very happy with gvim. The few tasks I have to do outside of it
+(like SVN and project management) are not worth so much hours of work,
+I think. But feel free to reactivate the project - I'll watch the
+progress and contribute to it again if I feel like doing so. But this
+is rather unlikely to happen.
+
+BTW, good luck with your diploma!
+
+Regards,
+Jannis
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 191 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/inde-devel/attachments/20060320/5a037c84/attachment.pgp>
+
+From devel at sten-net.de  Mon Mar 20 14:13:50 2006
+From: devel at sten-net.de (Jannis Pohlmann)
+Date: Mon, 20 Mar 2006 14:13:50 +0100
+Subject: [InDE-devel] Development
+In-Reply-To: <441DF030.9070802@web.de>
+References: <441DF030.9070802@web.de>
+Message-ID: <20060320141350.d68a636a.devel@sten-net.de>
+
+Hey Jochen,
+
+On Mon, 20 Mar 2006 00:58:40 +0100
+Jochen Ra?ler <jochen.rassler at web.de> wrote:
+
+> Hi Jannis, hi List.
+> 
+> Long time since last traffic on this list and last code
+> contribution....
+> 
+> Actually i am writing my diplom thesis and am moving to a new home.
+> So that's what up with me. After finishing moving I surly will have
+> some free time for coding -- and i need an editor or something more
+> that fits my needs for coding. So why not awake this project, maybe
+> giving it a new direction and just continue the cool stuff?!
+
+Personally, I don't feel the need for a better editor/IDE anymore. I
+got used to gvim and wouldn't want to use an editor not featuring
+things like separate edit/write modes etc. anmore.
+
+Having said this, I should probably mention that the only thing I'm
+really missing in gvim is project management. There are attempts to
+integrate it into the user interface, but all of them are almost
+unusable.
+
+If I would want to write an IDE again, I'd write a project manager
+and code browser and would try to embed vim, like e.g.
+http://pida.berlios.de/ does.
+
+> If you, Jannis, don't like or have not the time, i will understand
+> and continue anyway, but coding together actually is just more fun. I
+> hope to get you motivated and for sure we will find a way to keep
+> things going.
+
+I'm very happy with gvim. The few tasks I have to do outside of it
+(like SVN and project management) are not worth so much hours of work,
+I think. But feel free to reactivate the project - I'll watch the
+progress and contribute to it again if I feel like doing so. But this
+is rather unlikely to happen.
+
+BTW, good luck with your diploma!
+
+Regards,
+Jannis
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 191 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/inde-devel/attachments/20060320/5a037c84/attachment-0001.pgp>
+

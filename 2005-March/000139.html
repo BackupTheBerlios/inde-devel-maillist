@@ -1,0 +1,155 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] API changes/news
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-March/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20API%20changes/news&In-Reply-To=%3C1110396244.1541.12.camel%40jogix.sojox%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000140.html">
+   <LINK REL="Next"  HREF="000144.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] API changes/news</H1>
+    <B>Jochen Rassler</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20API%20changes/news&In-Reply-To=%3C1110396244.1541.12.camel%40jogix.sojox%3E"
+       TITLE="[InDE-devel] API changes/news">jochen at cornmania.de
+       </A><BR>
+    <I>Wed Mar  9 20:24:04 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000140.html">[InDE-devel] API changes/news
+</A></li>
+        <LI>Next message: <A HREF="000144.html">[InDE-devel] r25 - in trunk: doc/NaturalDocs/Data include src
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#139">[ date ]</a>
+              <a href="thread.html#139">[ thread ]</a>
+              <a href="subject.html#139">[ subject ]</a>
+              <a href="author.html#139">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Jannis.
+
+Am Dienstag, den 08.03.2005, 20:51 +0100 schrieb Jannis Pohlmann:
+&gt;<i> Hi Jochen.
+</I>&gt;<i> 
+</I>&gt;<i> I finally got my stuff commited to SVN. 
+</I>
+Hey :)
+
+&gt;<i> I removed your dialogs since the 
+</I>&gt;<i> current SVN trunk
+</I>&gt;<i> wouldn't build anymore with them (and I didn't want to do your work by 
+</I>&gt;<i> changing them). You
+</I>&gt;<i> may of course integrate them again.
+</I>
+I will work on this tomorrow. Maybe tonight, if i get a bit fitter than
+now....
+I guess i will commit my stuff in several small steps to get you
+actually involved. And i want to avoid a commit-marathon like you did
+*g*
+&gt;<i> 
+</I>&gt;<i> Some notes (besides the API docs you can look at in doc/index.html) on 
+</I>&gt;<i> the most
+</I>&gt;<i> important API changes:
+</I>&gt;<i> 
+</I>&gt;<i> Class: InDE (previously called &quot;App&quot;)
+</I>&gt;<i>     - removed syntax file loading functionality (is now handled by 
+</I>&gt;<i> TabEditor)
+</I>&gt;<i> 
+</I>&gt;<i> Class: MainWindow
+</I>&gt;<i>     - all onCmd... and onUpd... functions
+</I>&gt;<i>     + a public member variable &quot;settings&quot; which is an object of the 
+</I>&gt;<i> class Settings
+</I>&gt;<i>     &gt; onCmdEditSettings() to editSettings()
+</I>&gt;<i>     + methods applySettings(), resetSettings()
+</I>&gt;<i>     + method readSettings() - default values are defined here
+</I>&gt;<i>     + methods to build menus and content: buildMenu(), buildContent()
+</I>&gt;<i>     + variable &quot;editor&quot; (class TabEditor) and method getEditor()
+</I>&gt;<i>     &gt; settings file is now created in ~/.InDE/. It's called &quot;settings&quot; 
+</I>&gt;<i> without
+</I>&gt;<i>       any extension on linux. On Windows, it is created as 
+</I>&gt;<i> ~/InDE/settings.ini
+</I>&gt;<i>     ...
+</I>&gt;<i> 
+</I>&gt;<i> Class: SettingsDialog
+</I>&gt;<i>     + method run() to execute the dialog
+</I>&gt;<i>     + methods loadValues() and storeValues() (that's no longer handled 
+</I>&gt;<i> by MainWindow)
+</I>&gt;<i>     + some options
+</I>&gt;<i> 
+</I>&gt;<i> Class: Settings
+</I>&gt;<i>     + All methods are written in two ways: with and without section 
+</I>&gt;<i> parameter. The ones
+</I>&gt;<i>       without a section parameter use section &quot;GENERAL&quot;
+</I>&gt;<i>     + methods: setDefault() for integer and string values.
+</I>&gt;<i>     + methods: getStringValue(), getIntValue() and getFormatValue() (the 
+</I>&gt;<i> latter probably
+</I>&gt;<i>       won't work already)
+</I>&gt;<i>     + methods setStringValue, setIntValue() and setFormatValue() (the 
+</I>&gt;<i> latter probably
+</I>&gt;<i>       won't work)
+</I>&gt;<i>     + methods parse(), read() and write()
+</I>&gt;<i>     + method defaults(FXbool) for either filling missing values or 
+</I>&gt;<i> filling and replacing
+</I>&gt;<i>       all values with defaults defined using setDefault
+</I>&gt;<i> 
+</I>&gt;<i> Class: TabItem
+</I>&gt;<i>     + Enhancement of FXTabItem. Can send messages to a target.
+</I>&gt;<i> 
+</I>&gt;<i> Class: Edit
+</I>&gt;<i>     + represents an opened document/file
+</I>&gt;<i>     + methods getFilename(), setFilename(), isModified() and setModified()
+</I>&gt;<i>     + method setTitleTab() for connecting to a TabItem object which 
+</I>&gt;<i> displays the
+</I>&gt;<i>       file's basename
+</I>&gt;<i>     + method setSyntax() for settings the syntax for the document
+</I>&gt;<i> 
+</I>&gt;<i> Class: TabEditor
+</I>&gt;<i>     + tons of methods for loading a syntax file, determining the syntax 
+</I>&gt;<i> of documents,
+</I>&gt;<i>       opening, closing and saving one, more or all documents, and so on ...
+</I>&gt;<i> 
+</I>&gt;<i> Class: FileBrowser
+</I>&gt;<i>     + Enhanced FXDirList. Provides context menus for files and 
+</I>&gt;<i> directories like opening,
+</I>&gt;<i>       importing and deleting.
+</I>&gt;<i> 
+</I>&gt;<i> I hope this helps. If you have any questions - ask them!
+</I>&gt;<i> 
+</I>Nice to see. I will have a look at this tonight and tomorrow!
+
+sincerly
+	pleased Jochen
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000140.html">[InDE-devel] API changes/news
+</A></li>
+	<LI>Next message: <A HREF="000144.html">[InDE-devel] r25 - in trunk: doc/NaturalDocs/Data include src
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#139">[ date ]</a>
+              <a href="thread.html#139">[ thread ]</a>
+              <a href="subject.html#139">[ subject ]</a>
+              <a href="author.html#139">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>

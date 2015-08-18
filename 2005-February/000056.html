@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [InDE-devel] Editor (with tabs and one toggleable fixed tab);	ProjectBrowser
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/inde-devel/2005-February/index.html" >
+   <LINK REL="made" HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Editor%20%28with%20tabs%20and%20one%20toggleable%20fixed%20tab%29%3B%0A%09ProjectBrowser&In-Reply-To=%3C1108637977.1541.14.camel%40jogix.sojox%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000055.html">
+   <LINK REL="Next"  HREF="000057.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[InDE-devel] Editor (with tabs and one toggleable fixed tab);	ProjectBrowser</H1>
+    <B>Jochen Rassler</B> 
+    <A HREF="mailto:inde-devel%40lists.berlios.de?Subject=Re%3A%20%5BInDE-devel%5D%20Editor%20%28with%20tabs%20and%20one%20toggleable%20fixed%20tab%29%3B%0A%09ProjectBrowser&In-Reply-To=%3C1108637977.1541.14.camel%40jogix.sojox%3E"
+       TITLE="[InDE-devel] Editor (with tabs and one toggleable fixed tab);	ProjectBrowser">jochen at cornmania.de
+       </A><BR>
+    <I>Thu Feb 17 11:59:37 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000055.html">[InDE-devel] Editor (with tabs and one toggleable fixed tab); ProjectBrowser
+</A></li>
+        <LI>Next message: <A HREF="000057.html">[InDE-devel] Editor (with tabs and one toggleable fixed tab);	ProjectBrowser
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#56">[ date ]</a>
+              <a href="thread.html#56">[ thread ]</a>
+              <a href="subject.html#56">[ subject ]</a>
+              <a href="author.html#56">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Guten Morgen!
+
+Am Donnerstag, den 17.02.2005, 11:39 +0100 schrieb Jannis Pohlmann:
+&gt;<i> Of course, this would be interesting. Yet, I'm not sure how to observe 
+</I>&gt;<i> the filesystem permanently
+</I>&gt;<i> to redraw when files/directories are deleted/moved/created. FXDirList 
+</I>&gt;<i> does this automatically.
+</I>&gt;<i> And it allows to use a filter for file extensions. We could apply a 
+</I>&gt;<i> filter based on the project configuration
+</I>&gt;<i> to FXDirList and wouldn't have to use a virtual filesystem.
+</I>&gt;<i> I'm not sure about that. But if you are willing to look into that, why not?
+</I>&gt;<i> 
+</I>I thought of a simple FXList, not a FXList.
+Building the directories specyfied in the project config and showing the
+files added to the project.
+
+For the first iteration we only need the cpp an h source files, maybe
+later on some resource files,...
+
+This could be done with a simple FXList, where we keep record of the
+contents based on the project.cfg. Al list entries store the file path
+and can be opened by (bouble)clicking on them.
+
+I guess, objectfiles, libraries, SCons files,.... aren't important for
+the uses, hence we can add them by uncluding filters.
+
+Bis denne
+	Jochen
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000055.html">[InDE-devel] Editor (with tabs and one toggleable fixed tab); ProjectBrowser
+</A></li>
+	<LI>Next message: <A HREF="000057.html">[InDE-devel] Editor (with tabs and one toggleable fixed tab);	ProjectBrowser
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#56">[ date ]</a>
+              <a href="thread.html#56">[ thread ]</a>
+              <a href="subject.html#56">[ subject ]</a>
+              <a href="author.html#56">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/inde-devel">More information about the InDE-devel
+mailing list</a><br>
+</body></html>
